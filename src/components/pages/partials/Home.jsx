@@ -7,7 +7,7 @@ import { styled } from "@mui/material";
 import MidSlide from "../Home/MidSlide";
 import MidSection from "../Home/MidSection";
 import { useEffect } from "react";
-
+import { getProducts } from "../../react_redux/redux/actions/productAction.js";
 import { useDispatch, useSelector } from "react-redux";
 import Slide2 from "../Home/Slides/Slide2";
 import { Link as routerLink } from "react-router-dom"
@@ -57,7 +57,7 @@ export default function Home() {
                             })
                         }
                         <Grid container lg={12}>
-                            <Grid item lg={5} md={6} sm={6} xs={12}className="mx-auto mt-2">
+                            <Grid item lg={5} md={6} sm={6} xs={12} className="mx-auto mt-2">
                                 <Slide2 prod={data.prod[1]} time={false} />
                             </Grid>
                             <Grid item lg={7} md={6} sm={6} xs={12} className="mx-auto mt-2">
@@ -78,11 +78,11 @@ export default function Home() {
                                 <Slide3 prod={data.prod[0]} time={false} />
                             </Grid>
 
-                            <Grid item lg={3.8} md={5.8} sm={12} xs={12}className="mx-auto mt-4">
+                            <Grid item lg={3.8} md={5.8} sm={12} xs={12} className="mx-auto mt-4">
                                 <Slide2 prod={data.prod[1]} time={false} />
                             </Grid>
 
-                            <Grid item lg={3.8} md={12} sm={12} xs={12}className="mx-auto mt-4">
+                            <Grid item lg={3.8} md={12} sm={12} xs={12} className="mx-auto mt-4">
                                 <Slide3 prod={data.prod[0]} time={false} />
                             </Grid>
 

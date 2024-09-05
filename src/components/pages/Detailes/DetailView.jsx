@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-
+import { getProductDetails } from "../../react_redux/redux/actions/productAction";
 import ActionItem from "./ActionItem";
 import ProductDetails from "./ProductDetail";
 
