@@ -1,0 +1,223 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Inter, -apple-system, Helvetica, Arial, sans-serif !important;
+}
+
+header{
+    box-shadow: none!important;
+}
+html{font-size: 100%;}
+.username-svg {
+    transform:rotate(270deg) ;
+    transition: all .3s ease;
+}
+
+/* .user-dropdown-list{display:none} */
+
+/* //////////////////dropdowns//////////////////// */
+.username:hover .user-dropdown-list{
+    display: block !important;
+    
+}
+
+.username:hover > svg{
+    transform:rotate(90deg) ;
+}
+
+
+.more-icon:hover +.more-dropdown-list,.more-dropdown-list:hover {
+    display: block !important;
+}
+
+
+/* -----------------top item-------------- */
+.topitem:hover +.topitem-dropdown-list,.topitem-dropdown-list:hover {
+    display: flex !important;
+
+}
+.topitem:hover > p:first-child{
+    color:rgb(28, 20, 187);
+
+}
+.topitem > p:last-child{
+    transition: all .3s ease;
+    transform:rotate(180 deg) !important;
+}
+
+
+
+
+
+/* ---------------Filter PAGE HOver----------- */
+.filter-item-nav:hover .filter-dropdown{
+
+    display:flex !important ;
+
+}
+
+
+
+.flex-direction-column{
+    flex-direction: column;
+
+}
+
+.justify-content-space-between{
+    justify-content:space-between!important;
+}
+.justify-content-space-around{
+   
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+.text-bold{
+    font-weight: bold!important;
+    
+}
+.text-600-bold{
+    font-weight: 600;
+}
+html{
+    /* font-size: 0%; */
+}
+
+.text-small{
+    font-size:"12px !important"
+}
+/* ----------------HEADER PART---------------------*/
+.flex-direction-column{
+    flex-direction: column;
+   
+  
+}
+
+
+
+
+
+.align-item-center{
+    align-items: center;
+}
+ul{
+    list-style: none;
+    padding:0;
+   
+ 
+}
+.carousel .react-multiple-carousel__arrow react-multiple-carousel__arrow--left{
+    left:0;
+    backgound-color:white;
+    color:black;
+    height:40px;
+ }
+a{
+    text-decoration: none!important;
+ 
+}
+
+body{
+    /* background-color: rgb(241, 238, 238)!important; */
+     
+    background-color: #f1f3f6;
+}
+.cust-btn{
+    font-weight: bold;
+}
+
+.demo-div > div{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------footer---------------------------- */
+
+
+footer li{
+    font-size:0.8rem; 
+    letter-spacing: 0.7px;
+
+}
+footer .row:first-child li{
+    font-weight:600;
+}
+
+.social li{
+    font-size: 1.5rem;;
+}
+footer > div:last-child{
+  text-align: center;
+}
+footer > div:last-child .row div{
+    display: flex;
+    gap:10px;
+
+    font-weight: 800px;;
+    font-size: 0.9rem;;
+    justify-content: center;
+ 
+}
+.tokens{
+    gap:5px;
+}
+.tokens li{
+    background-color: white;
+    padding:2px;
+}
+footer > div:last-child span{
+    color:rgb(175, 175, 34)
+}
+footer > div:last-child a{
+    color:white;
+    
+}
+
+
+footer > div:first-child{
+    align-items: center;
+    
+}
+.text-bold{
+    font-weight:bold;
+}
+
+/* ///////////////////LOGIN CONTAINER///////////////// */
+.dialog .row > div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* padding-bottom:40px; */
+    align-items: center;
+    
+}
+.dialog .row{
+  --bs-gutter-x:0!important;
+  
+   
+}
+.dialog button{
+    width:100%;
+    text-align:center;
+    padding:12px;
+ 
+}
+
+/* ---------------------orderboax--------------------------
+ /* */
+ /* .order-box{
+    box-shadow:"0px 2px 10px black";
+} */ 
+ 
+
