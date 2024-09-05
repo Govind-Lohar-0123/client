@@ -7,7 +7,7 @@ import { styled } from "@mui/material";
 import MidSlide from "../Home/MidSlide";
 import MidSection from "../Home/MidSection";
 import { useEffect } from "react";
-import { getProducts } from "../../react_redux/redux/actions/productAction";
+
 import { useDispatch, useSelector } from "react-redux";
 import Slide2 from "../Home/Slides/Slide2";
 import { Link as routerLink } from "react-router-dom"
