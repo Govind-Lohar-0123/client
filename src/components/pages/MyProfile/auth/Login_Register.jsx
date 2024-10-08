@@ -155,8 +155,8 @@ export default function Login_Register() {
                                     By continuing, you agree to Flipkart's <span className="text-primary">Terms of Use</span> and <span className="text-primary">Privacy Policy.</span>
                                 </Typography>
                                 <LoginBtn variant="contained" className="w-100  py-3" onClick={loginHandle}>Login</LoginBtn>
-                                {/* <Typography style={{ fontSize: "1.2rem" }} className="my-3 text-center">OR</Typography>
-                                <RequestOTP variant="contained" >Request OTP</RequestOTP> */}
+                               
+                                {/* <RequestOTP variant="contained" >Request OTP</RequestOTP>  */}
 
                             </FormControl>
                         </Box>
