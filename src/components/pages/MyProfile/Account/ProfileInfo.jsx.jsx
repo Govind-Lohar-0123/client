@@ -105,7 +105,7 @@ export default function ProfileInfo() {
 
                 <Component className="mt-4">
 
-                    <Grid container lg={12}>
+                    <Grid container >
                         <Grid item lg={3} >
                             <Dashboard />
                         </Grid>
@@ -198,26 +198,7 @@ export default function ProfileInfo() {
                                             <Box className="mt-4" style={{ border: "solid 2px #e6f4e8", width: "250px", height: "52px", }}>
                                                 <input type="text" name=" " readOnly value={user.email} className="border-none h-100 w-100" style={{ width: "100%", paddingLeft: "16px", fontSize: "14px", outline: "none", border: "none", backgroundColor: "#f5f7fa ", }} />
                                             </Box>
-                                            {/* {
-                                                (editEmail) ?
-
-                                                    <Box className="mt-4" style={{ border: "solid 2px #e6f4e8", width: "250px", height: "52px", }}>
-                                                        <input type="text" name=" " readOnly value="" className="border-none h-100 w-100" style={{ width: "100%", paddingLeft: "16px", fontSize: "14px", outline: "none", border: "none", backgroundColor: "#f5f7fa ", }} />
-                                                    </Box>
-                                                    :
-                                                    <Box className="d-flex gap-3 mt-4" style={{ height: "50px" }}>
-                                                        <TextField
-                                                            id="outlined-password-input"
-                                                            label="Email Address"
-                                                            type="password"
-                                                            style={{ fontWeight: "bold" }}
-                                                            autoComplete="current-password"
-                                                        />
-                                                        <Button variant="contained" size="large" style={{ backgroundColor: "#2874f0", height: "48px", padding: "14px", width: "130px", fontSize: "16px", borderRadius: "3px" }}>
-                                                            SAVE
-                                                        </Button>
-                                                    </Box>
-                                            } */}
+                                            
                                         </Box>
                                         <Box className="my-5">
                                             <Box className="d-flex gap-4 align-item-center ">

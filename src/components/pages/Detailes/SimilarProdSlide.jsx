@@ -1,11 +1,9 @@
 import { Box, Stack, Typography, styled, Button, typographyClasses, Divider, Link } from "@mui/material";
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
-// import Card from "./Card";
-import { useEffect } from "react";
-import { getProducts } from "../../react_redux/redux/actions/productAction";
+
 import ProductTitle from "../Home/Slides/ProductTitle";
-import { useDispatch, useSelector } from "react-redux";
+
 import { Link as routerLink, useParams } from "react-router-dom"
 import SimilarCard from "./SimilarCard";
 
@@ -42,7 +40,7 @@ const SlideContainer = styled(Box)`
 
 
 
-const SimilarProdSlide = ({ prod, time, title }) => {
+const SimilarProdSlide = ({ prods, time, title }) => {
 
 
 
@@ -66,8 +64,8 @@ const SimilarProdSlide = ({ prod, time, title }) => {
                         keyBoardControl={true}
                     >
                         {
-                            prod.prods.map((p, i) => {
-                                return (<Link key={i} component={routerLink} to={"/filter-product/" + prod._id}>
+                            prods.map((p, i) => {
+                                return (<Link key={i} component={routerLink} to={"/filter-product/" + p._id}>
                                     <SimilarCard key={i} prod={p} />
                                 </Link>)
                             })

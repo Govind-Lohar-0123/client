@@ -4,11 +4,14 @@ import Star from '@mui/icons-material/Star';
 
 import Reply from '@mui/icons-material/Reply';
 import { useState } from "react";
+import zIndex from "@mui/material/styles/zIndex";
 const RightComponent = styled(Box)(({ theme }) => ({
+    position:"relative",
     "p": {
         fontSize: "14px",
         fontFamily: " Inter, -apple-system, Helvetica, Arial, sans-serif",
-    }
+    },
+    
 }))
 const ListStyleCircle = styled(Typography)(({ theme }) => ({
     "&::before": {
@@ -135,7 +138,7 @@ const SpecifiTable = styled(Table)(({ theme }) => ({
 
 export default function ProductDetails({ content }) {
     const [readMore, setReadMore] = useState(false);
-
+    
     const date = new Date(new Date().getTime() + (5 * 24 * 60 * 60 * 1000));
     const adURL = 'https://rukminim1.flixcart.com/lockin/774/185/images/CCO__PP_2019-07-14.png?q=50';
 
@@ -147,23 +150,23 @@ export default function ProductDetails({ content }) {
                     <SmallNav className="d-flex gap-1">
                         <Box className="r2CdBx">
                             <Link href="/" className=" R0cyWM">Home</Link>
-                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="sfneHK"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="wMLTcO"></path></svg>
+                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" ><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" ></path></svg>
                         </Box>
                         <Box className="r2CdBx">
                             <Link href="/" className=" R0cyWM">Mobile & A ...</Link>
-                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className="sfneHK"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="wMLTcO"></path></svg>
+                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" ><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="wMLTcO"></path></svg>
                         </Box>
                         <Box className="r2CdBx">
                             <Link href="/" className="R0cyWM">Mobiles</Link>
-                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className="sfneHK"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="wMLTcO"></path></svg>
+                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" ><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="wMLTcO"></path></svg>
                         </Box>
                         <Box className="r2CdBx">
                             <Link href="/" className="R0cyWM">MOTOROLA...</Link>
-                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className="sfneHK"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="wMLTcO"></path></svg>
+                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" ><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="wMLTcO"></path></svg>
                         </Box>
                         <Box className="r2CdBx">
                             <Link href="/" className="R0cyWM">MOTOROLA ED...</Link>
-                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className="sfneHK"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="wMLTcO"></path></svg>
+                            <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" ><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="wMLTcO"></path></svg>
                         </Box>
 
                     </SmallNav>
@@ -179,24 +182,19 @@ export default function ProductDetails({ content }) {
 
                 <Typography className="" style={{ fontSize: "18px" }}>{content.title} (8 GB RAM) #JustHere</Typography>
                 <Box className="my-2">
-                    <Typography variant="span" className="px-2 py-1 border-rounded text-white text-bold" style={{ backgroundColor: "#008c00", fontSize: "12px", borderRadius: "3px" }}>{content.rating.star} <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy45NC00LjI2LTMuMjEtMi44ODMgNC4yNTQtLjQwNEw2LjUuMTEybDEuNjkgNC4wMSA0LjI1NC40MDQtMy4yMSAyLjg4Mi45NCA0LjI2eiIvPjwvc3ZnPg==" className="Rza2QY my-auto" style={{ width: "12px" }} /></Typography>
-                    <Typography variant="span" className="text-muted mx-2 text-bold" style={{ fontSize: "15px" }}>{content.rating.rating} & {content.rating.reviews}</Typography>
+                    <Typography variant="span" className="px-2 py-1 border-rounded text-white text-bold" style={{ backgroundColor: "#008c00", fontSize: "12px", borderRadius: "3px" }}>{4.4} <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy45NC00LjI2LTMuMjEtMi44ODMgNC4yNTQtLjQwNEw2LjUuMTEybDEuNjkgNC4wMSA0LjI1NC40MDQtMy4yMSAyLjg4Mi45NCA0LjI2eiIvPjwvc3ZnPg==" className="Rza2QY my-auto" style={{ width: "12px" }} /></Typography>
+                    <Typography variant="span" className="text-muted mx-2 text-bold" style={{ fontSize: "15px" }}>{22} & {22}</Typography>
                 </Box>
 
 
                 <Typography style={{ color: "#388e3c", fontWeight: "bold" }}>Extra 40% Off</Typography>
                 <PriceComponent className="my-1">
-                    <Typography className="text-bold" style={{ fontSize: "25px" }}>{content.price[0]}</Typography>
-                    <Typography variant="span" className="text-muted">{content.price[1]}</Typography>
-                    <Typography variant="span" style={{ color: "#388e3c", fontWeight: "bold" }}> {content.price[2]}</Typography>
+                    <Typography className="text-bold" style={{ fontSize: "25px" }}>{content.price.sell_price}</Typography>
+                    <Typography variant="span" className="text-muted">{content.price.org_price}</Typography>
+                    <Typography variant="span" style={{ color: "#388e3c", fontWeight: "bold" }}> {content.price.discount}</Typography>
                 </PriceComponent>
                 <Typography className="">+ ₹59 Secured Packaging Fee</Typography>
-                {/* <Box className="my-2">
-                    <Typography style={{ fontWeight: "550" }}>Coupons for you</Typography>
-                    <Box className="my-2">
-                        <Typography><StyledBadge /><StyledTypography variant="span">Special Price </StyledTypography> 5% Unlimited Cashback on Flipkart Axis Bank Credit Card</Typography>
-                    </Box>
-                </Box> */}
+                
                 <Box className="my-2">
                     <Typography style={{ fontWeight: "550" }}>Available offers</Typography>
 
@@ -249,12 +247,12 @@ export default function ProductDetails({ content }) {
 
                                 <List style={{ listStyleType: "circle" }} className="gap-1">
                                     {
-                                        content.config.map((item, idx) => {
-                                            return (<ListItem key={idx} className="pt-0" >
-                                                <ListStyleCircle>{item}</ListStyleCircle>
+                                        // content.config.map((item, idx) => {
+                                        //     return (<ListItem key={idx} className="pt-0" >
+                                        //         <ListStyleCircle>{item}</ListStyleCircle>
 
-                                            </ListItem>)
-                                        })
+                                        //     </ListItem>)
+                                        // })
 
                                     }
                                 </List>
@@ -493,8 +491,11 @@ export default function ProductDetails({ content }) {
 
                 </Box>
 
+               
+
 
             </RightComponent>
         </>
+
     )
 }

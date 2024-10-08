@@ -113,7 +113,7 @@ export const Cart = () => {
     return (
         <>
             <CardWrapper className="mt-3">
-                <Grid container lg={12} >
+                <Grid container  >
                     <LeftComponent item lg={8} md={8}  >
                         <Box className="p-3 d-flex bg-white justify-content-space-between align-items-center" style={{ height: "60px" }}>
                             <Typography style={{ fontSize: "14px" }}>From Saved Address</Typography>
@@ -193,7 +193,7 @@ export const Cart = () => {
                             }
                         </Box>
                         <PlaceOrder className="w-100 bg-white d-flex p-4">
-                            <ButtonStyle variant="contained" size="large" ><Link component={RouterLink} to={"/checkout"} className="text-white"> PLACE ORDER </Link></ButtonStyle>
+                            <ButtonStyle variant="contained" size="large" ><Link component={RouterLink} className="text-white"> PLACE ORDER </Link></ButtonStyle>
                         </PlaceOrder>
                     </LeftComponent>
                     <RightComponent item lg={3.5} md={3.5} >

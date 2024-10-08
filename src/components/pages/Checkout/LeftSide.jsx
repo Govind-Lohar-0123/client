@@ -71,7 +71,7 @@ export default function LeftSide() {
                          {/* <Typography component="span" style={{ fontSize: "1.1rem" }} className="text-bold text-white">LOGIN OR SIGNUP</Typography> */}
                         <Box className="d-flex justify-content-space-between w-100 ">
                             <Box>
-                                <Typography className="text-muted text-bold">Login <svg height="20" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="_3rrek0"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" stroke="#2974f0"></path></svg></Typography>
+                                <Typography className="text-muted text-bold">Login <svg height="20" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" ><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" stroke="#2974f0"></path></svg></Typography>
                                 <Typography style={{fontSize:"14px"}} className="my-1"><Typography variant="span" className="text-dark text-bold " >Govind Lohar</Typography> +9109024482</Typography>
                             </Box>
                             <Button variant="outlined" className=" text-bold mt-1" style={{height:"40px",width:"18%"}} ><Link to="" component={routerLink} > CHANGE </Link></Button>

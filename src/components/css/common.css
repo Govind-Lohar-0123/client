@@ -4,7 +4,10 @@
     box-sizing: border-box;
     font-family: Inter, -apple-system, Helvetica, Arial, sans-serif !important;
 }
-
+.active{
+    background-color: red!important;
+    border-radius:100px!important;
+}
 header{
     box-shadow: none!important;
 }
@@ -133,7 +136,22 @@ body{
 }
 
 
+/* Shrink wrap strategy 1 */
+.easyzoom {
+    float: left;
+}
+.easyzoom img {
+    display: block;
+}
 
+
+/* Shrink wrap strategy 2 */
+.easyzoom {
+    display: inline-block;
+}
+.easyzoom img {
+    vertical-align: bottom;
+}
 
 
 

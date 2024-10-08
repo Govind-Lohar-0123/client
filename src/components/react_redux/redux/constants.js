@@ -17,4 +17,5 @@ export const GET_PRODUCTS_BY_ID_SUCCESS = "getProductsById";
 export const GET_PRODUCTS_BY_ID_FAILED = "getProductsByIdFailed";
 export const USER_REGISTER = "userRegister";
 export const USER_LOGIN = "userLogin";
+export const GET_PRODUCT_BY_LIMIT = "getProductsByLimit";
 

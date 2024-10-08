@@ -24,16 +24,7 @@ const ButtonStyle = styled(Button)(({ theme }) => ({
    
    
 }))
-const PlaceOrder = styled(Button)(({ theme }) => ({
-   justifyContent:"flex-end",
-   position: "sticky",
-    top: "64px",
-    bottom:" 0",
-   height:"100px",
-   boxShadow:"0 -2px 10px 0 rgba(0, 0, 0, .1)"
 
-   
-}))
 
  
 
@@ -53,7 +44,7 @@ const RightComponent=styled(Grid)(({theme})=>({
     return (
         <>
             <CardWrapper>
-                <Grid container lg={12} >
+                <Grid container  >
                     <LeftComponent item lg={8} md={8}  >
                         <LeftSide/>
                     </LeftComponent>

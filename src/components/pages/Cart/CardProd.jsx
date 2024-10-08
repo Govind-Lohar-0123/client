@@ -1,9 +1,9 @@
 
 import { Box, Grid, styled, Typography, Button } from "@mui/material";
 import ExtendedCart from "./Extended";
-
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllCarts, removeFromCart } from "../../react_redux/redux/actions/cartAction";
+import { removeFromCart } from "../../react_redux/redux/actions/cartAction";
 
 const Wrapper = styled(Box)(({ theme }) => ({
 
@@ -38,14 +38,15 @@ const StyledBox = styled(Box)(({ theme }) => ({
 
 export default function CardProd({ value, idx }) {
     const { prod, showWar } = value;
+    const [prodQuantity, setProdQuantity] = useState(1);
     const { url, content } = prod;
     const dispatch = useDispatch();
-    
 
+   
     return (
         <>
             <Wrapper className="my-3">
-                <Grid container lg={12} style={{ height: "150px", }} >
+                <Grid container  style={{ height: "150px", }} >
                     <Grid item lg={2} md={3} sm={4} >
                         <Box className=" w-75 text-center  mx-auto" style={{ height: "90%" }}>
                             <img src={url} className="d-block w-100 h-100 "></img>
@@ -55,14 +56,14 @@ export default function CardProd({ value, idx }) {
                         <Box >
                             <Box className="d-flex">
                                 <Typography component="span">{content.title}</Typography>
-                                <Typography component="span" className="" style={{ marginLeft: "auto", marginRight: "5rem", fontSize: ".9rem" }}>Delivery by Mon Jul 8 | <Typography className="text-muted" component="span">{content.price[3]}</Typography></Typography>
+                                <Typography component="span" className="" style={{ marginLeft: "auto", marginRight: "5rem", fontSize: ".9rem" }}>Delivery by Mon Jul 8 | <Typography className="text-muted mx-2" component="span">{"Free "}</Typography></Typography>
                             </Box>
-                            <Typography component="span" className="mt-1 text-muted" style={{ fontSize: ".9rem" }}>{content.config[0]}</Typography>
+                            {/* <Typography component="span" className="mt-1 text-muted" style={{ fontSize: ".9rem" }}>{content.other[0]}</Typography> */}
                             <Typography className="my-3 text-muted" style={{ fontSize: ".9rem" }}>Seller:Truenet Commerce</Typography>
                             <Box className="my-3">
-                                <Typography component="span" className="text-muted" style={{ fontSize: "1rem" }}><del>{content.price[1]}</del></Typography>
-                                <Typography component="span" className="mx-3 text-bold" style={{ fontSize: "1.2rem", }}>{content.price[0]}</Typography>
-                                <Typography component="small" className="text-bold" style={{ fontSize: ".9rem", color: "rgb(17, 138, 17)" }}>{content.price[2]}</Typography>
+                                <Typography component="span" className="text-muted" style={{ fontSize: "1rem" }}><del>{content.price.org_price}</del></Typography>
+                                <Typography component="span" className="mx-3 text-bold" style={{ fontSize: "1.2rem", }}>{content.price.sell_price}</Typography>
+                                <Typography component="small" className="text-bold" style={{ fontSize: ".9rem", color: "rgb(17, 138, 17)" }}>{content.price.discount}</Typography>
                             </Box>
 
                         </Box>
@@ -75,9 +76,9 @@ export default function CardProd({ value, idx }) {
 
                 <StyledBox>
                     <Incre_Decre >
-                        <Button variant="text" >-</Button>
-                        <Button variant="text" className="mx-2" style={{ borderRadius: "0", minWidth: "50px" }}>1</Button>
-                        <Button variant="text" >+</Button>
+                        <Button variant="text" onClick={() => setProdQuantity((prodQuantity > 1) ? prodQuantity - 1 : 1)}>-</Button>
+                        <Button variant="text" className="mx-2" style={{ borderRadius: "0", minWidth: "50px" }}>{prodQuantity}</Button>
+                        <Button variant="text" onClick={() => setProdQuantity((prodQuantity < 10) ? prodQuantity + 1 : 10)}>+</Button>
                     </Incre_Decre>
                     <Box >
                         <Typography component="span" className="text-bold">SAVE FOR LATER</Typography>

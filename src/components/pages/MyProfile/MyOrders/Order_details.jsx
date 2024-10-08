@@ -85,11 +85,11 @@ export default function OrderDetails() {
                         <Box className=" text-muted mt-3" style={{ fontSize: "12px" }} >
                             <List className="d-flex align-item-center gap-3 p-0 m-0" style={{ justifyContent: "flex-start" }}>
                                 <ListItem className="px-0 py-0 w-auto" ><Link to="/" component={routerLink} style={{ color: "#878787" }}>Home</Link></ListItem>
-                                <ListItem className="px-0  py-0 w-auto"><Link style={{ color: "#878787", transform: "rotate(180deg)", }}><svg width="5" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="sfneHK"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="wMLTcO"></path></svg></Link></ListItem>
+                                <ListItem className="px-0  py-0 w-auto"><Link style={{ color: "#878787", transform: "rotate(180deg)", }}><svg width="5" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" ><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" ></path></svg></Link></ListItem>
                                 <ListItem className="px-0 py-0 w-auto" ><Link to="/account" component={routerLink} style={{ color: "#878787" }}>My Account</Link></ListItem>
-                                <ListItem className="px-0  py-0 w-auto"><Link style={{ color: "#878787", transform: "rotate(180deg)", }}><svg width="5" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="sfneHK"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="wMLTcO"></path></svg></Link></ListItem>
+                                <ListItem className="px-0  py-0 w-auto"><Link style={{ color: "#878787", transform: "rotate(180deg)", }}><svg width="5" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" ><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" ></path></svg></Link></ListItem>
                                 <ListItem className="px-0 py-0 w-auto" ><Link to="/account/orders" component={routerLink} style={{ color: "#878787" }}>My Orders</Link></ListItem>
-                                <ListItem className="px-0  py-0 w-auto"><Link style={{ color: "#878787", transform: "rotate(180deg)", }}><svg width="5" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="sfneHK"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="wMLTcO"></path></svg></Link></ListItem>
+                                <ListItem className="px-0  py-0 w-auto"><Link style={{ color: "#878787", transform: "rotate(180deg)", }}><svg width="5" height="10" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" ><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" ></path></svg></Link></ListItem>
                                 <ListItem className="px-0 py-0 w-auto" ><Link style={{ color: "#878787" }}>OD331415795331962300</Link></ListItem>
 
 
@@ -110,7 +110,7 @@ export default function OrderDetails() {
                     <Typography className="text-bold" style={{ fontSize: "15px" }}>Your Rewards</Typography>
                     <Box className="d-flex gap-3 align-item-center my-4" >
                         <Link >
-                            <img style={{ display: "flex", width: "24px", height: "24px" }} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/lockinEarlyAccess_e0bd6e.png" class="MhlkkO"></img>
+                            <img style={{ display: "flex", width: "24px", height: "24px" }} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/lockinEarlyAccess_e0bd6e.png" ></img>
                         </Link>
                         <Link to="/supercoins" component={routerLink} className="text-dark">
                             <Box >
@@ -174,7 +174,7 @@ export default function OrderDetails() {
                                                         </Box>
                                                     </Fade>
                                                 </Modal>
-                                                <img style={{ height: "16px" }} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/lockinCoinNew_79b3fb.svg" class="ceA9lv" />
+                                                <img style={{ height: "16px" }} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/lockinCoinNew_79b3fb.svg"  />
 
                                             </Box>
                                             <span>15</span>
@@ -230,13 +230,13 @@ export default function OrderDetails() {
                                     </Box>
                                     <Box>
                                         <Link className="d-flex align-item-center gap-2">
-                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTknIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPgoJPGcgZmlsbD0nbm9uZSc+CgkJPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjMjg3NEYxIiBwb2ludHM9IjkgMTIuMDYyNSAxMy42Mzc1IDE1LjQzNzUgMTEuODYyNSA5Ljk4NzUgMTYuNSA2LjY4NzUgMTAuODEyNSA2LjY4NzUgOSAxLjA2MjUgNy4xODc1IDYuNjg3NSAxLjUgNi42ODc1IDYuMTM3NSA5Ljk4NzUgNC4zNjI1IDE1LjQzNzUiIC8+CgkJPHBvbHlnb24gaWQ9IlNoYXBlIiBwb2ludHM9IjAgMCAxOCAwIDE4IDE4IDAgMTgiIC8+Cgk8L2c+Cjwvc3ZnPg==" class="r68OKG col-1-5" />
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTknIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPgoJPGcgZmlsbD0nbm9uZSc+CgkJPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjMjg3NEYxIiBwb2ludHM9IjkgMTIuMDYyNSAxMy42Mzc1IDE1LjQzNzUgMTEuODYyNSA5Ljk4NzUgMTYuNSA2LjY4NzUgMTAuODEyNSA2LjY4NzUgOSAxLjA2MjUgNy4xODc1IDYuNjg3NSAxLjUgNi42ODc1IDYuMTM3NSA5Ljk4NzUgNC4zNjI1IDE1LjQzNzUiIC8+CgkJPHBvbHlnb24gaWQ9IlNoYXBlIiBwb2ludHM9IjAgMCAxOCAwIDE4IDE4IDAgMTgiIC8+Cgk8L2c+Cjwvc3ZnPg=="  />
                                             <Typography style={{ fontSize: "13px", color: "#2874f0" }} className="text-bold">Rate &amp; Review Product</Typography>
 
                                         </Link>
 
                                         <Link className="d-flex align-item-center gap-2 my-2">
-                                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/chatWithUs_69d373.svg" class="r68OKG col-1-5" />
+                                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/chatWithUs_69d373.svg"  />
 
                                             <Typography style={{ fontSize: "13px", color: "#2874f0" }} className="text-bold"> Chat with us</Typography>
                                         </Link>

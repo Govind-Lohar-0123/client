@@ -14,11 +14,6 @@ const StyledCarousel = styled(Box)(({ theme }) => ({
         }
     }
 }))
-const MidCard = styled(Carousel)(({ theme }) => ({
-    "div": {
-        height: "100% !important",
-    }
-}))
 
 const responsive = {
 
@@ -35,29 +30,30 @@ const responsive = {
         items: 1
     }
 };
-const SlideContainer = styled(Box)`
-   
-    min-width:30% !important;
-    
+const SlideContainer = styled(Box)(({ theme }) => ({
 
-`
-const GridComponent = styled(Grid)(({ theme }) => ({
-
+    height: "100%",
 }))
 
 
 
-const Slide3 = ({ prod, time }) => {
 
+
+
+
+
+
+const Slide3 = ({ prods, time, title }) => {
+   
 
 
     return (
 
         <>
             <SlideContainer className=" bg-white  ">
-                <Box className="w-100"><ProductTitle data={{ title: prod.category, time }} /></Box>
-
-                <StyledCarousel className="px-2">
+                <ProductTitle data={{ title, time }} />
+                {/* <Divider className="text-dark"/> */}
+                <StyledCarousel className="px-2 " >
                     <Carousel
                         responsive={responsive} dotListClass="custom-dot-list-style"
                         itemClass="carousel-item-padding-40-px" swipeable={false}
@@ -70,11 +66,11 @@ const Slide3 = ({ prod, time }) => {
                         keyBoardControl={true}
                     >
 
-                        <Grid container lg={12} md={12} spacing={1}>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={1} prod={prod.prods[1]} /></Grid>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={2} prod={prod.prods[0]} /></Grid>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={3} prod={prod.prods[0]} /></Grid>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={4} prod={prod.prods[1]} /></Grid>
+                        <Grid container spacing={1}>
+                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={1} prod={prods[1]} /></Grid>
+                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={2} prod={prods[0]} /></Grid>
+                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={3} prod={prods[0]} /></Grid>
+                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={4} prod={prods[1]} /></Grid>
                         </Grid>
 
 

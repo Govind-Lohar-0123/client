@@ -6,7 +6,7 @@ export default function Login() {
         <>
 
             <Box style={{ margin: "1.5rem 3rem" }} className="d-none">
-                <Grid container lg={12} md={12}>
+                <Grid container >
                     <Grid item lg={5} md={12}>
                         <Box>
                             <TextField id="standard-basic" className="w-100 text-bold text-muted" style={{ fontSize: "1.2rem" }} label="Enter Email/Mobile number" variant="standard" />

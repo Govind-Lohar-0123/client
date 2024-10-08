@@ -46,21 +46,21 @@ export default function WishlistCard() {
             <Box style={{height:"150px"}}>
                 <hr className="w-100" />
                 <Box >
-                    <Grid container lg={12}>
-                        <Grid lg={2} className="">
+                    <Grid container >
+                        <Grid item lg={2} className="">
                             <Box className=" w-100 p-2" style={{ height: "40%", verticalAlign: "center" }}>
                                 <Link className="w-100 h-100"><Image src="https://rukminim2.flixcart.com/image/312/312/xif0q/refrigerator-new/c/0/q/-original-imagyzrfxesmgjdq.jpeg?q=70" alt="" /></Link>
 
                             </Box>
 
                         </Grid>
-                        <Grid lg={10}>
+                        <Grid item lg={10}>
                             <Box>
                                 <Box className="d-flex w-100 justify-content-space-between">
 
                                     <Typography className="" style={{ fontSize: "15px", width: "80%" }} > IFB 187 L Direct Cool Single Door 2 Star Refrigerator  with Powered by E-Tech,with Extraordinary Stora...</Typography>
                                     <Link >
-                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEyIDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0xLjUuNWgxNXYxNWgtMTV6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0iI0MyQzJDMiIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMSAxMy44MzNjMCAuOTE3Ljc1IDEuNjY3IDEuNjY3IDEuNjY3aDYuNjY2Yy45MTcgMCAxLjY2Ny0uNzUgMS42NjctMS42Njd2LTEwSDF2MTB6bTEwLjgzMy0xMi41SDguOTE3TDguMDgzLjVIMy45MTdsLS44MzQuODMzSC4xNjdWM2gxMS42NjZWMS4zMzN6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" class="Mj62aK"></img>
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEyIDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0xLjUuNWgxNXYxNWgtMTV6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0iI0MyQzJDMiIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMSAxMy44MzNjMCAuOTE3Ljc1IDEuNjY3IDEuNjY3IDEuNjY3aDYuNjY2Yy45MTcgMCAxLjY2Ny0uNzUgMS42NjctMS42Njd2LTEwSDF2MTB6bTEwLjgzMy0xMi41SDguOTE3TDguMDgzLjVIMy45MTdsLS44MzQuODMzSC4xNjdWM2gxMS42NjZWMS4zMzN6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" ></img>
                                     </Link>
                                 </Box>
                                 <Box className="">

@@ -72,35 +72,13 @@ export const imageURL = [
     "https://rukminim1.flixcart.com/fk-p-flap/1000/170/image/bc4de135c7ee66ba.jpeg?q=90",
     "https://rukminim1.flixcart.com/fk-p-flap/1000/170/image/c8d9321bd85bb053.jpg?q=90",
     "https://rukminim1.flixcart.com/fk-p-flap/1000/170/image/918146cedcbab5c3.jpeg?q=90",
-    // "https://rukminim1.flixcart.com/fk-p-flap/1000/170/image/e3643f4ecf26b682.jpg?q=90",
-    // "https://rukminim1.flixcart.com/fk-p-flap/320/170/image/1a6ccb003d9a7b3d.jpg?q=90",
-    // "https://rukminim1.flixcart.com/fk-p-flap/320/170/image/e5cac70efd92ae9a.png?q=90",
-    // "https://rukminim1.flixcart.com/fk-p-flap/320/170/image/83aefeef8cd78687.jpg?q=90",
-    // "https://rukminim1.flixcart.com/fk-p-flap/170/170/image/5aa98b7cee183286.jpg?q=90",
-    // "https://rukminim1.flixcart.com/fk-p-flap/320/170/image/9d2cf3d5ba43e6d3.jpg?q=90",
-    // "https://rukminim1.flixcart.com/fk-p-flap/320/170/image/9a0850069d0546cc.jpg?q=90",
-    // "https://rukminim1.flixcart.com/fk-p-flap/320/170/image/984e04f853c6d984.jpg?q=90",
+
 ]
 
 
 
 
 
-const feature = [{ 'featureTitle': 'Brand', 'featureList': ['SAFARI', 'ARISTOCRAT', 'SKYBAGS', 'NASHER MILES', 'AMERICAN TOURISTER', 'Kamiliant by American Tourister'] },
-{ 'featureTitle': 'Gender', 'featureList': [] },
-{ 'featureTitle': 'Discount', 'featureList': [] },
-{ 'featureTitle': 'Body Type', 'featureList': [] },
-{ 'featureTitle': 'Type', 'featureList': [] },
-{ 'featureTitle': 'Wheels', 'featureList': [] },
-{ 'featureTitle': 'Color', 'featureList': [] },
-{ 'featureTitle': 'Customer Ratings', 'featureList': ['4★ & above', '3★ & above', '2★ & above', '1★ & above'] },
-{ 'featureTitle': 'Offers', 'featureList': ['Buy More, Save More', 'No Cost EMI', 'Special Price'] },
-{ 'featureTitle': 'Availability', 'featureList': [] },
-{ 'featureTitle': 'Bag Size', 'featureList': [] },
-{ 'featureTitle': 'Pack of', 'featureList': [] },
-{ 'featureTitle': 'Collections', 'featureList': [] },
-{ 'featureTitle': 'New Arrivals', 'featureList': [] },
-]
 export const mobile_feature = [{ 'featureTitle': 'Brand', 'featureList': ['POCO'] },
 { 'featureTitle': 'Customer Ratings', 'featureList': ['4★ & above', '3★ & above'] },
 { 'featureTitle': 'GST Invoice Available', 'featureList': ["GST Invoice Available"] },
@@ -142,7 +120,7 @@ export const mobile_feature = [{ 'featureTitle': 'Brand', 'featureList': ['POCO'
 { 'featureTitle': 'Discount', 'featureList': ['40% or more', '30% or more', '20% or more', '10% or more', '50% or more'] },
 { 'featureTitle': 'Clock Speed', 'featureList': ["2.2 - 2.4 GHz"] },
 ]
-const arr = ["Electronics", "TVs & Appliances", "Men", "Women", "Baby & Kids", "Home & Furniture", "Sports, Books & More", "Flights", "Offer Zone"]
+
 
 const list = [
     ["MiRealme", "Samsung", "Infinix", "Infinix", " OPPO", "Apple", "Vivo", "Honor", "Asus", "Poco X2", "realme Narzo 10", "Infinix Hot 9", "IQOO 3", "iPhone SE", " Motorola razr", "realme Narzo 10A", "Motorola g8 power lite"],
@@ -213,3 +191,21 @@ export const moreProd = [
     { title: "Flights", list },
     { title: "Offer Zone", list }
 ]
+
+export const carouselImg = [
+    { url: "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/d/h/q/m6-pro-5g-mzb0eprin-poco-original-imags3e7vewsafst.jpeg?q=70&amp;crop=false" },
+    { url: "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/r/m/y/m6-pro-5g-mzb0eprin-poco-original-imags3e7d2ezqgsr.jpeg?q=70&crop=false" },
+    { url: "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/k/0/4/m6-pro-5g-mzb0eprin-poco-original-imags3e7hpd5t7hq.jpeg?q=70&amp;crop=false" },
+    { url: "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/a/h/w/-original-imags5yc5hgkscbr.jpeg?q=70&amp;crop=false" },
+    { url: "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/r/q/l/m6-pro-5g-mzb0eprin-poco-original-imags3e7zrygy3hh.jpeg?q=70&amp;crop=false" },
+    { url: "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/w/n/6/m6-pro-5g-mzb0eprin-poco-original-imags3e7vqgz7ufv.jpeg?q=70&amp;crop=false" },
+    { url: "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/x/0/1/m6-pro-5g-mzb0eprin-poco-original-imags3e7ey5mq6gx.jpeg?q=70&amp;crop=false" },
+    { url: "https://rukminim2.flixcart.com/image/128/128/xif0q/mobile/y/k/n/m6-pro-5g-mzb0eprin-poco-original-imags3e7nhhu7zgz.jpeg?q=70&amp;crop=false" },
+
+
+]
+
+
+
+
+

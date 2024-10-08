@@ -1,13 +1,15 @@
 import * as actionType from "../constants";
 import axios from "axios";
 
-export const addToDB = (prod) => async (disptach) => {
+export const addToCart = (prod) => async (disptach) => {
+
     try {
         const response = await axios({
             method: 'post',
-            url: "https://clone-backend-f9y5.onrender.com/cart-api/add-to-cart",
+            url: "http://localhost:8000/cart-api/add-to-cart",
             data: { prod: prod }
         });
+
     }
     catch (err) { }
     window.location.href = "/view-carts";
@@ -29,11 +31,11 @@ export const getAllCarts = () => async (disptach) => {
     }
 }
 export const removeFromCart = (prod_id) => (disptach) => {
-    console.log(prod_id)
+
     try {
         const response = axios({
             method: 'delete',
-            url: `https://clone-backend-f9y5.onrender.com/cart-api/remove-from-cart/${prod_id}`,
+            url: `http://localhost:8000/cart-api/remove-from-cart/${prod_id}`,
 
         });
 

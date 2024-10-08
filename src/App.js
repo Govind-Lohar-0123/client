@@ -35,11 +35,13 @@ import Terms from "./components/pages/MyProfile/Account/Terms.jsx";
 
 import { getToken } from "./components/pages/MyProfile/auth/tokenAction.js";
 import Login_Register from "./components/pages/MyProfile/auth/Login_Register.jsx";
+import VideoDetails from "./components/pages/YouTube/VideosDetails/VideoDetails.jsx";
+import YoutubeLayout from "./components/pages/YouTube/partials/YoutubeLayout.jsx";
 
 
 function App() {
   const token = getToken();
- 
+
   return (
 
     <Provider store={store}>
@@ -54,9 +56,11 @@ function App() {
               <Route path="helpcentre" element={<HelpCare />} />
               <Route path="download-app" element={<DownloadApp />} />
               <Route path="communication-preferences" element={<Notifi_Preffrence />} />
-              <Route path="detail-view/:cat_id/:prod_id" element={<DetailView />} />
-              <Route path="filter-product/:cat_id" element={<FilterProduct />} />
+              <Route path="detail-view/:prod_id" element={<DetailView />} />
+              <Route path="filter-product/:prod_title" element={<FilterProduct />} />
               <Route path="the-gift-card-store/:link" element={<GiftCardStore />} />
+
+
             </Route>
 
 
@@ -65,6 +69,9 @@ function App() {
               <Route path="/view-carts" element={<Cart />} />
               <Route path="order_details/:order_id" element={<OrderDetails />} />
 
+            </Route>
+            <Route path="/" element={<YoutubeLayout />}>
+              <Route path="detail-video" element={<VideoDetails />} />
             </Route>
 
             <Route path="/account" element={<Layout />}>

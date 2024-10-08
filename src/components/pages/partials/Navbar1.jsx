@@ -76,11 +76,7 @@ const Logo = styled(Box)(({ theme }) => ({
 const StyledSearchBox = styled(Box)(({ theme }) => ({
     width: "100%",
     [theme.breakpoints.down("md")]: {
-        position: "absolute",
-        top: 87,
-        width: "90%",
-        right: 27,
-
+     display:"none "
     }
 
 }))
@@ -91,9 +87,7 @@ const StyledSearchBox = styled(Box)(({ theme }) => ({
 
 export default function Navbar() {
 
-    const logoURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png';
-    const subURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png';
-
+    
 
 
     return (<>
@@ -103,7 +97,7 @@ export default function Navbar() {
                 <Logo>
                     <Image src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" width="160" height="40" title="Flipkart" />
                 </Logo>
-                <StyledSearchBox>
+                <StyledSearchBox className="">
                     <SearchBox />
                 </StyledSearchBox>
             </LeftComponent>

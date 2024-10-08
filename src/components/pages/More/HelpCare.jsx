@@ -56,7 +56,7 @@ export default function HelpCare() {
 
                 <Component className="mx-auto">
 
-                    <Grid container lg={12} className=" mt-2">
+                    <Grid container  className=" mt-2">
                         <Grid item lg={3} className="" style={{ backgroundColor: "rgb(255, 255, 255)" }}>
                             <Box >
                                 <ListStyle className="mb-2" style={{ padding: "22px 16px 0 32px" }}>

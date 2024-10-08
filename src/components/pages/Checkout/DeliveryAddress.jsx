@@ -33,7 +33,7 @@ export default function DeliveryAddress() {
                         <Typography className=" text-primary text-bold" style={{ fontSize: ".9rem" }}>ADD A NEW ADDRESS</Typography>
                       
                         <Button variant="contained" size="large" className="bg-primary my-4" style={{ textTransform: "none", fontSize: ".9rem", fontWeight: "bold", height: "45px" }}><Link component={routerLink} className="text-white" > Use my current location </Link></Button>
-                        <Grid container lg={12}>
+                        <Grid container >
                             <Grid item lg={5.8}>
                                 <TextField
                                     id="outlined-password-input"
@@ -76,7 +76,7 @@ export default function DeliveryAddress() {
                             type="text"
                             autoComplete="current-password"
                         />
-                        <Grid container lg={12} className="my-3">
+                        <Grid container  className="my-3">
                             <Grid item lg={5.8}>
                                 <TextField
                                     id="outlined-password-input"

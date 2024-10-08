@@ -63,7 +63,7 @@ export default function PanCard() {
 
                 <Component className="mt-4">
 
-                    <Grid container lg={12}>
+                    <Grid container >
                         <Grid item lg={3} >
                             <Dashboard />
                         </Grid>

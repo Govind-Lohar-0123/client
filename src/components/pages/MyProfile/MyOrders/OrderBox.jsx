@@ -26,17 +26,17 @@ export default function OrderBox() {
                                         <Box className="mt-2" style={{
                                             color: " #878787",
                                             fontSize: "12px"
-                                        }}><span class="">•</span><span className="mx-2">9xxxxx1239</span></Box>
+                                        }}><span >•</span><span className="mx-2">9xxxxx1239</span></Box>
                                     </Box>
                                 </Box>
                             </Grid>
                             <Grid item lg={4} style={{ marginInline: "auto" }}>
                                 <Box className="d-flex justify-content-space-between " style={{ alignItems: "flex-start", marginBottom: "8px" }}>
-                                    <Box class="d-flex align-item-center gap-2">
+                                    <Box className="d-flex align-item-center gap-2">
                                         <span style={{ fontSize: "14px" }}>₹140</span>
                                         <Box className="d-flex align-item-center">
                                             <span> + </span>
-                                            <img style={{ height: "16px" }} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/lockinCoinNew_79b3fb.svg" class="ceA9lv" />
+                                            <img style={{ height: "16px" }} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/lockinCoinNew_79b3fb.svg"  />
 
                                         </Box>
                                         <span style={{ fontSize: "14px" }}>15</span>
@@ -49,7 +49,7 @@ export default function OrderBox() {
                                         <Typography style={{ fontSize: "12px" }}>Your recharge is successful</Typography>
 
                                         <Link className="d-flex align-item-center gap-2">
-                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTknIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPgoJPGcgZmlsbD0nbm9uZSc+CgkJPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjMjg3NEYxIiBwb2ludHM9IjkgMTIuMDYyNSAxMy42Mzc1IDE1LjQzNzUgMTEuODYyNSA5Ljk4NzUgMTYuNSA2LjY4NzUgMTAuODEyNSA2LjY4NzUgOSAxLjA2MjUgNy4xODc1IDYuNjg3NSAxLjUgNi42ODc1IDYuMTM3NSA5Ljk4NzUgNC4zNjI1IDE1LjQzNzUiIC8+CgkJPHBvbHlnb24gaWQ9IlNoYXBlIiBwb2ludHM9IjAgMCAxOCAwIDE4IDE4IDAgMTgiIC8+Cgk8L2c+Cjwvc3ZnPg==" class="r68OKG col-1-5" />
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTYnIGhlaWdodD0nMTknIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTggMTgiPgoJPGcgZmlsbD0nbm9uZSc+CgkJPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjMjg3NEYxIiBwb2ludHM9IjkgMTIuMDYyNSAxMy42Mzc1IDE1LjQzNzUgMTEuODYyNSA5Ljk4NzUgMTYuNSA2LjY4NzUgMTAuODEyNSA2LjY4NzUgOSAxLjA2MjUgNy4xODc1IDYuNjg3NSAxLjUgNi42ODc1IDYuMTM3NSA5Ljk4NzUgNC4zNjI1IDE1LjQzNzUiIC8+CgkJPHBvbHlnb24gaWQ9IlNoYXBlIiBwb2ludHM9IjAgMCAxOCAwIDE4IDE4IDAgMTgiIC8+Cgk8L2c+Cjwvc3ZnPg=="  />
                                             <Typography style={{ fontSize: "13px", color: "#2874f0" }} className="text-bold">Rate &amp; Review Product</Typography>
                                         </Link>
 

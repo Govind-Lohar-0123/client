@@ -33,10 +33,10 @@ export default function ExtendedCart({ prod }) {
         <>
             <Wrapper className="mt-4">
                 <Typography style={{fontSize:"1.2rem",fontWeight:"550"}}  >Extended Warranty</Typography>
-                <Grid container lg={12} className="mt-3">
+                <Grid container  className="mt-3">
                     <Grid item lg={2} md={3} sm={4}  >
                         <Box className=" w-75 text-center h-50 mt-2 " style={{ height: "80%" }}>
-                        <img loading="lazy"  class="d-block h-100 w-100" alt="" src="https://rukminim2.flixcart.com/image/144/144/kex5ci80/digital-combo/a/h/z/1-online-transaction-frauds-on-all-bank-accounts-credit-debit-original-imafvg2rkfrqhpzr.jpeg?q=90"/>
+                        <img loading="lazy"  className="d-block h-100 w-100" alt="" src="https://rukminim2.flixcart.com/image/144/144/kex5ci80/digital-combo/a/h/z/1-online-transaction-frauds-on-all-bank-accounts-credit-debit-original-imafvg2rkfrqhpzr.jpeg?q=90"/>
                         </Box>
                     </Grid>
                     <Grid item lg={9.8} md={9} sm={8} style={{marginLeft:"auto"}}>

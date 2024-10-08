@@ -145,16 +145,16 @@ export default function Login_Register() {
             <Box className=" h-100 w-100" >
                 {(account == true) ?
                     <Box className="d-flex flex-direction-column h-100 justify-content-space-between" >
-                        <Box className="mt-2">
+                        <Box className="mt-5">
                             {(result.type == true) ? <div className="mx-5 alert alert-primary">{result.msg}</div> : ""}
                             <FormControl className="w-100 px-5"  >
-                                <TextField variant="standard" className="w-100" defaultValue={signData.email} onChange={loginInputHandle} name="email" label="Enter Email/Mobile Number" />
+                                <TextField variant="standard" className="w-100" defaultValue={signData.email} onChange={loginInputHandle} name="email" label="Enter Email" />
                                 <TextField variant="standard" className=" w-100 my-3" defaultValue={signData.password} onChange={loginInputHandle} name="password" label="Enter Password" />
                                 <Typography className="text-danger text-bold mt-1" style={{ fontSize: "11px" }}>{(result.status) ? result.msg : ""}</Typography>
                                 <Typography className="mb-3 text-muted  mt-4" style={{ fontSize: "12px" }}>
                                     By continuing, you agree to Flipkart's <span className="text-primary">Terms of Use</span> and <span className="text-primary">Privacy Policy.</span>
                                 </Typography>
-                                <LoginBtn variant="contained" className="w-100  py-3" onClick={loginHandle}>Request OTP</LoginBtn>
+                                <LoginBtn variant="contained" className="w-100  py-3" onClick={loginHandle}>Login</LoginBtn>
                                 {/* <Typography style={{ fontSize: "1.2rem" }} className="my-3 text-center">OR</Typography>
                                 <RequestOTP variant="contained" >Request OTP</RequestOTP> */}
 

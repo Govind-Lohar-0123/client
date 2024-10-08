@@ -41,12 +41,12 @@ export default function PriceDetail() {
 
     const data = useSelector((state) => state.cart)
     let sum = 0;
-    for (let it of data.prods) {
+    // for (let it of data.prods) {
         
-        let price=it.content.price[0].replace(",","");
-        price=price.replace("₹","");
-        sum+=parseInt(price);
-    }
+    //     let price=it.content.price[0].replace(",","");
+    //     price=price.replace("₹","");
+    //     sum+=parseInt(price);
+    // }
 
     return (
         <>

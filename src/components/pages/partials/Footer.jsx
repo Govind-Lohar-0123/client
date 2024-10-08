@@ -15,11 +15,13 @@ const GridStyle = styled(Grid)(({ theme }) => ({
         fontSize: "12px",
         color: "#878787"
     },
-    ">div":{
-        
+    ">div": {
+
     }
     ,
-    "li": { color: "white" }
+
+    "li": { fontWeight: "700px", color: "white", cursor: "pointer" },
+
 }))
 
 const BottomCompoent = styled(Box)(({ theme }) => ({
@@ -49,30 +51,33 @@ export default function Footer() {
     return (
         <>
 
-            <StyledFooter className="  pt-3 pb-4 mt-5" style={{ backgroundColor: " #212121" }}>
+            <StyledFooter className="  pt-3 pb-4 mt-5 " style={{ backgroundColor: " #212121" }}>
                 <Box style={{ padding: "20px 0 5px 4rem" }}>
                     <GridStyle container lg={12} md={12} sm={12}  >
                         <Grid item lg={1} md={4} sm={4}>
                             <p className="text-secondary">ABOUT</p>
                             <ul>
-                                <li>Contact Us</li>
-                                <li>About Us</li>
-                                <li>Careers</li>
-                                <li>Flipkart Stories</li>
-                                <li>Press</li>
-                                <li>Corporate </li>
-                                <li>Information </li>
+                                <li ><a href="/helpcentre" className="text-white">Contact Us</a></li>
+                                <li ><a href="https://corporate.flipkart.net/corporate-home" className="text-white">About Us</a></li>
+                                <li ><a href="https://www.flipkartcareers.com/?otracker=${otracker}_navlinks#!/" className="text-white">Careers</a></li>
+                                <li ><a href="https://corporate.flipkart.net/corporate-home" className="text-white">Flipkart Stories</a></li>
+                                <li ><a href="https://www.flipkartcareers.com/?otracker=${otracker}_navlinks" className="text-white">Press</a></li>
+                                <li ><a href="http://stories.flipkart.com/" className="text-white">Corporate</a></li>
+                                <li ><a href="http://stories.flipkart.com/" className="text-white"> Information</a></li>
+
+
                             </ul>
 
 
                         </Grid>
-                        <Grid item lg={2} md={4} sm={4} style={{paddingLeft:"40px"}}>
+                        <Grid item lg={2} md={4} sm={4} style={{ paddingLeft: "40px" }}>
                             <p className="text-secondary">GROUP COMPANIES</p>
                             <ul>
-                                <li>Myntra</li>
-                                <li>Flipkart Wholesale</li>
-                                <li>Cleartrip</li>
-                                <li>Shopsy</li>
+                                <li ><a href="https://www.myntra.com/" className="text-white">Myntra</a></li>
+                                <li ><a href="https://www.cleartrip.com/" className="text-white">Flipkart Wholesale</a></li>
+                                <li ><a href="https://www.shopsy.in" className="text-white">Cleartrip</a></li>
+                                <li ><a href="https://www.shopsy.in" className="text-white">Shopsy</a></li>
+
 
                             </ul>
 
@@ -81,27 +86,30 @@ export default function Footer() {
                         <Grid item lg={1} md={4} sm={4}>
                             <p className="text-secondary">HELP</p>
                             <ul>
-                                <li>Payment</li>
-                                <li>Shipping</li>
-                                <li>Cancellation & Returns</li>
-                                <li>FAQ</li>
-                                <li>Report </li>
-                                <li>Infringement </li>
+                                <li ><a href="/pages/payments" className="text-white">Payment</a></li>
+                                <li ><a href="/pages/shipping" className="text-white">Shipping</a></li>
+                                <li ><a href="/helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG" className="text-white">Cancellation & Returns</a></li>
+                                <li ><a href="/helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG" className="text-white">FAQ</a></li>
+                                <li ><a href="https://seller.flipkart.com/fiv?otracker=${otracker}_navlinks" className="text-white">Report</a></li>
+                                <li ><a href="/helpcentre" className="text-white">Infringement</a></li>
+
+
 
                             </ul>
 
 
                         </Grid>
-                        <Grid item lg={2} md={4} sm={4} style={{paddingLeft:"40px"}}>
+                        <Grid item lg={2} md={4} sm={4} style={{ paddingLeft: "40px" }}>
                             <p className="text-secondary">CONSUMER POLICY</p>
                             <ul>
-                                <li>Cancellation & Returns</li>
-                                <li>Term Of Use</li>
-                                <li>Security</li>
-                                <li>Privacy</li>
-                                <li>Sitemap</li>
-                                <li>Grievance Redressal</li>
-                                <li>EPR Compliance</li>
+                                <li ><a href="/pages/returnpolicy?otracker=${otracker}_navlinks" className="text-white">Cancellation & Returns</a></li>
+                                <li ><a href="/pages/terms?otracker=${otracker}_navlinks" className="text-white">Term Of Use</a></li>
+                                <li ><a href="/pages/paymentsecurity?otracker=${otracker}_navlinks" className="text-white">Security</a></li>
+                                <li ><a href="/pages/privacypolicy?otracker=${otracker}_navlinks" className="text-white">Privacy</a></li>
+                                <li ><a href="/sitemap?otracker=${otracker}_navlinks" className="text-white">Sitemap</a></li>
+                                <li ><a href="/pages/grievance-redressal-mechanism?otracker=${otracker}_navlinks" className="text-white">Grievance Redressal</a></li>
+                                <li ><a href="/pages/ewaste-compliance-tnc?otracker=${otracker}_navlinks" className="text-white">EPR Compliance</a></li>
+
 
                             </ul>
 
@@ -114,13 +122,14 @@ export default function Footer() {
                         <Grid item lg={3} md={4} sm={4} style={{ borderLeft: "solid 2px rgb(124, 124, 124)", paddingLeft: "30px" }}>
                             <p className="text-secondary">Mail Us: </p>
                             <ul>
-                                <li>Flipkart Internet Private Limited,</li>
-                                <li>Buildings Alyssa,Begonia &</li>
-                                <li>Clove Embassy Tech Village,</li>
-                                <li>Outer Ring Road , Devarabeesabahalli Village,</li>
-                                <li>Bengaluru ,560103</li>
-                                <li>Karnataka,India</li>
-                                <li>EPR Compliance</li>
+                                <li ><a href="/helpcentre" className="text-white">lipkart Internet Private Limited,</a></li>
+                                <li ><a href="/helpcentre" className="text-white">Buildings Alyssa,Begonia &</a></li>
+                                <li ><a href="/helpcentre" className="text-white">Clove Embassy Tech Village,</a></li>
+                                <li ><a href="/helpcentre" className="text-white">Outer Ring Road , Devarabeesabahalli Village,</a></li>
+                                <li ><a href="/helpcentre" className="text-white">Bengaluru ,560103</a></li>
+                                <li ><a href="/helpcentre" className="text-white">Karnataka,India</a></li>
+                                <li ><a href="/helpcentre" className="text-white">EPR Compliance</a></li>
+
 
                             </ul>
                             <div className="social">
@@ -172,28 +181,28 @@ export default function Footer() {
                     <div>
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE2IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0yLTJoMjB2MjBILTJ6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuOTMgNS42MTRoLTIuOTQ4VjQuMTRjMC0uODE4LS42NTUtMS40NzMtMS40NzMtMS40NzNIOC41NmMtLjgxNyAwLTEuNDczLjY1NS0xLjQ3MyAxLjQ3M3YxLjQ3NEg0LjE0Yy0uODE4IDAtMS40NjYuNjU2LTEuNDY2IDEuNDc0bC0uMDA3IDguMTA1YzAgLjgxOC42NTUgMS40NzQgMS40NzMgMS40NzRoMTEuNzljLjgxOCAwIDEuNDc0LS42NTYgMS40NzQtMS40NzRWNy4wODhjMC0uODE4LS42NTYtMS40NzQtMS40NzQtMS40NzR6bS00LjQyMSAwSDguNTZWNC4xNGgyLjk0OHYxLjQ3NHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yIC0yKSIvPgogICAgPC9nPgo8L3N2Zz4K" />
                         <a href="https://seller.flipkart.com/?utm_source=fkwebsite&amp;utm_medium=websitedirect">
-                            <span class="XqVBP0">Become a Seller</span>
+                            <span >Become a Seller</span>
                         </a>
                     </div>
                     <div>
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0zLTNoMjB2MjBILTN6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTAuNDkyIDNDNi4zNTMgMyAzIDYuMzYgMyAxMC41YzAgNC4xNCAzLjM1MyA3LjUgNy40OTIgNy41QzE0LjY0IDE4IDE4IDE0LjY0IDE4IDEwLjUgMTggNi4zNiAxNC42NCAzIDEwLjQ5MiAzem0zLjE4IDEyTDEwLjUgMTMuMDg4IDcuMzI3IDE1bC44NC0zLjYwN0w1LjM3IDguOTdsMy42OS0uMzE1TDEwLjUgNS4yNWwxLjQ0IDMuMzk4IDMuNjkuMzE1LTIuNzk4IDIuNDIyLjg0IDMuNjE1eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMgLTMpIi8+CiAgICA8L2c+Cjwvc3ZnPgo=" />
                         <a href="https://seller.flipkart.com/?utm_source=fkwebsite&amp;utm_medium=websitedirect">
-                            <span class="XqVBP0">Advertise</span>
+                            <span >Advertise</span>
                         </a>
                     </div>
                     <div>
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE4IDE3Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0xLTFoMjB2MjBILTF6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTYuNjY3IDVIMTQuODVjLjA5Mi0uMjU4LjE1LS41NDIuMTUtLjgzM2EyLjQ5NyAyLjQ5NyAwIDAgMC00LjU4My0xLjM3NUwxMCAzLjM1bC0uNDE3LS41NjdBMi41MSAyLjUxIDAgMCAwIDcuNSAxLjY2N2EyLjQ5NyAyLjQ5NyAwIDAgMC0yLjUgMi41YzAgLjI5MS4wNTguNTc1LjE1LjgzM0gzLjMzM2MtLjkyNSAwLTEuNjU4Ljc0Mi0xLjY1OCAxLjY2N2wtLjAwOCA5LjE2NkExLjY2IDEuNjYgMCAwIDAgMy4zMzMgMTcuNWgxMy4zMzRhMS42NiAxLjY2IDAgMCAwIDEuNjY2LTEuNjY3VjYuNjY3QTEuNjYgMS42NiAwIDAgMCAxNi42NjcgNXptMCA2LjY2N0gzLjMzM3YtNWg0LjIzNEw1LjgzMyA5LjAyNWwxLjM1Ljk3NSAxLjk4NC0yLjdMMTAgNi4xNjdsLjgzMyAxLjEzMyAxLjk4NCAyLjcgMS4zNS0uOTc1LTEuNzM0LTIuMzU4aDQuMjM0djV6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMSAtMSkiLz4KICAgIDwvZz4KPC9zdmc+Cg==" />
-                        <a href="https://seller.flipkart.com/?utm_source=fkwebsite&amp;utm_medium=websitedirect">
-                            <span class="XqVBP0">Gift Cards</span>
+                        <a href="/the-gift-card-store/1">
+                            <span >Gift Cards</span>
                         </a>
                     </div>
                     <div>
                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE4IDE3Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0xLTFoMjB2MjBILTF6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTYuNjY3IDVIMTQuODVjLjA5Mi0uMjU4LjE1LS41NDIuMTUtLjgzM2EyLjQ5NyAyLjQ5NyAwIDAgMC00LjU4My0xLjM3NUwxMCAzLjM1bC0uNDE3LS41NjdBMi41MSAyLjUxIDAgMCAwIDcuNSAxLjY2N2EyLjQ5NyAyLjQ5NyAwIDAgMC0yLjUgMi41YzAgLjI5MS4wNTguNTc1LjE1LjgzM0gzLjMzM2MtLjkyNSAwLTEuNjU4Ljc0Mi0xLjY1OCAxLjY2N2wtLjAwOCA5LjE2NkExLjY2IDEuNjYgMCAwIDAgMy4zMzMgMTcuNWgxMy4zMzRhMS42NiAxLjY2IDAgMCAwIDEuNjY2LTEuNjY3VjYuNjY3QTEuNjYgMS42NiAwIDAgMCAxNi42NjcgNXptMCA2LjY2N0gzLjMzM3YtNWg0LjIzNEw1LjgzMyA5LjAyNWwxLjM1Ljk3NSAxLjk4NC0yLjdMMTAgNi4xNjdsLjgzMyAxLjEzMyAxLjk4NCAyLjcgMS4zNS0uOTc1LTEuNzM0LTIuMzU4aDQuMjM0djV6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMSAtMSkiLz4KICAgIDwvZz4KPC9zdmc+Cg==" />
-                        <a href="https://seller.flipkart.com/?utm_source=fkwebsite&amp;utm_medium=websitedirect">
-                            <span class="XqVBP0">Help Centre</span>
+                        <a href="/helpcentre">
+                            <span >Help Centre</span>
                         </a>
                     </div>
-                    <div><span class="XqVBP0">© 2007-2024 Flipkart.com</span>
+                    <div><span >© 2007-2024 Flipkart.com</span>
 
                     </div>
 

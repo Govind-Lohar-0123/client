@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, InputBase, ListItem, styled } from "@mui/material";
+import { Box, InputBase, ListItem, styled, List, Typography } from "@mui/material";
 
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -24,22 +24,20 @@ const ListWrapper = styled(Box)(({ theme }) => ({
     backgroundColor: "white",
     color: "black",
     width: "100%",
-    top: "40px",
+    zIndex: "11",
+    top: "35px",
+    left: 0
 }))
 
 export default function SearchBox() {
     const [search, setSearch] = useState("");
-    const dispatch = useDispatch();
+
     const prod_data = useSelector((state) => state.getProd);
-    // useEffect(()=>{
-    //     dispatch(getProducts());
-    // },[dispatch])
+
 
 
     const searchHandle = (e) => {
         setSearch(e.target.value);
-
-        // dispatch(searchAction(e.target.value));
     }
 
 
@@ -48,27 +46,34 @@ export default function SearchBox() {
         <>
 
             <SearchContainer className="" style={{ paddingLeft: "1rem", paddingBlock: "3px" }}>
-                {/* <Box>
-                    <button style={{border:"none"}} className="_2iLD__ border-none" type="submit" aria-label="Search for Products, Brands and More" title="Search for Products, Brands and More"><svg width="24" height="24" className="border-none" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Search Icon</title><path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 16L21 21" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
-                    <StyledInputBase value={search} className=" text-dark px-2" placeholder='Search for Product , brands and more' onChange={searchHandle} />
-                </Box> */}
-                <Box>
+
+                <Box className="d-flex justify-content-space-between">
 
                     <StyledInputBase value={search} className="border-none text-dark px-2 text-bold" placeholder='Search for Product , brands and more' onChange={searchHandle} />
-                    <button style={{ border: "none" }} className="_2iLD__ border-none" type="submit" aria-label="Search for Products, Brands and More" title="Search for Products, Brands and More"><svg width="24" height="24" className="border-none" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Search Icon</title><path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 16L21 21" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+                    <img alt="" width="35" src="https://rukminim2.flixcart.com/www/100/100/promos/20/07/2022/ea2077a7-575d-4fb9-a4dd-6df16e53c5d8.png?q=90" />
+
                 </Box>
+                <ListWrapper sx={{ maxHeight: "400px", overflowY: "scroll" }}>
 
-                <ListWrapper >
-                    {
-                        (search && prod_data) && (prod_data.prod.filter(prod => prod.title.longTitle.toLowerCase().includes(search.toLowerCase())).map(prod => {
+                    {search ? <hr className='p-0 m-0' /> : ""}
+                    <List className="py-0">
+                        {
+                            (search && prod_data) &&
+                            (prod_data.prod.filter((prod) => (prod.content.title.toLowerCase().includes(search.toLowerCase()))).
+                                map(prod => {
 
-                            return (<ListItem>
-                                <Link to={"/detail-view/" + prod._id} onClick={() => setSearch("")}>{prod.title.longTitle}</Link>
-                            </ListItem>)
-                        })
-                        )
-                    }
+                                    return (<ListItem className="py-2">
 
+                                        <Link className="text-dark" style={{ fontSize: "14px" }} to={"/filter-product/" + prod._id} onClick={() => setSearch("")}>
+                                            <img alt="" width="30" src="https://rukminim2.flixcart.com/www/100/100/promos/20/07/2022/ea2077a7-575d-4fb9-a4dd-6df16e53c5d8.png?q=90" />
+                                            <Typography variant="span" className='mx-3'>{prod.content.title}</Typography>
+                                        </Link>
+                                    </ListItem>)
+                                })
+                            )
+                        }
+
+                    </List>
                 </ListWrapper>
 
             </SearchContainer>

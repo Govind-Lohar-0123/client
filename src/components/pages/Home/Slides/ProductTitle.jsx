@@ -33,7 +33,7 @@ const ProductTitle = ({data}) => {
                     <Countdown date={Date.now() + 5.04e+7} renderer={renderer} />
                 </Timer> : ""
             }
-            <Box className="bg-primary _3n8fnay4 _3n8fnapm _3n8fnah3 _3n8fna1 _3n8fna8k _1i2djtb9 _1i2djt0 _9nihix85" theme="[object Object]" style={{ display: "flex", flexBasis: "auto", flexDirection: "column", flexShrink: 0, alignItems: "stretch", borderWidth: " 0px", minHeight: "0px", minWidth: "0px", position: "relative", zIndex: 0, boxSizing: "border-box", borderRadius: "42px" }}><svg width="16" height="16" fill="none" viewBox="0 0 17 17" style={{ margin: "4px" }}><path d="m6.627 3.749 5 5-5 5" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></Box>
+            <Box className="bg-primary _3n8fnay4 _3n8fnapm _3n8fnah3 _3n8fna1 _3n8fna8k _1i2djtb9 _1i2djt0 _9nihix85" theme="[object Object]" style={{ display: "flex", flexBasis: "auto", flexDirection: "column", flexShrink: 0, alignItems: "stretch", borderWidth: " 0px", minHeight: "0px", minWidth: "0px", position: "relative", zIndex: 0, boxSizing: "border-box", borderRadius: "42px" }}><svg width="16" height="16" fill="none" viewBox="0 0 17 17" style={{ margin: "4px" }}><path d="m6.627 3.749 5 5-5 5" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"></path></svg></Box>
             {/* <Button variant="contained" className="bg-primary px-3 " style={{ paddingBlock:"10px",marginLeft: "auto" }}> VIEW ALL</Button> */}
         </Box>
     </>

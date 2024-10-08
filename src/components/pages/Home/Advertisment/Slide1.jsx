@@ -70,11 +70,11 @@ const AdvertismentSlide1 = ({ item }) => {
                         containerClass="carousel-container"
                         keyBoardControl={true}
                     >
-                        <Grid container lg={12} md={12} className="p-2 gap-2 mx-auto" >
+                        <Grid container className="p-2 gap-2 mx-auto" >
                             {
                                 imgs.map((url, i) => {
                                     return (
-                                     <Grid item lg={3.8} md={3.8} sm={5.5} className="mx-auto" style={{marginBottom:"15px"}}><Link component={routerLink} className="w-100 h-100"><Image src={url} /></Link></Grid>
+                                     <Grid key={i} item lg={3.8} md={3.8} sm={5.5} className="mx-auto" style={{marginBottom:"15px"}}><Link component={routerLink} className="w-100 h-100"><Image src={url} /></Link></Grid>
                                     )
                                 })
 

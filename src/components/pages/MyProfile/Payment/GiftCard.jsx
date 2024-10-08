@@ -126,7 +126,7 @@ export default function GiftCard() {
 
                 <Component className="mt-4">
 
-                    <Grid container lg={12}>
+                    <Grid container >
                         <Grid item lg={3} >
                             <Dashboard />
                         </Grid>
@@ -350,13 +350,13 @@ export default function GiftCard() {
                                                 </Box>
                                                     :
                                                     <Box className="px-4 py-4" style={{ backgroundColor: "#f5faff" }}>
-                                                        <Grid container lg={12}>
-                                                            <Grid lg={5.5} >
+                                                        <Grid container>
+                                                            <Grid item lg={5.5} >
                                                                 <Box className="d-flex flex-direction-column gap-4">
                                                                     <TextField id="outlined-basic" label="Receiver`s Email ID *" variant="outlined" className="w-100" />
                                                                     <TextField id="outlined-basic" label="Receiver`s Name*" variant="outlined" className="w-100" />
                                                                     <Box> <TextField id="outlined-basic" label="Card Value  ₹*" variant="outlined" className="w-100" />
-                                                                        <select class="OZuttk _0Qdz4T nzEMIn" required="" name="voucher-value[]" tabindex="3" fdprocessedid="jm8xj"><option value="">Select</option><option value="100">100</option><option value=" 101"> 101</option><option value=" 300"> 300</option><option value=" 500"> 500</option><option value=" 1000"> 1000</option><option value=" 2000"> 2000</option><option value=" 2500"> 2500</option><option value=" 5000"> 5000</option><option value=" 6000"> 6000</option><option value=" 7000"> 7000</option><option value=" 8000"> 8000</option><option value=" 9000"> 9000</option><option value=" 10000"> 10000</option></select>
+                                                                        <select required="" name="voucher-value[]" tabindex="3" fdprocessedid="jm8xj"><option value="">Select</option><option value="100">100</option><option value=" 101"> 101</option><option value=" 300"> 300</option><option value=" 500"> 500</option><option value=" 1000"> 1000</option><option value=" 2000"> 2000</option><option value=" 2500"> 2500</option><option value=" 5000"> 5000</option><option value=" 6000"> 6000</option><option value=" 7000"> 7000</option><option value=" 8000"> 8000</option><option value=" 9000"> 9000</option><option value=" 10000"> 10000</option></select>
                                                                     </Box>
                                                                     <TextField id="outlined-basic" label="Gifter`s Name (Optional) *" variant="outlined" className="w-100" />
                                                                     <TextField id="outlined-basic" label="Write a message (Optional,100 Characters) *" variant="outlined" className="w-100" />
@@ -376,9 +376,9 @@ export default function GiftCard() {
                                                                     </div>
                                                                 </Box>
                                                             </Grid>
-                                                            <Grid lg={6} marginLeft="auto">
+                                                            <Grid item lg={6} marginLeft="auto">
                                                                 <Box>
-                                                                    <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/giftcard_509752.png" class="cTzJiY" />
+                                                                    <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/giftcard_509752.png" />
                                                                 </Box>
                                                             </Grid>
                                                         </Grid>

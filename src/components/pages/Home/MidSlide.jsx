@@ -1,5 +1,5 @@
 import { Box } from "@mui/material"
-import Slide from "./Slide";
+import Slide1 from "./Slides/Slide1";
 import { styled, Grid } from "@mui/material";
 
 
@@ -45,12 +45,13 @@ const SlideBox=styled(Box)(({theme})=>({
 const adURL = 'https://rukminim1.flixcart.com/flap/464/708/image/633789f7def60050.jpg?q=70';
 
 
-const MidSlide = ({ prod, time}) => {
+const MidSlide = ({ prods, time,title}) => {
+   
     return (
 
         <Component  >
             <SlideBox  className="  ">
-                <Slide prod={prod}  time={time} />
+                <Slide1 prods={prods}  time={time} title={title} />
             </SlideBox >
             <ImageBox   >
                 <Image src={adURL} className="d-block w-100 h-100" />

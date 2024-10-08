@@ -51,14 +51,14 @@ export default function Notifi_Preffrence() {
             <Box style={{ width: "80%" }} className="mx-auto mt-5" >
 
 
-                <Grid container lg={12} className="gap-2 mt-2">
+                <Grid container  className="gap-2 mt-2">
                     <Grid item lg={3.5} className="bg-white" style={{
                         borderRadius: "2px", boxShadow: "0 2px 4px 0 rgba(0, 0, 0, .08)",
 
                     }}>
                         <Box className="px-4 py-3">
                             <Box className="d-flex align-item-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="" viewBox="0 0 12 14"><g fill="none" fill-rule="evenodd"><path d="M-4-3h20v20H-4z"></path><path fill="#2874F1" d="M6.17 13.61c-1.183 0-1.922-.723-1.922-1.88H8.09c0 1.157-.74 1.88-1.92 1.88zm4.222-5.028l1.465 1.104v1.07H0v-1.07l1.464-1.104v-2.31h.004c.035-2.54 1.33-4.248 3.447-4.652V.992C4.915.446 5.37 0 5.928 0c.558 0 1.014.446 1.014.992v.628c2.118.404 3.412 2.112 3.446 4.65h.004v2.312z"></path></g></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 12 14"><g fill="none" fill-rule="evenodd"><path d="M-4-3h20v20H-4z"></path><path fill="#2874F1" d="M6.17 13.61c-1.183 0-1.922-.723-1.922-1.88H8.09c0 1.157-.74 1.88-1.92 1.88zm4.222-5.028l1.465 1.104v1.07H0v-1.07l1.464-1.104v-2.31h.004c.035-2.54 1.33-4.248 3.447-4.652V.992C4.915.446 5.37 0 5.928 0c.558 0 1.014.446 1.014.992v.628c2.118.404 3.412 2.112 3.446 4.65h.004v2.312z"></path></g></svg>
                                 <Typography className="text-bold " style={{ color: " #878787", fontSize: "14px", textTransform: "uppercase" }}>Notification Preferences</Typography>
                             </Box>
                             <LeftComponent className="text-white text-center">
@@ -119,7 +119,7 @@ export default function Notifi_Preffrence() {
                                                                         <Typography style={{ fontSize: "14px" }}>{item.title}</Typography>
                                                                         <Typography style={{ fontSize: "12px", color: " #878787" }}>{item.text}</Typography>
                                                                     </Box>
-                                                                    <svg width="9" height="11" viewBox="0 0 16 27" style={{ marginLeft: "auto", transform: "rotate(271deg)" }} xmlns="http://www.w3.org/2000/svg" class="vK1mmm"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class=""></path></svg>
+                                                                    <svg width="9" height="11" viewBox="0 0 16 27" style={{ marginLeft: "auto", transform: "rotate(271deg)" }} xmlns="http://www.w3.org/2000/svg" ><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"></path></svg>
                                                                 </Box>
                                                             </Box>
 
@@ -133,7 +133,7 @@ export default function Notifi_Preffrence() {
                                     }
 
                                 </Grid>
-                                <Grid lg={6}>
+                                <Grid item lg={6}>
                                     <Box className="mx-auto text-center mt-5" style={{ width: "264px", height: "264px" }}>
                                         <RightComponent>
                                             <div><img src="https://rukminim2.flixcart.com/www/110/110/promos/15/02/2019/b2716b3f-3f6b-458f-ba09-3705401d2c18.png?q=100" style={{ width: "88px", height: "88px" }} /></div>

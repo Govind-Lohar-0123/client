@@ -43,15 +43,15 @@ const SlideContainer = styled(Box)(({ theme }) => ({
 
 
 
-const Slide2 = ({ prod, time }) => {
-    //    console.log(prod)
+const Slide2 = ({ prods, time ,title}) => {
+   
 
 
     return (
 
         <>
             <SlideContainer className=" bg-white  ">
-                <ProductTitle data={{ title: prod.category, time }} />
+                <ProductTitle data={{ title, time }} />
                 {/* <Divider className="text-dark"/> */}
                 <StyledCarousel className="px-2 " >
                     <Carousel
@@ -66,12 +66,12 @@ const Slide2 = ({ prod, time }) => {
                         keyBoardControl={true}
                     >
 
-                        <Grid container lg={12} md={12} spacing={1}>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={1} prod={prod.prods[1]} /></Grid>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={2} prod={prod.prods[0]} /></Grid>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={3} prod={prod.prods[0]} /></Grid>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={4} prod={prod.prods[1]} /></Grid>
-                        </Grid>
+                        <Grid container  spacing={1}>
+                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={1} prod={prods[1]} /></Grid>
+                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={2} prod={prods[0]} /></Grid>
+                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={3} prod={prods[0]} /></Grid>
+                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={4} prod={prods[1]} /></Grid>
+                        </Grid> 
 
 
                     </Carousel>

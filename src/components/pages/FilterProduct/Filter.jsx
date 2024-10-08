@@ -63,7 +63,7 @@ export default function Filter() {
 
 
     // remaing work 
-    console.log(filters);
+   
     useEffect(() => {
         document.querySelectorAll(".filter-component input").forEach((item, idx) => {
             item.addEventListener("change", (e) => {
@@ -134,7 +134,7 @@ export default function Filter() {
 
 
                         <Box className="d-flex gap-2" style={{ alignItems: "center" }}>
-                            <div class="suthUA"><select class="Gn+jFg"><option value="Min" class="_0vP2OD">Min</option><option value="10000" class="_0vP2OD">₹10000</option><option value="15000" class="_0vP2OD">₹15000</option><option value="20000" class="_0vP2OD">₹20000</option><option value="30000" class="_0vP2OD">₹30000</option></select></div><div class="mhoEL5">to</div><div class="tKgS7w"><select class="Gn+jFg"><option value="10000" class="_0vP2OD">₹10000</option><option value="15000" class="_0vP2OD">₹15000</option><option value="20000" class="_0vP2OD">₹20000</option><option value="30000" class="_0vP2OD">₹30000</option><option value="Max" class="_0vP2OD">₹30000+</option></select>
+                            <div ><select ><option value="Min" >Min</option><option value="10000" >₹10000</option><option value="15000" >₹15000</option><option value="20000" >₹20000</option><option value="30000" >₹30000</option></select></div><div >to</div><div ><select ><option value="10000" >₹10000</option><option value="15000" >₹15000</option><option value="20000" >₹20000</option><option value="30000" >₹30000</option><option value="Max" >₹30000+</option></select>
                             </div>
                         </Box>
 
