@@ -12,7 +12,7 @@ export const userRegister = async (signData, setResult) => {
     try {
         const { state, data } = await axios({
             method: 'post',
-            url: "https://clone-backend-f9y5.onrender.com/user-api/signup",
+            url: "https://server-3f16.onrender.com/user-api/signup",
             data: { user_data: signData }
         });
 
@@ -27,7 +27,7 @@ export const userRegister = async (signData, setResult) => {
         }
     }
     catch (err) {
-        
+
         setResult({ type: true, msg: "Server Error..." });
     }
     return false;
@@ -40,7 +40,7 @@ export const userUpdate = async (user_data, setResult) => {
 
         const { state, data } = await axios({
             method: 'put',
-            url: "https://clone-backend-f9y5.onrender.com/user-api/update",
+            url: "https://server-3f16.onrender.com/user-api/update",
             data: { user_data }
         });
         setResult({ type: true, msg: data.msg });
@@ -58,7 +58,7 @@ export const deleteAccount = async (prod_id) => {
     try {
         const { state, data } = await axios({
             method: 'delete',
-            url: `https://clone-backend-f9y5.onrender.com/user-api/delete/${prod_id}`,
+            url: `https://server-3f16.onrender.com/user-api/delete/${prod_id}`,
 
         });
 
@@ -75,7 +75,7 @@ export const userLogin = async (loginData, setResult) => {
     try {
         const { status, data } = await axios({
             method: 'post',
-            url: "https://clone-backend-f9y5.onrender.com/user-api/login",
+            url: "https://server-3f16.onrender.com/user-api/login",
             data: { user_data: loginData }
         });
 
@@ -91,7 +91,7 @@ export const userLogin = async (loginData, setResult) => {
 
     }
     catch (err) {
-     
+
         setResult({ type: true, msg: "Server Error..." });
     }
     return false;
