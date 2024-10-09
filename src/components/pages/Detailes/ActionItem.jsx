@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { addToCart, getAllCarts } from "../../react_redux/redux/actions/cartAction";
 import { useState } from "react";
 import Carousel from "./Carousel";
-import ReactImageMagnify from 'react-image-magnify';
+
 import v1 from "../../videos/v1.mp4";
 // ---------------LEFT COMPONENT CSS------------
 const LeftComponent = styled(Grid)(({ theme }) => ({
