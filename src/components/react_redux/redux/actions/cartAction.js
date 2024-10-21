@@ -6,7 +6,7 @@ export const addToCart = (prod) => async (disptach) => {
     try {
         const response = await axios({
             method: 'post',
-            url: "https://flipkartserver-s9sw.onrender.com/cart-api/add-to-cart",
+            url: "https://server-3f16.onrender.com/cart-api/add-to-cart",
             data: { prod: prod }
         });
 
@@ -19,7 +19,7 @@ export const getAllCarts = () => async (disptach) => {
     try {
         const { state, data } = await axios({
             method: 'get',
-            url: "https://flipkartserver-s9sw.onrender.com/cart-api/get-all-carts",
+            url: "https://server-3f16.onrender.com/cart-api/get-all-carts",
 
         });
 
@@ -35,7 +35,7 @@ export const removeFromCart = (prod_id) => (disptach) => {
     try {
         const response = axios({
             method: 'delete',
-            url: `https://flipkartserver-s9sw.onrender.com/cart-api/remove-from-cart/${prod_id}`,
+            url: `https://server-3f16.onrender.com/cart-api/remove-from-cart/${prod_id}`,
 
         });
 
