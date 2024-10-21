@@ -40,7 +40,7 @@ export const userUpdate = async (user_data, setResult) => {
 
         const { state, data } = await axios({
             method: 'put',
-            url: "http://flipkartserver-s9sw.onrender.com/user-api/update",
+            url: "https://flipkartserver-s9sw.onrender.com/user-api/update",
             data: { user_data }
         });
         setResult({ type: true, msg: data.msg });
@@ -58,7 +58,7 @@ export const deleteAccount = async (prod_id) => {
     try {
         const { state, data } = await axios({
             method: 'delete',
-            url: `http://flipkartserver-s9sw.onrender.com/user-api/delete/${prod_id}`,
+            url: `https://flipkartserver-s9sw.onrender.com/user-api/delete/${prod_id}`,
 
         });
 
@@ -75,7 +75,7 @@ export const userLogin = async (loginData, setResult) => {
     try {
         const { status, data } = await axios({
             method: 'post',
-            url: "http://flipkartserver-s9sw.onrender.com/user-api/login",
+            url: "https://flipkartserver-s9sw.onrender.com/user-api/login",
             data: { user_data: loginData }
         });
 
