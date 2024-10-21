@@ -10,6 +10,8 @@ export const addToCart = (prod) => async (disptach) => {
             data: { prod: prod }
         });
 
+        
+
     }
     catch (err) { }
     window.location.href = "/view-carts";
@@ -31,24 +33,17 @@ export const getAllCarts = () => async (disptach) => {
     }
 }
 export const removeFromCart = (prod_id) => (disptach) => {
-    console.log(prod_id);
-    try {
-
-        const response = axios({
+    
+       const response = axios({
             method: 'delete',
             url: `https://server-3f16.onrender.com/cart-api/remove-from-cart/${prod_id}`,
 
         });
 
-
-    }
-    catch (err) {
-
-        console.log(err.message);
-    }
-    window.location.href = "/view-carts";
-
-
+        response.then( ()=>window.location.href = "/view-carts"
+                     , ()=>window.location.href = "/view-carts"
+                    )
+        
 
 }
 // export const clearCart = () => (disptach) => {

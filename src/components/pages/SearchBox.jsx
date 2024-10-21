@@ -25,7 +25,7 @@ const ListWrapper = styled(Box)(({ theme }) => ({
     color: "black",
     width: "100%",
     zIndex: "11",
-    top: "35px",
+    top: "40px",
     left: 0
 }))
 
@@ -45,7 +45,7 @@ export default function SearchBox() {
     return (
         <>
 
-            <SearchContainer className="" style={{ paddingLeft: "1rem", paddingBlock: "3px" }}>
+            <SearchContainer className="position-relative" style={{ paddingLeft: "1rem", paddingBlock: "3px" }}>
 
                 <Box className="d-flex justify-content-space-between">
 

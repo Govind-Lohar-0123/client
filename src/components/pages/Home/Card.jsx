@@ -19,7 +19,7 @@ export default function Card({ prod, time }) {
     const prod_name = prod.content.title;
     return (
 
-        <><Link component={routerLink} to={"/filter-product"}>
+        <><Link component={routerLink} to={"/filter-product/"+prod._id}>
             <Box className="card -ctextenter text-dark pt-1 mt-4" style={{ marginBottom: "20px", border: "solid 1px rgb(239, 233, 233)" }} >
                 <Image className="card-img-top m-auto " src={prod.url} alt="Card image cap" />
                 <Box className="card-body">
