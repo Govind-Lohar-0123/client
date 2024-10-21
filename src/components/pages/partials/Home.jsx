@@ -40,11 +40,14 @@ const StyledSearchBox = styled(Box)(({ theme }) => ({
 }))
 export default function Home() {
     const disptach = useDispatch();
+    
     useEffect(() => {
         disptach(getProducts());
+        console.log("UseEffect First Time ");
     }, [])
-    const data = useSelector((state) => state.getProd);
 
+    const data = useSelector((state) => state.getProd);
+    
 
     return (
         <>

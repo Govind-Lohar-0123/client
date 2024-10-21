@@ -57,7 +57,7 @@ function App() {
               <Route path="download-app" element={<DownloadApp />} />
               <Route path="communication-preferences" element={<Notifi_Preffrence />} />
               <Route path="detail-view/:prod_id" element={<DetailView />} />
-              <Route path="filter-product/:prod_title" element={<FilterProduct />} />
+              <Route path="filter-product" element={<FilterProduct />} />
               <Route path="the-gift-card-store/:link" element={<GiftCardStore />} />
 
 
