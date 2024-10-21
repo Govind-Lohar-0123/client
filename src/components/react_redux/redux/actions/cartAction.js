@@ -35,7 +35,7 @@ export const removeFromCart = (prod_id) => (disptach) => {
     try {
         const response = axios({
             method: 'delete',
-            url: `https://server-3f16.onrender.com/cart-api/remove-from-cart/${prod_id}`,
+            url: `http://server-3f16.onrender.com/cart-api/remove-from-cart/${prod_id}`,
 
         });
 
