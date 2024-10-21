@@ -1,7 +1,5 @@
 import * as actionType from "../constants";
-import { useDispatch } from "react-redux";
 
-import axios from "axios";
 
 
 

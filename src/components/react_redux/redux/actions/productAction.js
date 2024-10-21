@@ -18,7 +18,7 @@ export const getProducts = () => async (dispatch) => {
 export const getProductsByLimit = (page, limit) => async (dispatch) => {
 
    try {
-      const { status, data } = await axios.get(`https://server-3f16.onrender.com/product-api/get-products/${page}/${limit}`);
+      const { status, data } = await axios.get(`http://flipkartserver-s9sw.onrender.com/product-api/get-products/${page}/${limit}`);
      
       dispatch({ type: actionType.GET_PRODUCTS_SUCCESS, payload: { ...data, loading: false } });
    }
@@ -30,7 +30,7 @@ export const getProductsByLimit = (page, limit) => async (dispatch) => {
 export const getProductDetails = (prod_id) => async (dispatch) => {
    try {
       dispatch({ type: actionType.GET_PRODUCT_DETAIL_REQUEST })
-      const { status, data } = await axios.get(`https://server-3f16.onrender.com/product-api/get-product-detail/${prod_id}`);
+      const { status, data } = await axios.get(`http://flipkartserver-s9sw.onrender.com/product-api/get-product-detail/${prod_id}`);
 
       dispatch({ type: actionType.GET_PRODUCT_DETAIL_SUCCESS, payload: data });
    }
@@ -40,7 +40,7 @@ export const getProductDetails = (prod_id) => async (dispatch) => {
 export const getProductsById = (prod_id) => async (dispatch) => {
    try {
       dispatch({ type: actionType.GET_PRODUCT_DETAIL_REQUEST })
-      const { status, data } = await axios.get(`https://server-3f16.onrender.com/product-api/get-product/${prod_id}`)
+      const { status, data } = await axios.get(`http://flipkartserver-s9sw.onrender.com/product-api/get-product/${prod_id}`)
     
       dispatch({ type: actionType.GET_PRODUCTS_BY_ID_SUCCESS, payload: data });
    }

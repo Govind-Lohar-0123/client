@@ -4,7 +4,7 @@
 import axios from "axios";
 import { setUser } from "./userAction";
 import { setToken } from "./tokenAction";
-import { NavLink, useNavigate } from "react-router-dom"
+
 
 
 export const userRegister = async (signData, setResult) => {
@@ -12,7 +12,7 @@ export const userRegister = async (signData, setResult) => {
     try {
         const { state, data } = await axios({
             method: 'post',
-            url: "https://server-3f16.onrender.com/user-api/signup",
+            url: "https://flipkartserver-s9sw.onrender.com/user-api/signup",
             data: { user_data: signData }
         });
 
@@ -40,7 +40,7 @@ export const userUpdate = async (user_data, setResult) => {
 
         const { state, data } = await axios({
             method: 'put',
-            url: "https://server-3f16.onrender.com/user-api/update",
+            url: "http://flipkartserver-s9sw.onrender.com/user-api/update",
             data: { user_data }
         });
         setResult({ type: true, msg: data.msg });
@@ -58,7 +58,7 @@ export const deleteAccount = async (prod_id) => {
     try {
         const { state, data } = await axios({
             method: 'delete',
-            url: `https://server-3f16.onrender.com/user-api/delete/${prod_id}`,
+            url: `http://flipkartserver-s9sw.onrender.com/user-api/delete/${prod_id}`,
 
         });
 
@@ -75,7 +75,7 @@ export const userLogin = async (loginData, setResult) => {
     try {
         const { status, data } = await axios({
             method: 'post',
-            url: "https://server-3f16.onrender.com/user-api/login",
+            url: "http://flipkartserver-s9sw.onrender.com/user-api/login",
             data: { user_data: loginData }
         });
 
