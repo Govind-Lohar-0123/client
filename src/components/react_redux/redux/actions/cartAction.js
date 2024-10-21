@@ -14,7 +14,7 @@ export const addToCart = (prod) => async (disptach) => {
 
     }
     catch (err) { }
-    window.location.href = "/view-carts";
+    window.location.href = "https://server-3f16.onrender.com/view-carts";
 
 }
 export const getAllCarts = () => async (disptach) => {
@@ -40,9 +40,7 @@ export const removeFromCart = (prod_id) => (disptach) => {
 
         });
 
-        response.then( ()=>window.location.href = "/view-carts"
-                     , ()=>window.location.href = "/view-carts"
-                    )
+        window.location.href = "https://server-3f16.onrender.com/view-carts";
         
 
 }
