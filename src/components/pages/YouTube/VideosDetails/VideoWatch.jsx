@@ -12,7 +12,9 @@ const LeftComponent = styled(Grid)(({ theme }) => ({
 
     marginInline: "auto",
     [theme.breakpoints.down("md")]: {
-      
+        ".title": {
+            justifyContent: "space-between"
+        }
     },
     [theme.breakpoints.down("sm")]: {
         width: "100%",
@@ -25,7 +27,7 @@ const LeftComponent = styled(Grid)(({ theme }) => ({
 export default function VideoWatch() {
 
 
-    
+
 
     return (<>
 
@@ -36,11 +38,13 @@ export default function VideoWatch() {
             </video>
             <Typography style={{ fontSize: "19px", letterSpacing: "0px", wordSpacing: 0 }} className="text-bold my-2">How to prepare Low Level Design & Machine Coding for Interviews? LLD Roadmap and my Prep Strategy</Typography>
             <Box className="d-flex align-item-center justify-content-space-between px-1 flex-wrap gap-2">
-                <Box className="d-flex align-item-center gap-3 flex-wrap ">
-                    <Avatar sx={{ backgroundColor: "red" }}>G</Avatar>
-                    <Box>
-                        <Typography style={{ fontSize: "15px" }} className="text-bold ">Govind Lohar</Typography>
-                        <Typography style={{ fontSize: "13px" }} className="text-muted ">82k subscribers</Typography>
+                <Box className="d-flex align-item-center gap-4 title flex-wrap ">
+                    <Box className="d-flex align-item-center gap-3">
+                        <Avatar sx={{ backgroundColor: "red" }}>G</Avatar>
+                        <Box>
+                            <Typography style={{ fontSize: "15px" }} className="text-bold ">Govind Lohar</Typography>
+                            <Typography style={{ fontSize: "13px" }} className="text-muted ">82k subscribers</Typography>
+                        </Box>
                     </Box>
                     <Button variant="contained" className="bg-dark text-white text-bold " style={{ textTransform: "none", borderRadius: "20px" }}>Subscribe</Button>
                 </Box>
