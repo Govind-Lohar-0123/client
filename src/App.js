@@ -9,7 +9,7 @@ import { Box } from "@mui/material";
 
 import DetailView from "./components/pages/Detailes/DetailView";
 import { Cart } from "./components/pages/Cart/Cart";
-import Checkout from "./components/pages/Checkout/Checkout";
+
 import FilterProduct from "./components/pages/FilterProduct/FilterProduct";
 
 
@@ -37,6 +37,9 @@ import { getToken } from "./components/pages/MyProfile/auth/tokenAction.js";
 import Login_Register from "./components/pages/MyProfile/auth/Login_Register.jsx";
 import VideoDetails from "./components/pages/YouTube/VideosDetails/VideoDetails.jsx";
 import YoutubeLayout from "./components/pages/YouTube/partials/YoutubeLayout.jsx";
+import ForgetPassword from "./components/pages/MyProfile/auth/ForgetPassword.jsx";
+import MyProfileLayout from "./components/pages/MyProfile/MyProfileLayout.jsx";
+import Header from "./components/pages/partials/Header.jsx";
 
 
 function App() {
@@ -59,13 +62,13 @@ function App() {
               <Route path="detail-view/:prod_id" element={<DetailView />} />
               <Route path="filter-product/:prod_id" element={<FilterProduct />} />
               <Route path="the-gift-card-store/:link" element={<GiftCardStore />} />
-
+              <Route path="forget-password" element={<ForgetPassword />} />
 
             </Route>
 
 
 
-            <Route path="/" element={(token != null) ? <Layout /> : <Navigate to="/account/login" />}>
+            <Route path="/" element={(token != null && token != undefined) ? <Layout /> : <Navigate to="/account/login" />}>
               <Route path="/view-carts" element={<Cart />} />
               <Route path="order_details/:order_id" element={<OrderDetails />} />
 
@@ -77,9 +80,14 @@ function App() {
             <Route path="/account" element={<Layout />}>
               <Route path="login" element={<Login_Register />} />
             </Route>
-            <Route path="/account" element={(token != null) ? <Layout /> : <Navigate to="/account/login" />}>
+            <Route path="/account/orders" element={(token != null && token != undefined) ? <><Header /><MyOrders /> </> : <Navigate to="/account/login" />}>
 
-              <Route path="orders" element={<MyOrders />} />
+
+            </Route>
+            <Route path="/account" element={(token != null && token != undefined) ? <MyProfileLayout /> : <Navigate to="/account/login" />}>
+
+
+
               <Route path="wishlist" element={<MyWishlist />} />
               <Route index element={<ProfileInfo />} />
               <Route path="addresses" element={<ManageAddress />} />

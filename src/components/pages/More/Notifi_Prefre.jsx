@@ -1,22 +1,17 @@
 import { Box, Grid, Link, Typography, List, ListItem, styled, FormGroup, FormControlLabel, Checkbox } from "@mui/material";
 
-import Filters from "../MyProfile/MyOrders/Filters";
 import { Link as routerLink } from "react-router-dom";
 
 
-import { useEffect } from "react";
-
-import { useDispatch, useSelector } from "react-redux";
-
-import { useParams } from "react-router-dom";
-import OrderListCompo from "../MyProfile/MyOrders/OrdersListCompo";
-import { BorderBottom, Opacity } from "@mui/icons-material";
 
 const LeftComponent = styled(List)(({ theme }) => ({
     "p": {
-        fontSize: "14px", letterSpacing: "1px",
+        fontSize: "14px",
         textAlign: "center",
         width: "100%"
+    },
+    [theme.breakpoints.down("md")]:{
+        width:"100%"
     },
     width: "80%",
     marginInline: "auto",
@@ -48,13 +43,13 @@ export default function Notifi_Preffrence() {
         <>
 
 
-            <Box style={{ width: "80%" }} className="mx-auto mt-5" >
+            <Box style={{ width: "90%" }} className="mx-auto mt-5" >
 
 
                 <Grid container  className="gap-2 mt-2">
-                    <Grid item lg={3.5} className="bg-white" style={{
+                    <Grid item lg={3.5} md={3.5} sm={6}className="bg-white" style={{
                         borderRadius: "2px", boxShadow: "0 2px 4px 0 rgba(0, 0, 0, .08)",
-
+                        marginInline:"auto"
                     }}>
                         <Box className="px-4 py-3">
                             <Box className="d-flex align-item-center gap-3">
@@ -93,7 +88,7 @@ export default function Notifi_Preffrence() {
                             </LeftComponent>
                         </Box>
                     </Grid>
-                    <Grid item lg={8.2} className="bg-white" style={{
+                    <Grid item lg={8.2} md={8} sm={10} className="bg-white" style={{
                         marginInline: "auto",
                         borderRadius: "2px", boxShadow: "0 2px 4px 0 rgba(0, 0, 0, .08)"
                     }}>
@@ -134,8 +129,8 @@ export default function Notifi_Preffrence() {
 
                                 </Grid>
                                 <Grid item lg={6}>
-                                    <Box className="mx-auto text-center mt-5" style={{ width: "264px", height: "264px" }}>
-                                        <RightComponent>
+                                    <Box className="mx-auto text-center mt-5" style={{ width: "264px", }}>
+                                        <RightComponent className="mx-auto">
                                             <div><img src="https://rukminim2.flixcart.com/www/110/110/promos/15/02/2019/b2716b3f-3f6b-458f-ba09-3705401d2c18.png?q=100" style={{ width: "88px", height: "88px" }} /></div>
                                             <div><img src="https://rukminim2.flixcart.com/www/110/110/promos/15/02/2019/b2716b3f-3f6b-458f-ba09-3705401d2c18.png?q=100" style={{ width: "88px", height: "88px" }} /></div>
                                             <div style={{ placeSelf: "end" }}><img src="https://rukminim2.flixcart.com/www/110/110/promos/15/02/2019/b2716b3f-3f6b-458f-ba09-3705401d2c18.png?q=100" style={{ width: "88px", height: "88px" }} /></div>

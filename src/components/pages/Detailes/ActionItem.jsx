@@ -31,14 +31,12 @@ const ButtonStyle = styled(Box)(({ theme }) => ({
     ">button": {
         borderRadius: "0px",
         width: "100%",
-        paddingBlock: ".8rem"
+        // paddingBlock: ".8rem"
+        whiteSpace:"nowrap",
+        fontSize:"12px",
+        padding:"10px"
     },
-    [theme.breakpoints.down("md")]: {
-        width: "80%",
-    },
-    [theme.breakpoints.down("sm")]: {
-        width: "100%",
-    }
+    
 }))
 const BigImage = styled("Box")(({ theme }) => ({
 
@@ -61,7 +59,7 @@ export default function ActionItem({ url, prod }) {
 
     return (<>
 
-        <LeftComponent className="d-flex gap-2  justify-content-space-evenly">
+        <LeftComponent className="d-flex gap-2  justify-content-space-evenly mb-5">
             <Carousel setUrl={setUrl} url={url} />
 
             <BigImage style={{ zIndex: 100 }}>

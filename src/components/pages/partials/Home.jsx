@@ -2,7 +2,7 @@ import DemoAll from "../Home/DemoAll";
 import { Box, Link, Grid, styled, Typography } from "@mui/material";
 import Background from "../Home/Background";
 import Slide1 from "../Home/Slides/Slide1.jsx"
-import CircularProgress from '@mui/material/CircularProgress';
+import {CircularProgress} from "@mui/material";
 
 
 import MidSlide from "../Home/MidSlide";

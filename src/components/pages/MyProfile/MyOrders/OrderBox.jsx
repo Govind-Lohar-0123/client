@@ -15,10 +15,10 @@ export default function OrderBox() {
             <OrderBoxStyled className="mt-2 bg-white py-3 " style={{ borderRadius: "4px", border: "1px solid #dbdbdb", boxShadow: "0 0 0 0 rgba(0, 0, 0, .15)" }}>
                 <Link to="/order_details/1" component={routerLink} className="text-dark">
                     <Box style={{ marginLeft: "4%" }} >
-                        <Grid container>
-                            <Grid item lg={3}>
-                                <Box className="d-flex justify-content-space-between " >
-                                    <Link style={{ height: "75px", width: "75px" }}>
+                        <Grid container >
+                            <Grid item lg={3} md={3}>
+                                <Box className="d-flex justify-content-space-between gap-4" >
+                                    <Link style={{ height: "75px", width: "90px" }}>
                                         <img alt="" style={{ display: "block", width: "100%", height: "100%" }} src="https://rukminim2.flixcart.com/image/200/200/xif0q/recharge-bill-payment/w/h/j/-original-imagqjnvmr86drxt.jpeg?q=90" />
                                     </Link>
                                     <Box >
@@ -30,7 +30,7 @@ export default function OrderBox() {
                                     </Box>
                                 </Box>
                             </Grid>
-                            <Grid item lg={4} style={{ marginInline: "auto" }}>
+                            <Grid item lg={4} md={8}style={{ marginInline: "auto" }}>
                                 <Box className="d-flex justify-content-space-between " style={{ alignItems: "flex-start", marginBottom: "8px" }}>
                                     <Box className="d-flex align-item-center gap-2">
                                         <span style={{ fontSize: "14px" }}>₹140</span>
@@ -39,7 +39,7 @@ export default function OrderBox() {
                                             <img style={{ height: "16px" }} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/lockinCoinNew_79b3fb.svg"  />
 
                                         </Box>
-                                        <span style={{ fontSize: "14px" }}>15</span>
+                                        <span style={{ fontSize: "14px" }} className="mx-2">15</span>
                                     </Box>
                                     <Box className="d-flex flex-direction-column  gap-2">
                                         <Box className="d-flex align-item-center gap-3">

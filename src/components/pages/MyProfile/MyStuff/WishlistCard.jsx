@@ -1,21 +1,4 @@
-import { Box, styled, TextField, Grid, Typography, Button, List, Link, Table, TableBody, TableCell, TableContainer, Paper, TableRow, ListItem } from "@mui/material"
-import Dashboard from "../Dashboard";
-import Input from "@mui/material"
-import FilledInput from '@mui/material/FilledInput';
-import FormControl from '@mui/material/FormControl';
-import FormHelperText from '@mui/material/FormHelperText';
-import InputLabel from '@mui/material/InputLabel';
-import Radio from '@mui/material/Radio';
-import { useState } from "react";
-import Modal from '@mui/material/Modal';
-import Fade from '@mui/material/Fade';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import { Link as routerLink } from "react-router-dom"
-import Backdrop from '@mui/material/Backdrop';
-import CloseIcon from '@mui/icons-material/Close';
-import FormLabel from '@mui/material/FormLabel';
-import CouponsCard from "./CouponsCard";
+import { Box, styled, Grid, Typography, Link,} from "@mui/material"
 
 
 const PriceComponent = styled(Box)(({ theme }) => ({
@@ -30,31 +13,34 @@ const Image = styled("img")(({ theme }) => ({
     display: "block",
     objectFit: "contain"
 }))
+const LeftComponent=styled(Grid)(({theme})=>({
+    [theme.breakpoints.down("md")]:{
+        marginInline:"auto",
+        textAlign:"center",
+       
+        
+            
+       
+    }
+}))
+const RightComponent=styled(Grid)(({theme})=>({
+    "a":{height:"10px"}
+}))
 export default function WishlistCard() {
-
-
-
-
     return (
         <>
-
-
-
-
-
-
-            <Box style={{height:"150px"}}>
+            <Box>
                 <hr className="w-100" />
                 <Box >
-                    <Grid container >
-                        <Grid item lg={2} className="">
-                            <Box className=" w-100 p-2" style={{ height: "40%", verticalAlign: "center" }}>
-                                <Link className="w-100 h-100"><Image src="https://rukminim2.flixcart.com/image/312/312/xif0q/refrigerator-new/c/0/q/-original-imagyzrfxesmgjdq.jpeg?q=70" alt="" /></Link>
+                    <Grid container lg={12} sm={10} xs={12} >
+                        <LeftComponent item lg={2} md={2} sm={6} xs={10} className="mb-4">
+                            <Box className=" w-50 p-2 mx-auto" style={{  verticalAlign: "center" }}>
+                                <Link className="w-100 h-50"><Image src="https://rukminim2.flixcart.com/image/312/312/xif0q/refrigerator-new/c/0/q/-original-imagyzrfxesmgjdq.jpeg?q=70" alt="" /></Link>
 
                             </Box>
 
-                        </Grid>
-                        <Grid item lg={10}>
+                        </LeftComponent>
+                        <RightComponent item lg={10} md={10} sm={12} >
                             <Box>
                                 <Box className="d-flex w-100 justify-content-space-between">
 
@@ -74,7 +60,7 @@ export default function WishlistCard() {
                                     <Typography variant="span" style={{ color: "#388e3c", fontWeight: "bold" }}>20 % off</Typography>
                                 </PriceComponent>
                             </Box>
-                        </Grid>
+                        </RightComponent>
                     </Grid>
                 </Box>
 

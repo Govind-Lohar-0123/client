@@ -45,6 +45,7 @@ const RightComponent = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("md")]: {
         width: "80%",
         marginInline: "0",
+        marginLeft:"20px"
     }
 
 

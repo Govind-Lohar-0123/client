@@ -24,7 +24,7 @@ const DrawerComponent = () => {
     }
     return (
         <Box>
-            <Box>
+            <Box >
                 <MenuIcon onClick={handleOpen}>
                     <Menu />
                 </MenuIcon>

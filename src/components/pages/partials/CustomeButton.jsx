@@ -57,7 +57,7 @@ const StyledStack = styled(Stack)(({ theme }) => ({
 
     [theme.breakpoints.down("lg")]: {
 
-        gap: "10px",
+        gap: "5px",
     }
 
 
@@ -124,6 +124,9 @@ const LinkStyle = styled(Link)(({ theme }) => ({
     },
 
 }))
+const LoginStyle=styled(Box)(({theme})=>({
+    width:"100px"
+}))
 
 export default function CustomeButton() {
 
@@ -146,7 +149,7 @@ export default function CustomeButton() {
         <>
 
             <StyledStack className="text-dark" >
-                {(getUser() != null) ?
+                {(getUser() != null && getUser()!=undefined) ?
                     <Box className="username py-2" style={{ cursor: "pointer" }}>
                         <Box className="">
                             <LinkStyle component={routerLink} to="">
@@ -189,7 +192,7 @@ export default function CustomeButton() {
                                     </Link>
                                 </ListItem>
                                 <ListItem>
-                                    <Link component={routerLink} to="account/coupons">
+                                    <Link component={routerLink} to="/account/rewards">
                                         <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/coupons-083172.svg" alt="Coupons" width="24" height="24" />
                                         <Typography variant="span" className="mx-2">Coupons</Typography>
 
@@ -227,14 +230,14 @@ export default function CustomeButton() {
                     </Box>
                     :
                     <Box className="username py-2" style={{ cursor: "pointer" }}>
-                        <Box >
+                        <LoginStyle>
                             <Link component={routerLink} to="">
                                 <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg" alt="Govind " width="24" height="24" />
                             </Link>
                             <Typography variant="contained" className="mx-2" style={{ fontSize: "1rem" }} >Login</Typography>
                             <Link><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF80OTc0Xzc1OTY5KSI+CjxwYXRoIGQ9Ik0zIDJMNyA2TDExIDIiIHN0cm9rZT0iIzExMTExMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfNDk3NF83NTk2OSIgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjEzLjUiIGhlaWdodD0iOS44MTI1IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHk9IjEiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4xNiAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzQ5NzRfNzU5NjkiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3dfNDk3NF83NTk2OSIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K" alt="Chevron" width="12" height="12" />
                             </Link>
-                        </Box>
+                        </LoginStyle>
 
 
 
@@ -254,12 +257,7 @@ export default function CustomeButton() {
                                         <Typography variant="span" className="mx-2">My Profile</Typography>
                                     </Link>
                                 </ListItem>
-                                {/* <ListItem>
-                                    <Link component={routerLink} to="/supercoins">
-                                        <img  src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/supercoin-ce8408.svg" alt="SuperCoin Zone" width="24" height="24" />
-                                        <Typography variant="span" className="mx-2">Super Coins</Typography>
-                                    </Link>
-                                </ListItem> */}
+                                
                                 <ListItem>
                                     <Link component={routerLink} to="/plus">
                                         <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkplus-4ff29a.svg" alt="Flipkart Plus Zone" width="24" height="24" />
@@ -312,7 +310,7 @@ export default function CustomeButton() {
                 }
                 <Link className="text-dark " to="/view-carts" component={routerLink} >
                     <Link className="_3CowY2" style={{ cursor: "pointer", position: "relative" }} >
-                        <StyledBadge variant="span" className="_2U7eDE">{cartSize.length}</StyledBadge><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg" alt="Cart" width="24" height="24" />
+                        <StyledBadge variant="span" className="_2U7eDE">{(cartSize!=undefined)?cartSize.length :0}</StyledBadge><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg" alt="Cart" width="24" height="24" />
                     </Link>
                     <Cart variant="span" style={{ fontSize: "1rem" }} className="mx-1"> Cart</Cart>
                 </Link>

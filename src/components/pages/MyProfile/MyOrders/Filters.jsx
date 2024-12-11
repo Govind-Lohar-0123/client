@@ -52,6 +52,14 @@ const StyledFilterBox = styled(Box)(({ theme }) => ({
 
 }))
 
+const Component=styled(Box)(({theme})=>({
+    [theme.breakpoints.down("md")]:{
+        whiteSpace:"nowrap",
+        overflowX:"scroll",
+        display:"flex"
+    }
+}))
+
 export default function Filters() {
     const disptach = useDispatch();
     const [change, setChange] = useState(false);
@@ -92,10 +100,10 @@ export default function Filters() {
                             <FilteredItems className="d-flex gap-2 mt-2 filter-items" style={{ flexWrap: "wrap", fontSize: "12px" }}>
                                 {
                                     filters.map((filter, idx) => {
-
+                                            
                                         return (
                                             <>
-                                                <StyledFilterBox className="YcSYyC" onClick={() => {
+                                                <StyledFilterBox  onClick={() => {
                                                     disptach(removeFilter(filter));
                                                     setChange((change) ? false : true);
                                                 }} style={{ cursor: "pointer" }}>
@@ -115,8 +123,7 @@ export default function Filters() {
                     </ListItem>
 
 
-
-                    {
+                    <Component>{
                         order_feature.map((val, idx) => {
                             return (
                                 <>
@@ -128,6 +135,8 @@ export default function Filters() {
                             )
                         })
                     }
+                    </Component>
+
 
 
                 </List>

@@ -8,6 +8,8 @@ export default function SuperCoins() {
     const Wrapper = styled(Box)(({ theme }) => ({
         backgroundColor: "#f5f7fa !important",
         width: "800px",
+        overflowX:"scroll",
+        whiteSpace:"nowrap",
         height: "100%",
         boxShadow: "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px",
         backgroundColor: "rgb(255, 255, 255)",

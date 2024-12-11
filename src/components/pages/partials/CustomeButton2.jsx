@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import { Box, Button, Typography, IconButton, List, ListItem, Link } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
 import { Link as routerLink } from "react-router-dom"
-import Login_Register from '../MyProfile/auth/Login_Register';
 import { getUser, removeUser } from '../MyProfile/auth/userAction';
 import { getToken, removeToken } from '../MyProfile/auth/tokenAction';
-import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { getAllCarts } from '../../react_redux/redux/actions/cartAction';
@@ -110,7 +107,7 @@ export default function CustomeButton2() {
 
    
     const cartSize = useSelector(state => state.cart).prods;
-
+    
     const logoutHandle = () => {
         removeToken();
         removeUser();
@@ -120,12 +117,12 @@ export default function CustomeButton2() {
         <>
 
             <StyledStack className="text-dark" >
-                {(getUser() != null) ?
+                {(getUser() != null && getUser()!=undefined)  ?
                     <Box className="username" style={{ position: "relative", paddingBlock: "15px" }}>
                         <Box >
 
-                            <Typography variant="contained" className="mx-2 text-bold" style={{ fontSize: "1rem" }} >{getUser().firstname}</Typography>
-                            < Link ><svg style={{ transform: "rotate(271deg)" }} width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className="Wto0b0"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="-dC5Le" ></path></svg></Link>
+                            <Typography variant="contained" className="mx-2 text-bold bg-white text-primary p-1" style={{ fontSize: "1rem" }} >{getUser().firstname}</Typography>
+                            {/* < Link ><svg style={{ transform: "rotate(271deg)" }} width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className="Wto0b0"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="-dC5Le" ></path></svg></Link> */}
                         </Box>
 
 
@@ -159,7 +156,7 @@ export default function CustomeButton2() {
                                 </ListItem>
 
                                 <ListItem>
-                                    <Link component={routerLink} to="account/coupons">
+                                    <Link component={routerLink} to="/account/rewards">
                                         <img  src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/coupons-083172.svg" alt="Coupons" width="24" height="24" />
                                         <Typography variant="span" className="mx-2">Coupons</Typography>
 
@@ -199,7 +196,7 @@ export default function CustomeButton2() {
                     <Box className="username" style={{ position: "relative", paddingBlock: "15px" }}>
                         <Box >
                             <Link to="/account/login" >
-                                <Typography  className=" bg-white text-primary text-bold px-5 py-1" style={{ fontSize: "1rem" }} >Login</Typography>
+                                <Typography  className=" bg-white text-primary text-bold px-4 py-1" style={{ fontSize: "1rem" }} >Login</Typography>
                                
                             </Link>
                         </Box>
@@ -320,7 +317,7 @@ export default function CustomeButton2() {
                 </Box>
                 <Box >
                     <Link to="/view-carts" component={routerLink} style={{ position: "relative" }} className=" text-white">
-                        <StyledBadge variant="span" className="text-center">{cartSize.length}</StyledBadge><ShoppingCartIcon />
+                        <StyledBadge variant="span" className="text-center">{(cartSize!=undefined)?cartSize.length:0}</StyledBadge><ShoppingCartIcon />
                     </Link>
                     <Link to="/view-carts" component={routerLink}><Cart variant="span" style={{ fontSize: "1rem" }} className="mx-1 text-bold"> Cart</Cart></Link>
                 </Box>

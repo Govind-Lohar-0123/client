@@ -20,6 +20,7 @@ const LeftComponent = styled(Box)(({ theme }) => ({
     },
     [theme.breakpoints.down("md")]: {
         width: "40%",
+       
     }
 
 
@@ -28,8 +29,9 @@ const RightComponent = styled(Box)(({ theme }) => ({
     width: "40%",
 
     [theme.breakpoints.down("md")]: {
-        width: "80%",
+        width: "100%",
         marginInline: "0",
+        
     }
 
 
@@ -42,7 +44,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
     justifyContent: "center",
     gap: "20px",
     [theme.breakpoints.down("lg")]: {
-        gap: "5px",
+        gap: "10px",
         marginRight:"25px"
     }
 
@@ -53,11 +55,24 @@ const Logo = styled(Box)(({ theme }) => ({
     height: "100%",
     //   padding:"5px",
 
-    marginLeft: "auto",
+    marginInline: "auto",
     ">div": {
         display: "flex",
         flexDirection: "column",
 
+    }
+    ,
+    [theme.breakpoints.down("md")]:{
+       marginInline:"auto",
+       "img":{
+         width:"66%"
+       }
+    },
+    [theme.breakpoints.down("sm")]:{
+       
+       "img":{
+         width:"100%"
+       }
     }
 
 
@@ -77,6 +92,7 @@ const StyledSearchBox = styled(Box)(({ theme }) => ({
 
 
 
+
 export default function Navbar2() {
 
 
@@ -85,17 +101,19 @@ export default function Navbar2() {
 
     return (<>
         <Wrapper  >
+            <Box style={{marginLeft:"15px"}}>
             <DrawerComponent />
+            </Box>
             <LeftComponent className="gap-5">
-                <Logo>
-                    <div className="text-center w-100">
+                <Logo >
+                    <div className="text-center mx-0 text-center">
                         <a href="/">
-                            <img width="80" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="Flipkart" title="Flipkart" className="W5mR4e" />
+                            <img style={{width:"100px"}} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="Flipkart" title="Flipkart" className="W5mR4e" />
                         </a>
                         <a className="MwbhDR text-white d-flex gap-1 text-bold align-items-center" href="/plus" style={{ fontSize: "10px" }}>
                             <span className="text-bold">Explore</span>
                             <span className="s4NJ5L text-bold" style={{ color: "#ffe500" }}>Plus</span>
-                            <img width="10" height="12" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" />
+                            <img className="d-block " style={{width:"10px"}} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" />
                         </a>
                     </div>
                 </Logo>

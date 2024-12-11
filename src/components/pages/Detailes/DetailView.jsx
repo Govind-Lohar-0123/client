@@ -21,10 +21,11 @@ const Container = styled(Grid)(({ theme }) => ({
     }
 }))
 const DetailWrapper = styled(Box)(({ theme }) => ({
-    width: "100%",
+    width: "90%",
     marginInline: "auto",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
         width: "100%",
+        marginTop:"20px"
 
 
     }
@@ -59,18 +60,18 @@ const DetailView = () => {
 
     return (
         <>
-            <Box className=" mt-1 mx-auto" style={{ width: "90%" }}>
+           
 
                 {((data.loading == false && data.prod)) &&
 
 
-                    <DetailWrapper className="mt-1">
+                    <DetailWrapper className="mt-5  mx-auto">
 
                         <Container container className="pt-4 " spacing={0}>
-                            <LeftComponent item lg={4.8} md={4} sm={12} xs={12} >
+                            <LeftComponent item lg={4.8} md={6} sm={12} xs={12} className="mb-5">
                                 <ActionItem url={data.prod.prod.url} prod={data.prod} />
                             </LeftComponent>
-                            <RightComponent item lg={7.2} md={8} sm={12} xs={12} style={{ height: "85vh", overflowY: "scroll" }}>
+                            <RightComponent item lg={7.2} md={6} sm={12} xs={12} style={{ height: "85vh", overflowY: "scroll" }}>
 
                                 <ProductDetails content={data.prod.prod.content} />
                             </RightComponent>
@@ -81,7 +82,7 @@ const DetailView = () => {
                         </Box>
                     </DetailWrapper>
                 }
-            </Box>
+            
 
         </>
 

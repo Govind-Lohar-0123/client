@@ -1,21 +1,19 @@
 import { Box, Tpography, Link, styled, List, Typography, Grid, ListItem, Pagination, Button } from "@mui/material"
-import Card1 from "./Cards/Card1"
 import Card2 from "./Cards/Card2"
 import { Link as routerLink, useParams } from "react-router-dom"
-import { Height } from "@mui/icons-material"
 import { getProductsByLimit } from "../../react_redux/redux/actions/productAction"
-import { getProducts } from "../../react_redux/redux/actions/productAction"
 import { useDispatch, useSelector } from "react-redux"
 import { useState, useEffect } from "react"
 const ListStyle = styled(List)(({ theme }) => ({
     "li": {
         width: "auto", fontSize: "14px", cursor: "pointer",
+        marginBottom:"15px"
 
     },
-    // "li:": {
-    //     borderBottom: "2px solid #2874f0",
-
-    // }
+    [theme.breakpoints.down("md")]: {
+        overflowX: "scroll",
+        whiteSpace:"nowrap"
+    }
 }))
 
 const active = {
@@ -32,7 +30,7 @@ export default function Product() {
     const [sortBy, setSortBy] = useState("Popularity");
     const [page, setPage] = useState(1);
     let size = 4;
-   
+
     const handleChange = (e) => {
 
         setPage(e.target.value);
@@ -74,29 +72,31 @@ export default function Product() {
                     <Typography variant="span " className="text-bold" style={{ fontSize: "1rem", letterSpacing: "1px" }}>Vivo T2x 5G</Typography>
                     <Typography variant="span" className="mx-3 text-bold " style={{ fontSize: "12px", color: "#878787" }} >(Showing 1 – 14 products of 14 products)</Typography>
                 </Box>
-                <ListStyle className="d-flex  align-item-center mt-2">
+            
+                    <ListStyle className="d-flex  align-item-center mt-2">
 
 
-                    <ListItem className="text-bold">Sort By</ListItem>
+                        <ListItem className="text-bold">Sort By</ListItem>
 
 
-                    <ListItem onClick={(e) => setSortBy(e.target.textContent)} style={(sortBy == "Popularity") ? active : {}}>Popularity</ListItem>
+                        <ListItem onClick={(e) => setSortBy(e.target.textContent)} style={(sortBy == "Popularity") ? active : {}}>Popularity</ListItem>
 
 
-                    <ListItem onClick={(e) => setSortBy(e.target.textContent)} style={(sortBy == "Price--Low to High") ? active : {}}>Price--Low to High</ListItem>
+                        <ListItem onClick={(e) => setSortBy(e.target.textContent)} style={(sortBy == "Price--Low to High") ? active : {}}>Price--Low to High</ListItem>
 
 
-                    <ListItem onClick={(e) => setSortBy(e.target.textContent)} style={(sortBy == "Price--High to Low") ? active : {}}>Price--High to Low</ListItem>
+                        <ListItem onClick={(e) => setSortBy(e.target.textContent)} style={(sortBy == "Price--High to Low") ? active : {}}>Price--High to Low</ListItem>
 
 
-                    <ListItem onClick={(e) => setSortBy(e.target.textContent)} style={(sortBy == "Newest First") ? active : {}}>Newest First</ListItem>
+                        <ListItem onClick={(e) => setSortBy(e.target.textContent)} style={(sortBy == "Newest First") ? active : {}}>Newest First</ListItem>
 
 
-                </ListStyle>
+                    </ListStyle>
+        
             </Box>
             <hr className="w-100 mt-0 p-0 mb-5" />
             <Box className="mt-5">
-                <Grid container >
+                <Grid container lg={12} className="mx-auto">
                     {
 
                         prods.filter((prod) => (prod.content.title.toLowerCase().includes("")))
@@ -106,8 +106,8 @@ export default function Product() {
 
 
                                 return <>
-                                    <Grid item lg={3} key={idx}>
-                                        <Link className="text-dark w-100" to={`/detail-view/${prod._id}`} component={routerLink}>
+                                    <Grid item lg={3} md={4} sm={6} xs={8} className="mx-auto" key={idx}>
+                                        <Link className="text-dark w-100 d-block" to={`/detail-view/${prod._id}`} component={routerLink}>
                                             <Card2 prod={prod} />
                                         </Link>
                                     </Grid>

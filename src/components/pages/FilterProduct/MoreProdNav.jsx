@@ -10,27 +10,37 @@ const StyleList = styled(List)(({ theme }) => ({
     backgroundColor: "white",
     color: "black",
     display: "flex",
-    flexWrap: "wrap",
-   
+    
+
     justifyContent: "space-between",
     alignItems: "center",
     "p": {
         fontWeight: "bold",
         fontSize: "80%",
     },
-    [theme.breakpoints.down("md")]: {
-        display: "none"
+    [theme.breakpoints.down("lg")]: {
+        overflowX: "scroll",
+        whiteSpace: "nowrap",
+
+    
+
+        
+
     }
 
 
 }))
-
+const Wrapper=styled(Box)(({theme})=>({
+    [theme.breakpoints.down("md")]:{
+        marginBottom:"20px"
+    }
+}))
 
 
 export default function MoreProdNav() {
 
     return (<>
-        <Box className=" bg-white px-5 " style={{  boxShadow: "0 1px 1px #e0e3e5", position: "relative" }} >
+        <Wrapper className=" bg-white px-5 " style={{ boxShadow: "0 1px 1px #e0e3e5", position: "relative" }} >
 
             <StyleList>
                 {
@@ -57,7 +67,7 @@ export default function MoreProdNav() {
                 }
             </StyleList>
 
-        </Box>
+        </Wrapper>
 
     </>
     )

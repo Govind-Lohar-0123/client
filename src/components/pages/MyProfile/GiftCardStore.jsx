@@ -9,6 +9,9 @@ export default function GiftCardStore() {
         backgroundColor: "#f5f7fa !important",
         width: "100%",
         height: "100%",
+        [theme.breakpoints.down("lg")]:{
+            ">div>div>div":{flexWrap:"wrap",width:"60%",marginInline:"auto"}
+        },
         boxShadow: "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px",
         backgroundColor: "rgb(255, 255, 255)",
         padding: " 0px 24px",
@@ -35,7 +38,7 @@ export default function GiftCardStore() {
                             <img width="100%" alt="" srcSet="https://rukminim2.flixcart.com/flap/3600/3600/image/81ebdc5d337e7190.jpg?q=80 2x, https://rukminim2.flixcart.com/flap/1800/1800/image/81ebdc5d337e7190.jpg?q=80 1x" />
                             <img width="100%" alt="" src="https://rukminim2.flixcart.com/fk-p-flap/2000/2000/image/93881a4d42932961.jpg?q=50" />
                             <img width="100%" alt="" src="https://rukminim2.flixcart.com/flap/2000/2000/image/21e9c498b1a3da2a.jpg?q=50" />
-                            <Box className="d-flex align-item-center justify-content-space-between">
+                            <Box className="d-flex  align-item-center justify-content-space-between">
                                 <img width="100%" alt="" src="https://rukminim2.flixcart.com/flap/400/400/image/375c61bb05abe881.jpg?q=50" />
                                 <img width="100%" alt="" src="https://rukminim2.flixcart.com/flap/400/400/image/7625fe850a200fc5.jpg?q=50" />
                                 <img width="100%" alt="" src="https://rukminim2.flixcart.com/flap/400/400/image/8125f4708060ba40.jpg?q=50" />

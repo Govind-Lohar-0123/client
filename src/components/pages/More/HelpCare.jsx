@@ -32,6 +32,9 @@ const Component = styled(Box)(({ theme }) => ({
     marginInline: "auto"
 
 }))
+const LeftComponent=styled(Box)(({theme})=>({
+
+}))
 
 export default function HelpCare() {
     const [open, setOpen] = useState(false);
@@ -57,8 +60,8 @@ export default function HelpCare() {
                 <Component className="mx-auto">
 
                     <Grid container  className=" mt-2">
-                        <Grid item lg={3} className="" style={{ backgroundColor: "rgb(255, 255, 255)" }}>
-                            <Box >
+                        <Grid item lg={3} md={4} sm={10}className="mx-auto mb-3" style={{ backgroundColor: "rgb(255, 255, 255)" }}>
+                            <LeftComponent >
                                 <ListStyle className="mb-2" style={{ padding: "22px 16px 0 32px" }}>
                                     <Typography className="text-bold" style={{ fontSize: "12px", color: "#212121" }} >TYPE OF ISSUE</Typography>
                                     <List>
@@ -86,7 +89,7 @@ export default function HelpCare() {
                                         <ListItem><Link to="" className="text-dark" component={routerLink}>Return related</Link></ListItem>
                                     </ListStyle>
                                 </Box>
-                            </Box>
+                            </LeftComponent>
 
 
 
@@ -95,7 +98,7 @@ export default function HelpCare() {
                         </Grid>
 
 
-                        <Grid item lg={8.7} style={{ marginInline: "auto" }} >
+                        <Grid item lg={8.7} md={7.8} sm={10}style={{ marginInline: "auto" }} >
                             <Box>
                                 <Box className="bg-white p-3 px-4 " style={{ color: "#878787", backgroundColor: "#fff", borderRadius: "2px", boxShadow: "0 2px 4px 0 rgba(0, 0, 0, .08)" }}>
                                     <Typography style={{ fontSize: "12px", }} className="text-bold">Help Centre</Typography>

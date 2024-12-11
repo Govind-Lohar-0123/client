@@ -30,6 +30,7 @@ const ListStyleCircle = styled(Typography)(({ theme }) => ({
 }))
 const ColumnText = styled(TableRow)(({ theme }) => ({
     verticalAlign: "baseline",
+   
 }))
 const RatingComponent = styled(Box)(({ theme }) => ({
 
@@ -60,6 +61,9 @@ const SmallNav = styled(Box)(({ theme }) => ({
         fontWeight: "bold",
         verticalAlign: "super",
         color: " #878787 !important",
+    },
+    [theme.breakpoints.down("md")]:{
+        justifyContent:"flex-start"
     }
 }))
 
@@ -78,7 +82,8 @@ const ToolbarComponent = styled(Box)(({ theme }) => ({
 
         justifyContent: "space-between",
         alignItems: "flex-start",
-    }
+    },
+    
 }))
 const StyledChecked = styled(FormControlLabel)(({ theme }) => ({
     "span": {
@@ -93,13 +98,19 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
     "*": { border: "none!important" }
 }))
 const BuyChange = styled(Box)(({ theme }) => ({
+    width:"90%",
     "*": {
         fontSize: "14px",
     },
     ">div": {
         justifyContent: "space-between",
         alignItems: "center",
+    },
+    [theme.breakpoints.down("md")]:{
+        overflowX:"scroll",
+        whiteSpace:"nowrap"
     }
+    
 }))
 
 const RatingStyled = styled(Box)(({ theme }) => ({
@@ -134,7 +145,10 @@ const SpecifiTable = styled(Table)(({ theme }) => ({
     },
     "td": { borderBottom: "none", }
 }))
-
+const TableStyle=styled(Table)(({theme})=>({
+    whiteSpace:"nowrap",
+    overflowX:"scroll"
+}))
 
 export default function ProductDetails({ content }) {
     const [readMore, setReadMore] = useState(false);
@@ -147,7 +161,7 @@ export default function ProductDetails({ content }) {
         <>
             <RightComponent>
                 <ToolbarComponent className="">
-                    <SmallNav className="d-flex gap-1">
+                    <SmallNav className="d-flex gap-1 flex-wrap">
                         <Box className="r2CdBx">
                             <Link href="/" className=" R0cyWM">Home</Link>
                             <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" ><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" ></path></svg>
@@ -170,7 +184,7 @@ export default function ProductDetails({ content }) {
                         </Box>
 
                     </SmallNav>
-                    <Box className="d-flex " style={{ marginLeft: "auto" }} >
+                    <Box className="d-flex flex-wrap" style={{ marginLeft: "auto" }} >
                         <StyledChecked control={<Checkbox size="small" />} fontSize="13px" label="Compare" size="small" />
 
                         <Box className="text-muted" >
@@ -206,7 +220,7 @@ export default function ProductDetails({ content }) {
                     </Box>
                 </Box>
                 <Typography varaint="a" className="text-primary text-bold">View 4 more offers</Typography>
-                <BuyChange className="my-3 w-50 text-center border border-muted">
+                <BuyChange className="my-3  text-center border border-muted">
                     <Box style={{ backgroundColor: " #f5faff" }} className="border border-muted d-flex p-2 px-3 ">
                         <FormControlLabel value="female" control={<Radio size="small" defaultChecked />} label="Buy without Exchange" />
                         <Typography>₹22,999</Typography>
@@ -222,7 +236,7 @@ export default function ProductDetails({ content }) {
 
                 </BuyChange>
 
-                <Table>
+                <TableStyle>
                     <ColumnText>
                         <TableCell className="text-muted"><Box className="SLT5t4"><img className="border " src="https://rukminim2.flixcart.com/image/60/100/prod-fk-cms-brand-images/dcb0a7e61ba5a05860ceee7e6948e00470cfbdff88a18c522461201f523a9006.jpg?q=90" /></Box></TableCell>
                         <TableCell className="text-dark" style={{ fontWeight: "bold" }}>1 Year on Handset and 6 Months on Accessories <Link to=""> Know More</Link></TableCell>
@@ -293,7 +307,7 @@ export default function ProductDetails({ content }) {
                         <TableCell className="text-muted text-bold">Description</TableCell>
                         <TableCell >NA</TableCell>
                     </ColumnText>
-                </Table>
+                </TableStyle>
                 <Box className="border border-muted mt-4">
                     <Typography variant="h5" className="p-3 border border-muted">Product Description</Typography>
                     <Box >

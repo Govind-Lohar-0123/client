@@ -23,6 +23,7 @@ const BottomComponent = styled(Box)(({ theme }) => ({
         fontSize: "15px",
         letterSpacing: "0.8px",
     }
+
 }))
 const Component = styled(Box)(({ theme }) => ({
 
@@ -54,7 +55,7 @@ export default function Dashboard() {
 
                 <BottomComponent className="bg-white mt-3 px-2" style={{ boxShadow: "0 2px 4px 0 rgba(0, 0, 0, .08)" }}>
 
-                    <List>
+                    <List className="">
                         <ListItem >
                             <Box className="d-flex align-items-center gap-4" style={{
 

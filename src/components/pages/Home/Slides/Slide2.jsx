@@ -42,7 +42,6 @@ const SlideContainer = styled(Box)(({ theme }) => ({
 
 
 
-
 const Slide2 = ({ prods, time ,title}) => {
    
 
@@ -67,10 +66,10 @@ const Slide2 = ({ prods, time ,title}) => {
                     >
 
                         <Grid container  spacing={1}>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={1} prod={prods[1]} /></Grid>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={2} prod={prods[0]} /></Grid>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={3} prod={prods[0]} /></Grid>
-                            <Grid item lg={6} md={6} sm={6} xs={10} className="mx-auto"><Card key={4} prod={prods[1]} /></Grid>
+                            <Grid item lg={6} md={10} sm={10} xs={10} className="mx-auto"><Card key={1} prod={prods[1]} /></Grid>
+                            <Grid item lg={6} md={10} sm={10} xs={10} className="mx-auto"><Card key={2} prod={prods[0]} /></Grid>
+                            <Grid item lg={6} md={10} sm={10} xs={10} className="mx-auto"><Card key={3} prod={prods[0]} /></Grid>
+                            <Grid item lg={6} md={10} sm={10} xs={10} className="mx-auto"><Card key={4} prod={prods[1]} /></Grid>
                         </Grid> 
 
 

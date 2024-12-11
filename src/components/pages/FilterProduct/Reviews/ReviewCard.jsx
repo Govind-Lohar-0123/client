@@ -17,6 +17,10 @@ const Wrapper = styled(Grid)(({ theme }) => ({
     ":hover": {
         boxShadow: "2px 2px 20px 10px #DFE1E5",
         transform: "scale(0.9)"
+    },
+    [theme.breakpoints.down("md")]:{
+        width:"80%",
+        margin:"auto"
     }
 }))
 const Component = styled(Grid)(({ theme }) => ({
@@ -62,16 +66,16 @@ export default function ReviewCard({ prod }) {
 
         <Wrapper className="p-4">
 
-            <Component container >
-                <LeftComponent item lg={5.4}>
+            <Component container lg={12}>
+                <LeftComponent item lg={5.4} md={10} sm={12} className="mb-4">
                     <Grid container >
-                        <Grid item lg={3}>
+                        <Grid item lg={3} >
                             <Box className="p-2 w-100">
                                 <Link><Image src={url} alt="" /></Link>
 
                             </Box>
                         </Grid>
-                        <Grid item lg={8} style={{ marginLeft: "auto" }}>
+                        <Grid item lg={8}  sm={12} md={12}>
                             <Box>
                                 <Typography className="text-bold" style={{ fontSize: "17px" }} >{content.title} </Typography>
                                 <Box className="">
@@ -96,7 +100,7 @@ export default function ReviewCard({ prod }) {
                         </Grid>
                     </Grid>
                 </LeftComponent>
-                <MiddleComponent item lg={2.6} className="mx-auto">
+                <MiddleComponent item lg={2.6} className="mx-auto mb-4" sm={12} md={12}>
                     <Box>
                         <Typography style={{ fontSize: "16px" }} className="text-muted text-bold">Most Helfull Reviews</Typography>
                         <Box className="mt-1">
@@ -110,7 +114,7 @@ export default function ReviewCard({ prod }) {
                         <Box className="d-flex gap-1 align-item-center"><p className="_2NsDsF AwS1CA m-0" style={{ fontSize: "13px" }}>{"yes"}</p><svg width="14" height="14" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" className="VjlQyz"><g><circle cx="6" cy="6" r="6" fill="#878787"></circle><path stroke="#FFF" stroke-width="1.5" d="M3 6l2 2 4-4" fill="#878787"></path></g></svg><p id="review-5aa457fd-3c5c-40a2-891c-0420d82154cc" className="MztJPv m-0"><span style={{ fontSize: "13px" }}>Certified Buyer</span></p><p className="_2NsDsF m-0" style={{ fontSize: "13px" }}>{"11-02-2023"}</p></Box>
                     </Box>
                 </MiddleComponent>
-                <RightComponent item lg={2.6} style={{ marginInline: "auto" }}>
+                <RightComponent item lg={2.6} style={{ marginInline: "auto" }} sm={12} md={12}>
                     <Box>
                         <Typography style={{ fontSize: "16px" }} className="text-muted text-bold">Recent Review</Typography>
                         <Box className="mt-1">

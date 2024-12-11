@@ -33,7 +33,9 @@ const CardWrapper = styled(Box)(({ theme }) => ({
 
 
 
-    width: "85%",
+    width: "90%",
+    [theme.breakpoints.down("md")]:{
+    },
     marginInline: "auto",
 
 }))
@@ -112,9 +114,9 @@ export const Cart = () => {
 
     return (
         <>
-            <CardWrapper className="mt-3">
+            <CardWrapper className="mt-3 mx-2">
                 <Grid container  >
-                    <LeftComponent item lg={8} md={8}  >
+                    <LeftComponent item lg={8} md={7.5}  >
                         <Box className="p-3 d-flex bg-white justify-content-space-between align-items-center" style={{ height: "60px" }}>
                             <Typography style={{ fontSize: "14px" }}>From Saved Address</Typography>
 
@@ -196,7 +198,7 @@ export const Cart = () => {
                             <ButtonStyle variant="contained" size="large" ><Link component={RouterLink} className="text-white"> PLACE ORDER </Link></ButtonStyle>
                         </PlaceOrder>
                     </LeftComponent>
-                    <RightComponent item lg={3.5} md={3.5} >
+                    <RightComponent item lg={3.5} md={4} >
                         <PriceDetail />
 
                         <Box style={{ marginLeft: "26px" }}>

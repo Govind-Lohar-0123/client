@@ -1,13 +1,10 @@
-import { Box, styled, TextField, Grid, Typography, Button, List, Link, Table, TableBody, TableCell, TableContainer, Paper, TableRow, ListItem } from "@mui/material"
+import { Box, styled, Typography, Button, List, Link, Table,} from "@mui/material"
 import { useState } from "react";
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import { Link as routerLink } from "react-router-dom"
+
 import Backdrop from '@mui/material/Backdrop';
 import CloseIcon from '@mui/icons-material/Close';
-import FormLabel from '@mui/material/FormLabel';
 const style = {
     position: 'absolute',
     top: '50%',
@@ -55,17 +52,17 @@ export default function CouponsCard({ title }) {
                     <Typography className="text-bold" style={{ fontSize: "18px" }} >{title} Coupons</Typography>
 
                 </Box>
-                <Box style={{ width: "623px" ,position:"relative"}} >
+                <Box style={{  position:"relative"}} >
                     {
                         Array.from(new Array(5), (item, idx) => {
                             return (
                                 <>
                                     <Box style={{ padding: "24px 16px 24px 20px", border: " 1px solid #e0e0e0" }}>
-                                        <Box className="d-flex align-item-center justify-content-space-between">
+                                        <Box className="d-flex flex-wrap align-item-center justify-content-space-between">
                                             <Typography className="text-bold" style={{ color: "#26a541", fontSize: "16px" }}>Extra ₹700 off on OPPO Enco Ai</Typography>
                                             <Typography style={{ color: " #878787", fontSize: "14px" }}>Valid till 31 Aug, 2024</Typography>
                                         </Box>
-                                        <Box style={{ fontSize: "14px" }} className="mt-3 d-flex align-item-center justify-content-space-between">
+                                        <Box style={{ fontSize: "14px" }} className="mt-3 flex-wrap d-flex align-item-center justify-content-space-between">
                                             <Typography variant="span">Get extra ₹700 off on 1 item(s) (price inclusive of cashback/coupon)</Typography>
                                             <Typography onClick={handleOpen} fontSize="14px" className="text-bold" style={{ color: "#1976d2", cursor: "pointer" }}>View T&C</Typography>
 

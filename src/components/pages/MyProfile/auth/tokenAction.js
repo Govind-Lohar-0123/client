@@ -4,7 +4,7 @@ function setToken(token){
     
 }
 function getToken(){
-    
+    if(localStorage.getItem("Token")==undefined)return undefined;
     return localStorage.getItem("Token");
 }
 function removeToken(){

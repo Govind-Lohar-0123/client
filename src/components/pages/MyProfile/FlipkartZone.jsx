@@ -9,7 +9,7 @@ export default function FlipkartZonePlus() {
     return (
         <>
 
-            <Box style={{ width: "55%", marginInline: "auto" }} className="mt-3">
+            <Box style={{ width: "95%", marginInline: "auto" }} className="mt-3">
                 <Box>
                     <img srcSet="https://rukminim2.flixcart.com/fk-p-flap/3600/3600/image/1a4aa42d5b6b5386.png?q=80 2x, https://rukminim2.flixcart.com/fk-p-flap/1800/1800/image/1a4aa42d5b6b5386.png?q=80 1x" alt="" width="100%" />
                     <img srcSet="https://rukminim2.flixcart.com/fk-p-flap/3600/3600/image/eb5704620f69dfc6.png?q=80 2x, https://rukminim2.flixcart.com/fk-p-flap/1800/1800/image/eb5704620f69dfc6.png?q=80 1x" alt="" width="100%" />
