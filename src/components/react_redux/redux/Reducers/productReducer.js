@@ -26,13 +26,13 @@ export const getProductDetail = (state = { loading: true, prod: [] }, actions) =
 export const getProductsById = (state = {}, actions) => {
     switch (actions.type) {
         case actionType.GET_PRODUCT_DETAIL_REQUEST:
-            return { loading: true }
+            return { loading: true,status:false,prods:{} }
         case actionType.GET_PRODUCTS_BY_ID_SUCCESS:
-            return { loading: false, prods: actions.payload };
+            return { loading: false, status:true,prods: actions.payload };
         case actionType.GET_PRODUCTS_BY_ID_FAILED:
-            return { loading: true, error: actions.payload }
+            return { loading: true, status:false,prods:{} }
         case actionType.GET_PRODUCT_DETAIL_RESET:
-            return { loading: false, prods: {} }
+            return { loading: false,status:false, prods: {} }
         default: return state;
     }
 }

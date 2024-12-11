@@ -1,42 +1,27 @@
 
 
-
-// export const url = "https://server-3f16.onrender.com";
-export const url = "http://localhost:8000";
+export const url = "https://server-3f16.onrender.com";
+// export const url = "http://localhost:8000";
 export const clientUrl = "http://localhost:3000";
 
 
 
-const bannerImgs = [{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/918146cedcbab5c3.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/e53a8ebf7627286c.jpg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/e3643f4ecf26b682.jpg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/eee4c17ef87649e7.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/cd82db837cd38a84.jpg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/219d8e9ca74e23e0.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/3b2b1e0cf72a3109.jpg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/6167b56dad6d1330.jpg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/918146cedcbab5c3.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/e53a8ebf7627286c.jpg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/mobile/c/s/x/-original-imagzjhwaaewgj8r.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/mobile/g/q/5/-original-imahfkf6jcuhhzyb.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/mobile/y/9/0/-original-imahyuhfg2z4fvyh.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/mobile/k/g/j/t3x-5g-v2338-vivo-original-imahyyzaqhgwzfup.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/mobile/g/0/h/-original-imahfqws9yjuv4vv.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/mobile/u/v/h/-original-imagxaqtzmqgtfen.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/mobile/n/l/u/-original-imah2fjd7wfd9ksh.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/mobile/i/k/l/edge-50-fusion-pb300001in-motorola-original-imahywzpfd2jh9ep.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/1540/image/a03b09d0a1a39849.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/320/170/image/1a6ccb003d9a7b3d.jpg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/320/170/image/e5cac70efd92ae9a.png?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/320/170/image/83aefeef8cd78687.jpg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/kwzap3k0/bra/x/w/l/lightly-padded-32b-no-halter-styled-back-k1403bp-makclan-original-imag9j7swc86z9dh.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/shoe/0/u/t/-original-imagzevjzpn7mwb6.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/l2tcfbk0/kurta/9/g/j/xxl-indigobird-stylum-original-image2g7ym9fu9wt.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/fk-p-flap/170/170/image/5aa98b7cee183286.jpg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/sari/v/l/q/free-df-vishva-maroon-lichi-soft-silk-jacquard-woven-saree-heavy-original-imagh8hytfggqhg8.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/shoe/s/k/s/4-5-376169-puma-rose-dust-warm-white-hibiscus-flower-original-imaghkpgyzvg2rf7.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/xif0q/top/s/7/i/m-gr6289a-black-harpa-original-imagm7t6yhr83tpr.jpeg?q=90' },
-{ 'url': 'https://rukminim2.flixcart.com/image/170/170/kcnp8y80/accessories-combo/2/y/7/0ip6cbwfr005i-united-colors-of-benetton-original-imaftq7y5j22yepb.jpeg?q=90' },
+const bannerImgs = [
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/918146cedcbab5c3.jpeg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/e53a8ebf7627286c.jpg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/e3643f4ecf26b682.jpg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/eee4c17ef87649e7.jpeg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/cd82db837cd38a84.jpg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/219d8e9ca74e23e0.jpeg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/3b2b1e0cf72a3109.jpg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/6167b56dad6d1330.jpg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/918146cedcbab5c3.jpeg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/e53a8ebf7627286c.jpg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/1000/1540/image/a03b09d0a1a39849.jpeg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/320/170/image/1a6ccb003d9a7b3d.jpg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/320/170/image/e5cac70efd92ae9a.png?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/320/170/image/83aefeef8cd78687.jpg?q=90' },
+    { 'url': 'https://rukminim2.flixcart.com/fk-p-flap/170/170/image/5aa98b7cee183286.jpg?q=90' },
 ]
 const prod = [{ 'prod_url': 'https://rukminim1.flixcart.com/fk-p-flap/64/64/image/698ba0cebe456aaf.jpg?q=100', 'prod_name': 'Top Offer' },
 { 'prod_url': 'https://rukminim1.flixcart.com/fk-p-flap/64/64/image/44e10b16e649b691.jpg?q=100', 'prod_name': 'Mobiles & Tablets' },
@@ -49,7 +34,6 @@ const prod = [{ 'prod_url': 'https://rukminim1.flixcart.com/fk-p-flap/64/64/imag
 { 'prod_url': 'https://rukminim1.flixcart.com/fk-p-flap/64/64/image/57fe1ffe54569c41.jpg?q=100', 'prod_name': 'Travel' },
 { 'prod_url': 'https://rukminim1.flixcart.com/fk-p-flap/64/64/image/25f400c36bc3487d.jpg?q=100', 'prod_name': 'Grocery' },
 ]
-
 
 
 

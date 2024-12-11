@@ -1,42 +1,55 @@
-import React from "react";
-import { Typography, styled, Box, Link } from "@mui/material";
-import { Link as routerLink } from "react-router-dom"
-const Image = styled("img")({
-    width: "100%",
-    height: "70%",
-    padding: "10px"
-
-})
-
-const Text = styled(Typography)`
-    font-size:0.9rem;
-    margin-block:4px;
-`
+import { Box, styled, Grid, Typography, Link, List, ListItem, Checkbox, FormControlLabel } from "@mui/material";
+import * as React from 'react';
+import CardComp from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import { Link as routerLink } from "react-router-dom";
 
 
+const AddToCompare = styled(Grid)(({ theme }) => ({
+    "span": {
+        fontSize: "14px",
+    }
+}))
 
-export default function Card({ prod, time }) {
 
 
+const Wrapper = styled(Box)(({ theme }) => ({
+    transition: "all .5s ease-in-out",
+    marginBottom: "10px",
+    ":hover": {
+        boxShadow: "2px 2px 20px 20px #DFE1E5",
+        transform: "scale(1.1)"
+    }
+}))
+
+
+
+export default function Card({ prod }) {
     const prod_name = prod.content.title;
-    return (
+    return <>
+        <Wrapper className="p-2 py-3" style={{width:"210px"}}>
 
-        <>
-            
-                <Link component={routerLink} to={"/filter-product/" + prod._id} className="d-block mx-auto"  style={{ width: 220, height: "72%" }}>
-                    <Box className="card  text-dark pt-1 mt-4 h-100" style={{ border: "solid 1px rgb(239, 233, 233)" }} >
-                        <Image className="card-img-top m-auto " src={prod.url} alt="Card image cap" />
-                        <Box className="card-body ">
-                            <Text className="card-title text-dark text-center"  >{prod_name.substring(0, (prod_name.length > 20) ? 18 : prod_name.length)}</Text>
-                            <Text className="card-text p-0 text-center" style={{ fontWeight: "bold", fontSize: "17px" }}> {prod.content.price.sell_price}</Text>
+            <CardComp >
+
+                <Box>
+                    <img src={prod.url} className="d-block mx-auto p-4" alt="" height="250px" width="100%" />
+                </Box>
 
 
-                        </Box>
+
+                <CardContent >
+                    <Box className="d-flex flex-direction-column gap-1 text-center">
+                        <Link to="" className="text-dark" component={routerLink} style={{ fontSize: "14px" }}>{prod_name.substring(0, (prod_name.length > 20) ? 18 : prod_name.length)}</Link>
+                        <Link to="" className="text-dark" component={routerLink} style={{ fontSize: "14px" }}>{prod.content.price.sell_price}</Link>
+
                     </Box>
-                </Link>
-          
+                </CardContent>
+            
+
+            </CardComp>
 
 
-        </>
-    )
+        </Wrapper>
+    </>
 }

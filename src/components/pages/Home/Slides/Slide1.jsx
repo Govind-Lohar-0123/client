@@ -18,8 +18,8 @@ const StyledCarousel = styled(Carousel)(({ theme }) => ({
 const responsive = {
 
     desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 4
+        breakpoint: { max: 6000, min: 1024 },
+        items: 5
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
@@ -40,7 +40,7 @@ const SlideContainer = styled(Box)`
 
 
 const Slide1 = ({ prods, time, title }) => {
-    
+
 
 
     return (
