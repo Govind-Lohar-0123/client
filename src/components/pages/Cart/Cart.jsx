@@ -1,4 +1,4 @@
-import { Box, styled, TextField, Grid, Typography, Button, Link, Table,  } from "@mui/material"
+import { Box, styled, TextField, Grid, Typography, Button, Link, Table, } from "@mui/material"
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 
@@ -30,16 +30,10 @@ const CloseIconStyle = styled(Table)(({ theme }) => ({
 
 }))
 const CardWrapper = styled(Box)(({ theme }) => ({
-
-
-
-    width: "90%",
-    [theme.breakpoints.down("md")]:{
-    },
+    width: "95%",
+    
     marginInline: "auto",
-
 }))
-
 const ButtonStyle = styled(Button)(({ theme }) => ({
 
     width: "33%", height: "60px", backgroundColor: "#fb641b",
@@ -54,8 +48,11 @@ const PlaceOrder = styled(Button)(({ theme }) => ({
     top: "64px",
     bottom: " 0",
     height: "100px",
-    boxShadow: "0 -2px 10px 0 rgba(0, 0, 0, .1)"
-
+    width:"50%",
+    boxShadow: "0 -2px 10px 0 rgba(0, 0, 0, .1)",
+    [theme.breakpoints.down("md")]:{
+        "button":{width:"80%"}
+    }
 
 }))
 
@@ -80,8 +77,8 @@ const LeftComponent = styled(Grid)(({ theme }) => ({
     padding: "0 !important",
     border: "solid 1px rgb(225, 220, 220)",
     boxShadow: " rgba(0, 0, 0, 0.2) 0px 1px 2px 0px",
-    height: "80vh",
-    marginBottom: "100rem",
+    
+    // marginBottom: "100rem",
 
 }))
 const RightComponent = styled(Grid)(({ theme }) => ({
@@ -114,10 +111,14 @@ export const Cart = () => {
 
     return (
         <>
-            <CardWrapper className="mt-3 mx-2">
-                <Grid container  >
-                    <LeftComponent item lg={8} md={7.5}  >
-                        <Box className="p-3 d-flex bg-white justify-content-space-between align-items-center" style={{ height: "60px" }}>
+            <CardWrapper className="mt-3">
+
+                {
+                    (data.status!=false && data.prods!=undefined && data.prods.length!=0)?
+                
+                <Grid container  lg={12}>
+                    <LeftComponent item lg={8} md={7.5} sm={12} className="mx-auto mb-2" >
+                        <Box className="p-3 d-flex flex-wrap bg-white justify-content-space-between align-items-center" >
                             <Typography style={{ fontSize: "14px" }}>From Saved Address</Typography>
 
                             <Button variant="outlined" onClick={handleOpen} className="text-bold" style={{
@@ -198,7 +199,7 @@ export const Cart = () => {
                             <ButtonStyle variant="contained" size="large" ><Link component={RouterLink} className="text-white"> PLACE ORDER </Link></ButtonStyle>
                         </PlaceOrder>
                     </LeftComponent>
-                    <RightComponent item lg={3.5} md={4} >
+                    <RightComponent item lg={3.5} md={4.5} sm={6} className="mx-auto" >
                         <PriceDetail />
 
                         <Box style={{ marginLeft: "26px" }}>
@@ -207,7 +208,10 @@ export const Cart = () => {
                             </Box>
                         </Box>
                     </RightComponent>
-                </Grid>
+                </Grid>:<Box className="mx-auto ">
+                    <Typography variant="h2" className="text-center">Card is empty</Typography>
+                </Box>
+}
             </CardWrapper >
         </>
     )

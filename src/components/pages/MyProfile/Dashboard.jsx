@@ -1,9 +1,8 @@
 import { styled, Box, ListItem, List, Link, Typography } from "@mui/material";
 import { Link as routerLink } from "react-router-dom"
-
-import { getUser, removeUser } from '../MyProfile/auth/userAction';
-import { getToken, removeToken } from '../MyProfile/auth/tokenAction';
-import { useNavigate } from 'react-router-dom';
+import { removeToken } from "../auth/tokenAction";
+import { removeUser } from "../auth/userAction";
+ import { useNavigate } from 'react-router-dom';
 const BottomComponent = styled(Box)(({ theme }) => ({
     ">ul>li>div": {
         width: "100%"

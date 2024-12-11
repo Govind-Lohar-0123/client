@@ -1,7 +1,7 @@
 import { Box, List, ListItem, styled, Typography, Link } from "@mui/material";
 import { Link as routerLink } from "react-router-dom"
 import Dropdown from "./Dropdown";
-import { moreProd } from "../Home/data";
+import { moreProd } from "../partials/data";
 
 
 const StyleList = styled(List)(({ theme }) => ({

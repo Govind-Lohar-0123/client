@@ -3,9 +3,9 @@
 
 import axios from "axios";
 import { setUser } from "./userAction";
-import { setToken } from "./tokenAction";
-import { url } from "../../Home/data";
-
+import { setToken ,getToken} from "./tokenAction";
+import { url  } from "../partials/data";
+import { clientUrl } from "../partials/data";
 const temp = { token: null, user: null }
 export const userRegister = async (signData, setResult) => {
 
@@ -35,6 +35,7 @@ export const userRegister = async (signData, setResult) => {
 }
 
 export const userUpdate = async (user_data, setResult) => {
+    
 
     try {
 
@@ -50,7 +51,7 @@ export const userUpdate = async (user_data, setResult) => {
     catch (err) {
         setResult({ type: true, msg: "Error" });
     }
-    setTimeout(() => setResult({ status: false, msg: "" }))
+    setTimeout(() => setResult({ type: false, msg: "" }))
     return false;
 
 }
@@ -151,3 +152,111 @@ export const verifyOTP = async (email, otp, setResult) => {
     }
     setTimeout(()=>setResult({type:false,msg:""}),5000);
 }
+
+export async function changeUserPassword(user_data, setResult) {
+
+    let { confirmPassword, newPassword } = user_data;
+
+    for (let key in user_data) {
+        if (user_data[key] == "" || user_data[key] == undefined) {
+            setResult({ type: true, msg: "Please Fill All Field" });
+            return;
+        }
+    }
+    if (confirmPassword != newPassword) {
+        setResult({ type: true, msg: "Password is MissMatch..." });
+        setTimeout(() => setResult({ type: false, msg: "" }), 5000);
+        return;
+    }
+
+
+
+    try {
+        let token = getToken();
+        let { status, data } = await axios({
+            method: "put",
+            url: `${url}/user-api/change-pass`,            
+            data: { user_data },
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+
+        })
+
+        if (status == 200) {
+            window.location.href=clientUrl;
+        }
+
+        setResult({ type: true, msg: data.msg });
+        setTimeout(() => setResult({ type: false, msg: "" }), 5000);
+
+    }
+    catch (err) {
+        setResult({ type: true, msg: err.message });
+        setTimeout(() => setResult({ type: false, msg: "" }), 5000);
+    }
+
+}
+export async function userForgetPassword(user_data, setResult) {
+
+    let { confirmPassword, newPassword } = user_data;
+
+    for (let key in user_data) {
+        if (user_data[key] == "" || user_data[key] == undefined) {
+            setResult({ type: true, msg: "Please Fill All Field" });
+            return;
+        }
+    }
+    if (confirmPassword != newPassword) {
+        setResult({ type: true, msg: "Password is MissMatch..." });
+        setTimeout(() => setResult({ type: false, msg: "" }), 5000);
+        return;
+    }
+
+
+
+    try {
+        let { status, data } = await axios({
+            method: "put",
+            url: `${url}/user-api/forget-password`,
+            data: { user_data },
+
+        })
+
+        if (status == 200) {
+            window.location.href = clientUrl;
+        }
+
+        setResult({ type: true, msg: data.msg });
+        setTimeout(() => setResult({ type: false, msg: "" }), 5000);
+
+    }
+    catch (err) {
+        setResult({ type: true, msg: err.message });
+        setTimeout(() => setResult({ type: false, msg: "" }), 5000);
+    }
+
+}
+// export async function deleteAccount(email) {
+    
+//     try {
+//         let { status, data } = await axios({
+//             method: "delete",
+//             url: `${urlPath}/delete-account`,
+//             data: { email },
+
+//         })
+        
+//         if (status == 200) {
+//             logOut();
+//             window.location.href = clientUrl;
+//         }
+
+
+
+//     }
+//     catch (err) {
+//         return;
+//     }
+
+// }

@@ -23,7 +23,7 @@ export default function Card({ prod, time }) {
 
         <>
             
-                <Link component={routerLink} to={"/filter-product/" + prod._id} className="d-block mx-auto"  style={{ width: 220, height: "68%" }}>
+                <Link component={routerLink} to={"/filter-product/" + prod._id} className="d-block mx-auto"  style={{ width: 220, height: "72%" }}>
                     <Box className="card  text-dark pt-1 mt-4 h-100" style={{ border: "solid 1px rgb(239, 233, 233)" }} >
                         <Image className="card-img-top m-auto " src={prod.url} alt="Card image cap" />
                         <Box className="card-body ">

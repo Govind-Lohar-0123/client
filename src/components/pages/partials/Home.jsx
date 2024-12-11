@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Slide2 from "../Home/Slides/Slide2";
 import { Link as routerLink } from "react-router-dom"
 import Slide3 from "../Home/Slides/Slide3";
-import { imageURL } from "../Home/data";
+import { imageURL } from "./data.js";
 import AdvertismentSlide1 from "../Home/Advertisment/Slide1";
 import { AppBar } from "@mui/material";
 import Navbar1 from "./Navbar1.jsx";

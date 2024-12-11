@@ -1,7 +1,7 @@
 import { Box,  styled, Grid } from "@mui/material";
 
 import DemoItem from "./DemoItem";
-import { prod } from "./data";
+import { prod } from "../partials/data";
 const DemoBox = styled(Grid)(({ theme }) => ({
     backgroundColor: "white",
     height: "150px",

@@ -1,5 +1,5 @@
 import { Box, Stack, Typography, styled } from "@mui/material";
-import { bannerImgs } from "./data.js";
+import { bannerImgs } from "../partials/data.js";
 import Carousel from 'react-multi-carousel';
 
 import "react-multi-carousel/lib/styles.css";

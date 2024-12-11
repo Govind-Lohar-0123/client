@@ -2,6 +2,7 @@ import { Dialog, TextField, styled, Box, Button, Grid, Typography, FormControl, 
 import { useState } from "react";
 import { userRegister, userLogin, sendOTP, verifyOTP } from "./userApi";
 import { Link as routerLink } from "react-router-dom";
+import { clientUrl } from "../partials/data";
 
 
 
@@ -89,7 +90,7 @@ export default function Login_Register() {
     }
     const verifyOtpHandle = async () => {
         verifyOTP(loginData.email, otp, setResult);
-        // window.location.href = "/"
+        window.location.href = clientUrl;
 
     }
     const sendOTPHandle = async () => {

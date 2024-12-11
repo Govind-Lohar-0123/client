@@ -1,6 +1,6 @@
 import { Box, styled, Button, List, ListItem } from "@mui/material"
 import { useEffect } from 'react';
-import { carouselImg } from "../Home/data";
+import { carouselImg } from "../partials/data";
 import v1 from "../../videos/v1.mp4";
 const CarouselComponent = styled(Box)(({ theme }) => ({
     width: "70px",

@@ -7,21 +7,25 @@ export default function GiftCardStore() {
 
     const Component = styled(Box)(({ theme }) => ({
         backgroundColor: "#f5f7fa !important",
-        width: "100%",
+        width: "95%",
         height: "100%",
+                    ">div>div>div>img":{width:"280px"},
         [theme.breakpoints.down("lg")]:{
-            ">div>div>div":{flexWrap:"wrap",width:"60%",marginInline:"auto"}
+            ">div>div>div":{flexWrap:"wrap",width:"60%",marginInline:"auto"},
+            
+">div>div>div>img":{width:"100%"}
         },
         boxShadow: "rgba(0, 0, 0, 0.2) 0px 1px 2px 0px",
         backgroundColor: "rgb(255, 255, 255)",
         padding: " 0px 24px",
-        marginInline: "auto"
+        marginInline: "auto",
+        "img":{width:"100%"}
 
     }))
     return (
         <>
 
-            <Box className="mt-2">
+            <Box className="mt-2 ">
 
                 <Box className="mt-4 mx-2" >
 

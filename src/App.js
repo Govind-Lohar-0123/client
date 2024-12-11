@@ -32,16 +32,16 @@ import Notifi_Preffrence from "./components/pages/More/Notifi_Prefre.jsx";
 import HelpCare from "./components/pages/More/HelpCare.jsx";
 import DownloadApp from "./components/pages/More/DownloadApp.jsx";
 import Terms from "./components/pages/MyProfile/Account/Terms.jsx";
-
-import { getToken } from "./components/pages/MyProfile/auth/tokenAction.js";
-import Login_Register from "./components/pages/MyProfile/auth/Login_Register.jsx";
+import { getToken } from "./components/pages/auth/tokenAction.js";
+import Login_Register from "./components/pages/auth/Login_Register.jsx"
 import VideoDetails from "./components/pages/YouTube/VideosDetails/VideoDetails.jsx";
 import YoutubeLayout from "./components/pages/YouTube/partials/YoutubeLayout.jsx";
-import ForgetPassword from "./components/pages/MyProfile/auth/ForgetPassword.jsx";
+import ForgetPassword from "./components/pages/auth/ForgetPassword.jsx";
 import MyProfileLayout from "./components/pages/MyProfile/MyProfileLayout.jsx";
 import Header from "./components/pages/partials/Header.jsx";
+import ResetPassword from "./components/pages/auth/ResetPassword.jsx";
 
-
+import ChangePassword from "./components/pages/auth/ChangePassword.jsx";
 function App() {
   const token = getToken();
 
@@ -61,11 +61,15 @@ function App() {
               <Route path="communication-preferences" element={<Notifi_Preffrence />} />
               <Route path="detail-view/:prod_id" element={<DetailView />} />
               <Route path="filter-product/:prod_id" element={<FilterProduct />} />
-              <Route path="the-gift-card-store/:link" element={<GiftCardStore />} />
-              <Route path="forget-password" element={<ForgetPassword />} />
+              <Route path="the-gift-card-store" element={<GiftCardStore />} />
+            
 
             </Route>
-
+          
+            <Route path="/forget-password" element={<><Header/><ForgetPassword /></>} />
+            <Route path="/forget-password" element={<><Header/><ResetPassword /></>} />
+            <Route path="/change-password" element={<><Header/><ChangePassword /></>} />
+            
 
 
             <Route path="/" element={(token != null && token != undefined) ? <Layout /> : <Navigate to="/account/login" />}>
@@ -79,6 +83,8 @@ function App() {
 
             <Route path="/account" element={<Layout />}>
               <Route path="login" element={<Login_Register />} />
+
+
             </Route>
             <Route path="/account/orders" element={(token != null && token != undefined) ? <><Header /><MyOrders /> </> : <Navigate to="/account/login" />}>
 

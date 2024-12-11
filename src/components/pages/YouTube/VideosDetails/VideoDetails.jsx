@@ -63,10 +63,10 @@ const VideoDetails = () => {
                 <DetailWrapper className="mt-1 bg-white">
 
                     <Container container className="pt-4 mx-auto  " style={{width:"95%"}} spacing={0}>
-                        <LeftComponent item lg={8.5} md={4} sm={12} xs={12} >
+                        <LeftComponent item lg={8.5} md={8} sm={12} xs={12} >
                             <VideoWatch />
                         </LeftComponent>
-                        <RightComponent item lg={3} md={8} sm={12} xs={12} >
+                        <RightComponent item lg={3} md={11} sm={12} xs={12} >
 
                             <VideosList />
                         </RightComponent>

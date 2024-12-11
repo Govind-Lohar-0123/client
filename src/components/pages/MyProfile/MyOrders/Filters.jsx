@@ -6,7 +6,7 @@ import OrdersFeatureList from "./OrderFeatureList";
 import { Link as routerLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addFilter, removeFilter } from "../../../react_redux/redux/actions/FilterActions";
-import { order_feature } from "../../Home/data";
+import { order_feature } from "../../partials/data";
 
 
 

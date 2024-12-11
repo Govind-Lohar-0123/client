@@ -6,7 +6,7 @@ import ProdFeatureSelect from "./ProdFeatureSelect";
 import { Link as routerLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addFilter, removeFilter } from "../../react_redux/redux/actions/FilterActions";
-import { mobile_feature } from "../Home/data";
+import { mobile_feature } from "../partials/data";
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 

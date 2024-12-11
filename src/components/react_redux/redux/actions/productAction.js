@@ -2,7 +2,7 @@
 
 import * as actionType from "../constants";
 import axios from "axios";
-import { url } from "../../../pages/Home/data";
+import { url } from "../../../pages/partials/data";
 
 export const getProducts = () => async (dispatch) => {
 

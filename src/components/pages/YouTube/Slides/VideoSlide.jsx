@@ -32,11 +32,11 @@ const VideoSlide = ({ prods, time, title }) => {
 
                 {/* <Divider className="text-dark"/> */}
                 <Box className="w-100 px-2 " >
-                    <StyledCarousel container className="w-100" spacing={2}>
+                    <StyledCarousel container className="w-100 mx-auto" spacing={2}>
                         {
 
                             Array.from(new Array(20), (it, idx) => {
-                                return <Grid item lg={3} className="h-100 "><VideoCard key={idx} /></Grid>
+                                return <Grid item lg={3} md={4} sm={5}className="h-100 mx-auto"><VideoCard key={idx} /></Grid>
                             })
 
 

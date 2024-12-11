@@ -1,6 +1,6 @@
 
 import { styled,Box ,Grid} from "@mui/material"
-import { imageURL } from "./data"
+import { imageURL } from "../partials/data"
 const GridWrapper = styled(Grid)`
     margin-block:10px;
     

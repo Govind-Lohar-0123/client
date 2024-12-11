@@ -40,13 +40,19 @@ export default function PriceDetail() {
     }, [])
 
     const data = useSelector((state) => state.cart)
-    let sum = 0;
-    // for (let it of data.prods) {
-        
-    //     let price=it.content.price[0].replace(",","");
-    //     price=price.replace("₹","");
-    //     sum+=parseInt(price);
-    // }
+    
+    function getTotalPrice(){
+        let sum=0;
+        data.prods.forEach((item,idx)=>{
+            let s=item.content.price.sell_price;
+           s=s.replace("₹","");
+           s=s.replace(",","");
+            sum+=parseInt(s);
+        })
+        return sum;
+    }
+    
+   
 
     return (
         <>
@@ -57,14 +63,14 @@ export default function PriceDetail() {
                 <hr className="w-100" />
 
                 <MiddleBox className="py-2 px-4  ">
-                    <Box >
-                        <Typography>Price ({data.prods.length} item)</Typography>
+                    {/* <Box >
+                        <Typography>Price ({(data.status)?data.prods.length : 0} item)</Typography>
                         <Typography >₹27,999</Typography>
                     </Box>
                     <Box className="my-3" >
                         <Typography >Discount</Typography>
                         <Typography style={{ color: "rgb(11, 163, 11)" }}> ₹4,000</Typography>
-                    </Box>
+                    </Box> */}
                     <Box>
                         <Typography >Delivery Charges</Typography>
                         <Typography style={{ color: "rgb(11, 163, 11)" }}>Free</Typography>
@@ -74,7 +80,7 @@ export default function PriceDetail() {
                 <hr style={{ borderTop: "dotted 1px" }} className="mx-4" />
                 <TotalAmount className=" px-4 ">
                     <Typography  >Total Amount</Typography>
-                    <Typography >₹{sum}</Typography>
+                    <Typography >₹{getTotalPrice()}</Typography>
 
                 </TotalAmount>          
                 <hr style={{ borderTop: "dotted 1px" }} className="mx-4" />

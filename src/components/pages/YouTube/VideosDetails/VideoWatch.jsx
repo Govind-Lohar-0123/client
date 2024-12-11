@@ -9,10 +9,10 @@ import cartoon from "../../../videos/cartoon.mp4";
 const LeftComponent = styled(Grid)(({ theme }) => ({
     width: "100%",
 
-    height: "65vh",
+
     marginInline: "auto",
     [theme.breakpoints.down("md")]: {
-        width: "80%",
+      
     },
     [theme.breakpoints.down("sm")]: {
         width: "100%",
@@ -35,8 +35,8 @@ export default function VideoWatch() {
                 <source src={cartoon} className="w-100 h-100 d-block" />
             </video>
             <Typography style={{ fontSize: "19px", letterSpacing: "0px", wordSpacing: 0 }} className="text-bold my-2">How to prepare Low Level Design & Machine Coding for Interviews? LLD Roadmap and my Prep Strategy</Typography>
-            <Box className="d-flex align-item-center justify-content-space-between px-1">
-                <Box className="d-flex align-item-center gap-3 ">
+            <Box className="d-flex align-item-center justify-content-space-between px-1 flex-wrap gap-2">
+                <Box className="d-flex align-item-center gap-3 flex-wrap ">
                     <Avatar sx={{ backgroundColor: "red" }}>G</Avatar>
                     <Box>
                         <Typography style={{ fontSize: "15px" }} className="text-bold ">Govind Lohar</Typography>
@@ -44,7 +44,7 @@ export default function VideoWatch() {
                     </Box>
                     <Button variant="contained" className="bg-dark text-white text-bold " style={{ textTransform: "none", borderRadius: "20px" }}>Subscribe</Button>
                 </Box>
-                <Box className="d-flex align-item-center gap-4" style={{ fontSize: "14px" }}>
+                <Box className="d-flex align-item-center flex-wrap  gap-4" style={{ fontSize: "14px" }}>
                     <Box className="bg-muted p-2 px-2 d-flex align-item-center gap-1" style={{ borderRadius: "20px", backgroundColor: "#f5f6f4 " }}>
                         <ThumbUpIcon />
                         <Typography variant="span" className="mx-1 text-muted ">956</Typography>

@@ -3,7 +3,7 @@ import { Box, Grid, styled, Typography, Button,Link } from "@mui/material";
 
 
 const Wrapper = styled(Box)(({ theme }) => ({
-    height: "245px",
+    
     padding: "20px",
     backgroundColor: "#f4f8ff",
     border:"solid 2px black",

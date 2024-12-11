@@ -7,9 +7,8 @@ import { Box, Button, Typography, IconButton, List, ListItem, Link } from '@mui/
 import Badge from '@mui/material/Badge';
 import { Link as routerLink } from "react-router-dom"
 
-import { removeToken } from '../MyProfile/auth/tokenAction';
-import { getUser, removeUser } from '../MyProfile/auth/userAction';
-
+import { removeToken } from '../auth/tokenAction';
+import { getUser,removeUser } from '../auth/userAction';
 import { useSelector, useDispatch } from 'react-redux';
 import UserIcon from '@mui/icons-material/AccountCircleOutlined';
 import { getAllCarts } from '../../react_redux/redux/actions/cartAction';
@@ -199,7 +198,7 @@ export default function CustomeButton() {
                                     </Link>
                                 </ListItem>
                                 <ListItem>
-                                    <Link component={routerLink} to="/the-gift-card-store/1">
+                                    <Link component={routerLink} to="/the-gift-card-store">
                                         <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/giftCard-bd87e1.svg" alt="Gift Cards" width="24" height="24" />
 
                                         <Typography variant="span" className="mx-2">Gift Cards </Typography>
@@ -276,13 +275,7 @@ export default function CustomeButton() {
                                         <Typography variant="span" className="mx-2">Wishlist</Typography>
                                     </Link>
                                 </ListItem>
-                                {/* <ListItem>
-                                    <Link component={routerLink} to="account/coupons">
-                                        <img  src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/coupons-083172.svg" alt="Coupons" width="24" height="24" />
-                                        <Typography variant="span" className="mx-2">Coupons</Typography>
 
-                                    </Link>
-                                </ListItem> */}
                                 <ListItem>
                                     <Link component={routerLink} to="/rewards">
                                         <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/rewards-fbd212.svg" alt="Rewards" width="24" height="24" />
@@ -291,7 +284,7 @@ export default function CustomeButton() {
                                     </Link>
                                 </ListItem>
                                 <ListItem>
-                                    <Link component={routerLink} to="/the-gift-card-store/1">
+                                    <Link component={routerLink} to="/the-gift-card-store">
                                         <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/giftCard-bd87e1.svg" alt="Gift Cards" width="24" height="24" />
 
                                         <Typography variant="span" className="mx-2">Gift Cards </Typography>
