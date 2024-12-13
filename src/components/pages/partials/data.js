@@ -2,7 +2,7 @@
 
 export const url = "https://flipkart-server-yu7d.onrender.com";
 // export const url = "http://localhost:8000";
-export const clientUrl = "/";
+export const clientUrl = "https://flipkart-client.onrender.com";
 
 
 
