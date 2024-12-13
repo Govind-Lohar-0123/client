@@ -31,9 +31,7 @@ const style = {
     boxShadow: 24,
     p: 4,
 };
-const FormStyle = styled("form")(({ theme }) => ({
-    "i": { marginRight: "10px" }
-}))
+
 
 let cookieEmail = getCookie("email");
 let cookiePass = getCookie("password");

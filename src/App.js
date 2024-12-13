@@ -44,7 +44,7 @@ import ResetPassword from "./components/pages/auth/ResetPassword.jsx";
 import ChangePassword from "./components/pages/auth/ChangePassword.jsx";
 function App() {
   const token = getToken();
-
+  const email = window.localStorage.getItem("email")
   return (
 
     <Provider store={store}>
@@ -62,14 +62,16 @@ function App() {
               <Route path="detail-view/:prod_id" element={<DetailView />} />
               <Route path="filter-product/:prod_id" element={<FilterProduct />} />
               <Route path="the-gift-card-store" element={<GiftCardStore />} />
-            
+
 
             </Route>
-          
-            <Route path="/forget-password" element={<><Header/><ForgetPassword /></>} />
-            <Route path="/forget-password" element={<><Header/><ResetPassword /></>} />
-            <Route path="/change-password" element={<><Header/><ChangePassword /></>} />
-            
+
+            <Route path="/" element={(email != undefined && email != null) ? <Layout /> : <Navigate to="/account/login" />}>
+
+              <Route path="/forget-password" element={<><ForgetPassword /></>} />
+              <Route path="/reset-password" element={<><ResetPassword /></>} />
+            </Route>
+
 
 
             <Route path="/" element={(token != null && token != undefined) ? <Layout /> : <Navigate to="/account/login" />}>
@@ -93,6 +95,7 @@ function App() {
             <Route path="/account" element={(token != null && token != undefined) ? <MyProfileLayout /> : <Navigate to="/account/login" />}>
 
 
+              <Route path="change-password" element={<ChangePassword />} />
 
               <Route path="wishlist" element={<MyWishlist />} />
               <Route index element={<ProfileInfo />} />

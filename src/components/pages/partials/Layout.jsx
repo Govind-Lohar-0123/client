@@ -12,7 +12,7 @@ export default function Layout() {
         <>
 
             <Header />
-            <Box style={{marginTop:"130px"}}>
+            <Box >
             <Outlet />
             </Box>
             <Footer />

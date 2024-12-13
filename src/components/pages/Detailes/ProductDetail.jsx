@@ -1,10 +1,7 @@
-import { Box, Typography, Grid, styled, Table, TextField, Toolbar, Button, TableRow, Slider, TableCell, List, ListItem, Link, Radio, FormControlLabel, Checkbox, TableHead } from "@mui/material";
+import { Box, Typography, Grid, styled, Table, TextField, Toolbar, Button, TableRow, TableCell, List, ListItem, Link, Radio, FormControlLabel, Checkbox, TableHead } from "@mui/material";
 import { LocalOffer as Badge, BorderBottom, CheckBox } from "@mui/icons-material";
-import Star from '@mui/icons-material/Star';
-
 import Reply from '@mui/icons-material/Reply';
 import { useState } from "react";
-import zIndex from "@mui/material/styles/zIndex";
 const RightComponent = styled(Box)(({ theme }) => ({
     position:"relative",
     "p": {

@@ -1,32 +1,32 @@
 import React, { useState } from 'react'
 import { Box, InputBase, ListItem, styled, List, Typography } from "@mui/material";
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
-const StyledInputBase = styled(InputBase)(({theme})=>({
-    fontSize:"14px",
-    width:"90%",
-    fontWeight:"bold",
-   backgroundColor:"transparent",
-   
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    fontSize: "14px",
+    width: "90%",
+    fontWeight: "bold",
+    backgroundColor: "transparent",
+
 
 }))
-   
-  
-    
 
-const SearchContainer = styled(Box)(({theme})=>({
-    boxShadow:"0 0 3px rgba(0, 0, 0, .2)",
-    backgroundColor:"white",
-    width:"100%",
-    [theme.breakpoints.down("md")]:{
-        top:"25px",
-       }
+
+
+
+const SearchContainer = styled(Box)(({ theme }) => ({
+    boxShadow: "0 0 3px rgba(0, 0, 0, .2)",
+    backgroundColor: "white",
+    width: "100%",
+    [theme.breakpoints.down("md")]: {
+        top: "25px",
+    }
 }))
-   
-    
+
+
 
 const ListWrapper = styled(Box)(({ theme }) => ({
     position: "absolute",
@@ -35,7 +35,7 @@ const ListWrapper = styled(Box)(({ theme }) => ({
     width: "100%",
     zIndex: "11",
     top: "40px",
-    
+
     left: 0
 }))
 

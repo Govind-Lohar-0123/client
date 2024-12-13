@@ -24,8 +24,7 @@ const FAQsStyled = styled(Box)(({ theme }) => ({
 
 }))
 const user = getUser();
-
-let { firstname, lastname, phone } = user;
+if(user!=undefined && user!=null){var { firstname, lastname, phone } = user;}
 export default function ProfileInfo() {
 
     const [editPerInfo, setEditPerInfo] = useState(true);
@@ -70,7 +69,7 @@ export default function ProfileInfo() {
         if (name == "phone") {
             let len = perInfo.phone.toString().length;
             
-            if (len == 10) {console.log(len);phone = perInfo.phone;}
+            if (len == 10) {phone = perInfo.phone;}
             else {setResult({type:true,msg:"Please Enter 10 Digit..."});}
             setEditMobile(true);
         }

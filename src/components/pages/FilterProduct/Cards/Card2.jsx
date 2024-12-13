@@ -1,17 +1,10 @@
 import { Box, styled, Grid, Typography, Link, List, ListItem, Checkbox, FormControlLabel } from "@mui/material";
 import * as React from 'react';
-import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import { Link as routerLink } from "react-router-dom";
 
-const Image = styled("img")(({ theme }) => ({
-    width: "100%",
-    height: "100%",
-    display: "block",
-}))
+
 const AddToCompare = styled(Grid)(({ theme }) => ({
     "span": {
         fontSize: "14px",
@@ -21,23 +14,13 @@ const CardStyled = styled(Grid)(({ theme }) => ({
 
 
 }))
-const RightComponent = styled(Grid)(({ theme }) => ({
 
-}))
-const Component = styled(Grid)(({ theme }) => ({
-
-}))
 const Wrapper = styled(Box)(({ theme }) => ({
     transition: "all .5s ease-in-out",
     marginBottom: "10px",
     ":hover": {
         boxShadow: "2px 2px 20px 10px #DFE1E5",
         transform: "scale(1.1)"
-    }
-}))
-const CardMediaStyle = styled(CardMedia)(({ theme }) => ({
-    ">div": {
-
     }
 }))
 

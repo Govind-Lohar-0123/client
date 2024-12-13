@@ -43,7 +43,7 @@ export default function Home() {
     
     useEffect(() => {
         disptach(getProducts());
-        console.log("UseEffect First Time ");
+        
     }, [])
 
     const data = useSelector((state) => state.getProd);

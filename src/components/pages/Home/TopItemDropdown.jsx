@@ -1,8 +1,6 @@
 import { Box, List, ListItem, styled, Link, Typography } from "@mui/material"
 import { Link as routerLink } from "react-router-dom";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import LogoutIcon from '@mui/icons-material/Logout';
+
 
 const TopItemList = styled(Box)(({ theme }) => ({
     position: "absolute",

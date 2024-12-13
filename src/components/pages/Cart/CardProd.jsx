@@ -7,9 +7,6 @@ import { removeFromCart } from "../../react_redux/redux/actions/cartAction";
 
 const Wrapper = styled(Box)(({ theme }) => ({
 
-    // height: "250px",
-    // padding:"20px",
-
 }))
 
 

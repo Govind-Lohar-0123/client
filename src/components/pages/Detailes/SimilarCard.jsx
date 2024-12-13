@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography, styled, Box, Link } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom"
 const Image = styled("img")({
     width: "100%",
     padding: "15px",

@@ -1,6 +1,5 @@
 import { Box, Stack, Typography, styled, Grid } from "@mui/material";
 import TopItemDropdown from "./TopItemDropdown";
-import { useState, useEffect } from "react";
 
 const Item = styled(Grid)(({ theme }) => ({
     position: "relative",
