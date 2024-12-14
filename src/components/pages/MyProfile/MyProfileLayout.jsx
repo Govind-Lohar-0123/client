@@ -1,7 +1,7 @@
-import { Box, styled,Grid} from "@mui/material"
+import { Box, styled, Grid } from "@mui/material"
 import Dashboard from "./Dashboard";
 import { Outlet } from "react-router-dom";
-import Header from "../partials/Header";
+import Header from "../partials/Header1";
 import Footer from "../partials/Footer";
 
 
@@ -13,7 +13,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
     height: "100%",
 
     [theme.breakpoints.down("md")]: {
-        marginTop:"30px"
+        marginTop: "30px"
     }
 
 }))
@@ -39,8 +39,8 @@ const GridContainer = styled(Grid)(({ theme }) => ({
 export default function MyProfileLayout() {
     return (
         <>
-            <Header/>
-            <Wrapper className="mx-2" style={{marginTop:"150px"}}>
+
+            <Wrapper className="mx-2" style={{ marginTop: "150px" }}>
 
                 <Component className="mt-4">
 
@@ -52,14 +52,14 @@ export default function MyProfileLayout() {
 
 
                         <Grid item lg={8.5} md={8} sm={10} xs={11} className="mr-auto" style={{ backgroundColor: "white", marginLeft: "auto", boxShadow: "0 2px 4px 0 rgba(0, 0, 0, .08)" }}>
-                            <Outlet/>
+                            <Outlet />
 
                         </Grid>
 
                     </GridContainer>
                 </Component>
             </Wrapper >
-            <Footer/>
+            <Footer />
         </>
 
     )

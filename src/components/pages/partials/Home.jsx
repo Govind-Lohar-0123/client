@@ -2,7 +2,7 @@ import DemoAll from "../Home/DemoAll";
 import { Box, Link, Grid, styled, Typography } from "@mui/material";
 import Background from "../Home/Background";
 import Slide1 from "../Home/Slides/Slide1.jsx"
-import {CircularProgress} from "@mui/material";
+import { CircularProgress } from "@mui/material";
 
 
 import MidSlide from "../Home/MidSlide";
@@ -18,7 +18,6 @@ import AdvertismentSlide1 from "../Home/Advertisment/Slide1";
 import { AppBar } from "@mui/material";
 import Navbar1 from "./Navbar1.jsx";
 import Footer from "./Footer.jsx";
-
 import SearchBox from "../SearchBox.jsx";
 
 import VideoSlide from "../YouTube/Slides/VideoSlide.jsx";
@@ -40,21 +39,19 @@ const StyledSearchBox = styled(Box)(({ theme }) => ({
 }))
 export default function Home() {
     const disptach = useDispatch();
-    
+
     useEffect(() => {
         disptach(getProducts());
-        
+
     }, [])
 
     const data = useSelector((state) => state.getProd);
-    
+
 
     return (
         <>
-            <AppBar className="fixed-top  p-3 px-4" style={{ backgroundColor: "white", height: "56px" }}><Navbar1 /></AppBar>
-            <StyledSearchBox >
-                <SearchBox />
-            </StyledSearchBox>
+            
+            
             <Box style={{ marginTop: "4.5rem" }} className="mx-2">
                 <DemoAll />
                 <Background />
@@ -118,14 +115,17 @@ export default function Home() {
                                 )
                             })
                         }
-                        <VideoSlide  />
+                        <VideoSlide />
 
 
 
                     </>
                 }
             </Box>
-            <Footer />
+            <Box >
+                <Footer />
+            </Box>
+
         </>
     )
 

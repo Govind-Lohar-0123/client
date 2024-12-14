@@ -8,23 +8,25 @@ import Typography from '@mui/material/Typography';
 import { getUser } from './userAction';
 import { changeUserPassword } from './userApi';
 const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 500,
-
+   
+marginInline:"auto",
     boxShadow: 24,
     p: 4,
 };
 
 const Component = styled(Box)(({ theme }) => ({
+    width:"40%",
     [theme.breakpoints.down("md")]: {
         backgroundColor: "white",
-        marginTop: "3rem"
+        marginTop: "3rem",
+        width:"70%",
 
     },
     [theme.breakpoints.down("sm")]: {
+        "button":{
+            marginInline:"auto"
+        },
+        "a":{marginInline:"auto"},
         width: "90%"
     }
 }))
@@ -71,11 +73,11 @@ export default function ChangePassword() {
 
 
 
-                    <Box className="d-flex gap-2">
+                    <Box className="d-flex justify-content-space-between flex-wrap ">
 
-                        <Link to="/profile" component={routerLink} ><Button variant='contained' className="mt-3  bg-danger px-5 text-bold w-50">Cancel</Button>
+                        <Link to="/profile" component={routerLink} ><Button variant='contained' className="mt-3  bg-danger px-5 text-bold ">Cancel</Button>
                         </Link>
-                        <Button variant='contained' onClick={changePassHandle} className="mt-3  btn-primary text-bold w-50">Change Password</Button>
+                        <Button variant='contained' onClick={changePassHandle} className="mt-3  btn-primary text-bold ">Change Password</Button>
                     </Box>
                 </form>
             </Component>

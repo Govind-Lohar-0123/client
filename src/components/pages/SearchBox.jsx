@@ -22,7 +22,7 @@ const SearchContainer = styled(Box)(({ theme }) => ({
     backgroundColor: "white",
     width: "100%",
     [theme.breakpoints.down("md")]: {
-        top: "25px",
+        top:"144px"
     }
 }))
 

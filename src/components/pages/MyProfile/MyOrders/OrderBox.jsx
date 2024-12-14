@@ -13,7 +13,7 @@ export default function OrderBox() {
 
         <>
             <OrderBoxStyled className="mt-2 bg-white py-3 " style={{ borderRadius: "4px", border: "1px solid #dbdbdb", boxShadow: "0 0 0 0 rgba(0, 0, 0, .15)" }}>
-                <Link to="/order_details/1" component={routerLink} className="text-dark">
+                <Link to="/account/order_details/1" component={routerLink} className="text-dark">
                     <Box style={{ marginLeft: "4%" }} >
                         <Grid container >
                             <Grid item lg={3} md={3}>

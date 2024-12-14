@@ -28,28 +28,30 @@ const Wrapper = styled(Box)(({ theme }) => ({
 export default function Card({ prod }) {
     const prod_name = prod.content.title;
     return <>
-        <Wrapper className="p-2 py-3" style={{width:"210px"}}>
+        <Link to={`filter-product/${prod._id}`} component={routerLink} style={{cursor:"pointer"}}>
+            <Wrapper className="p-2 py-3" style={{ width: "210px" }}>
 
-            <CardComp >
+                <CardComp >
 
-                <Box>
-                    <img src={prod.url} className="d-block mx-auto p-4" alt="" height="250px" width="100%" />
-                </Box>
-
-
-
-                <CardContent >
-                    <Box className="d-flex flex-direction-column gap-1 text-center">
-                        <Link to="" className="text-dark" component={routerLink} style={{ fontSize: "14px" }}>{prod_name.substring(0, (prod_name.length > 20) ? 18 : prod_name.length)}</Link>
-                        <Link to="" className="text-dark" component={routerLink} style={{ fontSize: "14px" }}>{prod.content.price.sell_price}</Link>
-
+                    <Box>
+                        <img src={prod.url} className="d-block mx-auto p-4" alt="" height="250px" width="100%" />
                     </Box>
-                </CardContent>
-            
-
-            </CardComp>
 
 
-        </Wrapper>
+
+                    <CardContent >
+                        <Box className="d-flex flex-direction-column gap-1 text-center">
+                            <Link to="" className="text-dark" component={routerLink} style={{ fontSize: "14px" }}>{prod_name.substring(0, (prod_name.length > 20) ? 18 : prod_name.length)}</Link>
+                            <Link to="" className="text-dark" component={routerLink} style={{ fontSize: "14px" }}>{prod.content.price.sell_price}</Link>
+
+                        </Box>
+                    </CardContent>
+
+
+                </CardComp>
+
+
+            </Wrapper>
+        </Link>
     </>
 }

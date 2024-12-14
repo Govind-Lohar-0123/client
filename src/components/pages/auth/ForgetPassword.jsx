@@ -6,37 +6,37 @@ import Typography from '@mui/material/Typography';
 import { Link as routerLink } from "react-router-dom"
 import { useState } from 'react';
 
-import { getCookie } from './cookieAction.js';
+import { getCookie, setEmailForResetPass } from './cookieAction.js';
 
 import { clientUrl } from '../partials/data.js';
 import sendEmail from "../Email/email.js"
-import {isValidEmail} from "../auth/regularExp.js"
+import { isValidEmail } from "../auth/regularExp.js"
 
 // import {useNavigator} from "react-router-dom";
 
-const Component=styled(Box)(({theme})=>({
-    [theme.breakpoints.down("md")]:{
-        width:340
-    }
-}))
-
 const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
 
+    marginInline: "auto",
     boxShadow: 24,
     p: 4,
 };
 
+const Component = styled(Box)(({ theme }) => ({
+    width: "30%",
+    [theme.breakpoints.down("md")]: {
+        backgroundColor: "white",
+        marginTop: "3rem",
+        width: "70%",
 
-let cookieEmail = getCookie("email");
-let cookiePass = getCookie("password");
-
-
+    },
+    [theme.breakpoints.down("sm")]: {
+        "button": {
+            marginInline: "auto"
+        },
+        "a": { marginInline: "auto" },
+        width: "90%"
+    }
+}))
 let options = {
     to: "govindlohar3210@gmail.com",
     subject: "Welcome to reset your password",
@@ -52,7 +52,7 @@ export default function ForgetPassword() {
 
     const [result, setResult] = useState({ type: false, msg: "" });
     const [user_data, setUser_data] = useState({
-        email: (cookieEmail == null) ? "" : cookieEmail, password: (cookiePass == null) ? "" : cookiePass
+        email:"",
     });
 
     const handleInput = (e) => {
@@ -70,7 +70,7 @@ export default function ForgetPassword() {
         else {
             //send email to user
             options.to = user_data.email;
-            window.localStorage.setItem("email", user_data.email);
+            setEmailForResetPass(user_data.email);
             sendEmail(options);
             setResult({ type: true, msg: "Check your email..." })
 
@@ -86,34 +86,34 @@ export default function ForgetPassword() {
 
 
 
-            
-
-                <Component sx={style} className="p-4">
-                    {(result.type == true) ? <div className="alert alert-primary" role="alert">
-                        {result.msg}
-                    </div> : ""}
-                    <Typography variant='h5' className="text-center text-bold">Forget Password</Typography>
-                    <form className="my-4">
-
-                        <div className="mb-3">
-                            <label for="exampleInputEmail1" className="form-label">Enter Email </label>
-                            <input type="email" name="email" value={user_data.email} onChange={handleInput} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-
-                        </div>
 
 
-                        <Box className="d-flex gap-2">
+            <Component sx={style} className="p-4">
+                {(result.type == true) ? <div className="alert alert-primary" role="alert">
+                    {result.msg}
+                </div> : ""}
+                <Typography variant='h5' className="text-center text-bold">Forget Password</Typography>
+                <form className="my-4">
 
-                            <Link to="/login" className='d-block w-100' component={routerLink}><Button variant='contained' className="mt-3  bg-danger  text-bold w-50">Cancel</Button></Link>
+                    <div className="mb-3">
+                        <label for="exampleInputEmail1" className="form-label">Enter Email </label>
+                        <input type="email" name="email" value={user_data.email} onChange={handleInput} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
-                            <Button variant='contained' onClick={sendEmailHandle} className="mt-3  btn-primary text-bold w-50">Submit</Button>
-                        </Box>
-                    </form>
-                </Component>
-
+                    </div>
 
 
-            
+                    <Box className="d-flex gap-2">
+
+                        <Link to="/login" className='d-block w-100' component={routerLink}><Button variant='contained' className="mt-3  bg-danger  text-bold w-50">Cancel</Button></Link>
+
+                        <Button variant='contained' onClick={sendEmailHandle} className="mt-3  btn-primary text-bold w-50">Submit</Button>
+                    </Box>
+                </form>
+            </Component>
+
+
+
+
 
 
         </div>

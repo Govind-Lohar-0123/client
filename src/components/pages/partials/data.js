@@ -1,8 +1,8 @@
 
 
-export const url = "https://server-3f16.onrender.com";
-// export const url = "http://localhost:8000";
-export const clientUrl = "http://localhost:3000";
+export const url = "https://flipkart-server-0wxb.onrender.com";
+// export const url = "";
+export const clientUrl =+"/"+window.location.hostname;
 
 
 

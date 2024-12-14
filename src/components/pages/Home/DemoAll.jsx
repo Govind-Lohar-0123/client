@@ -14,7 +14,7 @@ const DemoBox = styled(Grid)(({ theme }) => ({
         paddingBlock:"5px"
     },
     [theme.breakpoints.down("md")]: {
-        marginTop: "10rem",
+       
         overflowX: "scroll",
 
 

@@ -7,7 +7,7 @@ import { url } from "../../../pages/partials/data";
 export const getProducts = () => async (dispatch) => {
 
    try {
-      const { status, data } = await axios.get("https://server-3f16.onrender.com/product-api/get-products");
+      const { status, data } = await axios.get(`${url}/product-api/get-products`);
 
       dispatch({ type: actionType.GET_PRODUCTS_SUCCESS, payload: { ...data, loading: false } });
    }

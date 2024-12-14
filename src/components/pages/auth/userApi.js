@@ -6,6 +6,7 @@ import { setUser } from "./userAction";
 import { setToken ,getToken} from "./tokenAction";
 import { url  } from "../partials/data";
 import { clientUrl } from "../partials/data";
+import { addEmailPassToCookie } from "./cookieAction";
 const temp = { token: null, user: null }
 export const userRegister = async (signData, setResult) => {
 
@@ -121,7 +122,7 @@ export const sendOTP = async (email, setResult, setIsOtp) => {
     catch (err) { }
 
 }
-export const verifyOTP = async (email, otp, setResult) => {
+export const verifyOTP = async (email,password, otp, setResult) => {
     let otplen = otp.toString().length;
     if (otplen != 4) {
 
@@ -140,17 +141,19 @@ export const verifyOTP = async (email, otp, setResult) => {
             
             setToken(temp.token);
             setUser(temp.user);
+            addEmailPassToCookie(email,password);
+            setTimeout(()=>window.location.href = clientUrl,5000);
+
         }
 
         setResult({ type: true, msg: data.message });
-        
 
     }
     catch (err) {
 
         setResult({ type: true, msg: "Server Error..." + err.message });
     }
-    setTimeout(()=>setResult({type:false,msg:""}),5000);
+    setTimeout(()=>setResult({type:false,msg:""}),4000);
 }
 
 export async function changeUserPassword(user_data, setResult) {

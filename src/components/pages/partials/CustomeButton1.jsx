@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import Paper from '@mui/material/Paper';
+
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
-import { Box, Button, Typography, IconButton, List, ListItem, Link } from '@mui/material';
+import { Box, Typography, List, ListItem, Link } from '@mui/material';
 
 import Badge from '@mui/material/Badge';
 import { Link as routerLink } from "react-router-dom"
@@ -17,16 +17,6 @@ import More from '@mui/icons-material/MoreVert';
 
 
 
-const StyledLogin = styled(Button)`
-    background-color:white;
-    color:#2874f0;
-    text-transform:capitalize;
-    font-weight:bold;
-    font-size:1rem;
-    height:35px;
-    
-  border-radius:0;
-`
 const StyledBadge = styled(Badge)(({ theme }) => ({
     position: "absolute",
     top: -9,
@@ -127,7 +117,7 @@ const LoginStyle=styled(Box)(({theme})=>({
     width:"100px"
 }))
 
-export default function CustomeButton() {
+export default function CustomeButton1() {
 
 
     const dispatch = useDispatch();
@@ -243,8 +233,8 @@ export default function CustomeButton() {
                         <UserList className="bg-white text-dark user-dropdown-list d-none" style={{ width: "270px" }}>
                             <Box className="py-2 d-flex align-item-center justify-content-space-between">
                                 <ListItem className=" d-flex align-item-center " style={{ justifyContent: "space-between", fontSize: "15px" }}>
-                                    <Link to="/account/login" component={routerLink} style={{ cursor: "pointer" }}><Typography className="text-muted text-bold" variant="span">New Customer ?</Typography></Link>
-                                    <Link to="/account/login" component={routerLink} style={{ cursor: "pointer" }}><Typography variant="span" className="text-primary text-bold">Sign Up</Typography></Link>
+                                    <Link to="/login" component={routerLink} style={{ cursor: "pointer" }}><Typography className="text-muted text-bold" variant="span">New Customer ?</Typography></Link>
+                                    <Link to="/login" component={routerLink} style={{ cursor: "pointer" }}><Typography variant="span" className="text-primary text-bold">Sign Up</Typography></Link>
                                 </ListItem>
                             </Box>
                             <hr className="p-0 m-0" />
@@ -301,7 +291,7 @@ export default function CustomeButton() {
                     </Box>
 
                 }
-                <Link className="text-dark " to="/view-carts" component={routerLink} >
+                <Link className="text-dark " to="/account/view-carts" component={routerLink} >
                     <Link className="_3CowY2" style={{ cursor: "pointer", position: "relative" }} >
                         <StyledBadge variant="span" className="_2U7eDE">{(cartSize!=undefined)?cartSize.length :0}</StyledBadge><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg" alt="Cart" width="24" height="24" />
                     </Link>

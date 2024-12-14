@@ -7,10 +7,11 @@ import { styled } from '@mui/material';
 import { userForgetPassword } from './userApi';
 // import userForgetPassword from 
 import { clientUrl } from '../partials/data';
+import { getEmailForResetPass } from './cookieAction';
 const StyleBox = styled(Box)(({ theme }) => ({
 
     display: "flex",
-    alignItems: "center",
+   
     justifyContent: "center",
     ">div": {
         width:"40%",
@@ -26,12 +27,13 @@ const FormStyle = styled("form")(({ theme }) => ({
     "i": { marginRight: "10px" }
 }))
 
+
 export default function ResetPassword() {
 
 
     const [result, setResult] = useState({ type: false, msg: "" });
     const [user_data, setUser_data] = useState({
-        email: window.localStorage.getItem("email"), newPassword: "", confirmPassword: "",
+        email:getEmailForResetPass(), newPassword: "", confirmPassword: "",
     });
     const handleInput = (e) => {
         setUser_data({ ...user_data, [e.target.name]: e.target.value });
@@ -41,7 +43,7 @@ export default function ResetPassword() {
 
     }
     return (
-        <StyleBox className="border-none" style={{ height: "100vh" }}>
+        <StyleBox className="border-none" style={{ height: "100%"}}>
 
             <Box className=" p-3" >
 

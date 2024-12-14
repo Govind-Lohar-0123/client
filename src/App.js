@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, useNavigate, Navigate } from "react-router-dom";
-import Layout from "./components/pages/partials/Layout";
+import Layout1 from "./components/pages/partials/Layout1.jsx";
 import Home from "./components/pages/partials/Home";
 import "./components/css/common.css";
 import store from "./components/react_redux/store";
 import { Provider } from "react-redux";
 import { Box } from "@mui/material";
-
+import Layout2 from "./components/pages/partials/Layout2.jsx";
 import DetailView from "./components/pages/Detailes/DetailView";
 import { Cart } from "./components/pages/Cart/Cart";
 
@@ -38,13 +38,14 @@ import VideoDetails from "./components/pages/YouTube/VideosDetails/VideoDetails.
 import YoutubeLayout from "./components/pages/YouTube/partials/YoutubeLayout.jsx";
 import ForgetPassword from "./components/pages/auth/ForgetPassword.jsx";
 import MyProfileLayout from "./components/pages/MyProfile/MyProfileLayout.jsx";
-import Header from "./components/pages/partials/Header.jsx";
+import Header from "./components/pages/partials/Header1.jsx";
 import ResetPassword from "./components/pages/auth/ResetPassword.jsx";
 
 import ChangePassword from "./components/pages/auth/ChangePassword.jsx";
+import { getEmailForResetPass } from "./components/pages/auth/cookieAction.js";
 function App() {
   const token = getToken();
-  const email = window.localStorage.getItem("email")
+  const email = getEmailForResetPass();
   return (
 
     <Provider store={store}>
@@ -52,72 +53,69 @@ function App() {
         <BrowserRouter>
           <Routes>
 
-            <Route path="/" element={<Home />} />
-            <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Layout2 />}>
+              <Route path="login" element={<Login_Register />} />
+              <Route path="register" element={<Login_Register />} />
+            </Route>
+            <Route path="/" element={<Layout1 />}>
+              <Route index element={<Home />} />
+              <Route path="/forget-password" element={<><ForgetPassword /></>} />
+
+            </Route>
+
+            {/* //Forget Password */}
+
+            <Route path="/" element={(email != undefined && email != null) ? <Layout1 /> : <Navigate to="/forget-password" />}>
+              
+              <Route path="/reset-password" element={<><ResetPassword /></>} />
+            </Route>
+            <Route path="/" element={<Layout2 />}>
+              <Route path="the-gift-card-store" element={<GiftCardStore />} />
+              <Route path="detail-view/:prod_id" element={<DetailView />} />
+              <Route path="filter-product/:prod_id" element={<FilterProduct />} />
               <Route path="supercoins" element={<SuperCoins />} />
               <Route path="plus" element={<FlipkartZonePlus />} />
               <Route path="helpcentre" element={<HelpCare />} />
               <Route path="download-app" element={<DownloadApp />} />
               <Route path="communication-preferences" element={<Notifi_Preffrence />} />
-              <Route path="detail-view/:prod_id" element={<DetailView />} />
-              <Route path="filter-product/:prod_id" element={<FilterProduct />} />
-              <Route path="the-gift-card-store" element={<GiftCardStore />} />
-
-
-            </Route>
-
-            <Route path="/" element={(email != undefined && email != null) ? <Layout /> : <Navigate to="/account/login" />}>
-
-              <Route path="/forget-password" element={<><ForgetPassword /></>} />
-              <Route path="/reset-password" element={<><ResetPassword /></>} />
             </Route>
 
 
 
-            <Route path="/" element={(token != null && token != undefined) ? <Layout /> : <Navigate to="/account/login" />}>
-              <Route path="/view-carts" element={<Cart />} />
-              <Route path="order_details/:order_id" element={<OrderDetails />} />
-
-            </Route>
-            <Route path="/" element={<YoutubeLayout />}>
+            <Route path="/" element={(token != null && token != undefined) ? <YoutubeLayout /> : <Navigate to="/login" />}>
               <Route path="detail-video" element={<VideoDetails />} />
             </Route>
 
-            <Route path="/account" element={<Layout />}>
-              <Route path="login" element={<Login_Register />} />
 
 
-            </Route>
-            <Route path="/account/orders" element={(token != null && token != undefined) ? <><Header /><MyOrders /> </> : <Navigate to="/account/login" />}>
+            {/* Account Handling Routes */}
 
+            <Route path="/account" element={(token != null && token != undefined) ? <Layout2 /> : <Navigate to="/login" />}>
+              <Route path="" element={<MyProfileLayout />}>
+                <Route index element={<ProfileInfo />} />
+                <Route path="addresses" element={<ManageAddress />} />
 
-            </Route>
-            <Route path="/account" element={(token != null && token != undefined) ? <MyProfileLayout /> : <Navigate to="/account/login" />}>
-
-
+                <Route path="vpadetails" element={<VPADetails />} />
+                <Route path="cardsdetails" element={<SavedCards />} />
+                <Route path="rewards" element={<MyCoupons />} />
+                <Route path="reviews" element={<MyReviews />} />
+                <Route path="notification" element={<Notification />} />
+                <Route path="wishlist" element={<MyWishlist />} />
+                <Route path="pancard" element={<PanCard />} />
+                <Route path="giftcard" element={<GiftCard />} />
+              </Route>
               <Route path="change-password" element={<ChangePassword />} />
-
-              <Route path="wishlist" element={<MyWishlist />} />
-              <Route index element={<ProfileInfo />} />
-              <Route path="addresses" element={<ManageAddress />} />
-              <Route path="pancard" element={<PanCard />} />
+              <Route path="orders" element={<MyOrders />} />
               <Route path="terms" element={<Terms />} />
-              <Route path="vpadetails" element={<VPADetails />} />
-              <Route path="cardsdetails" element={<SavedCards />} />
-              <Route path="reviews" element={<MyReviews />} />
-              <Route path="notification" element={<Notification />} />
-              <Route path="giftcard" element={<GiftCard />} />
-              <Route path="rewards" element={<MyCoupons />} />
-
-
-
+              <Route path="view-carts" element={<Cart />} />
+              <Route path="order_details/:order_id" element={<OrderDetails />} />
             </Route>
 
           </Routes>
         </BrowserRouter>
 
       </Box>
-    </Provider>
+    </Provider >
 
   );
 }

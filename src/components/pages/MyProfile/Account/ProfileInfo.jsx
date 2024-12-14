@@ -169,7 +169,7 @@ export default function ProfileInfo() {
 
                         </Box>
                         <Box>
-                            <Link component={routerLink} to="/change-password" className="bg-primary text-white text-bold p-2">Change Password</Link>
+                            <Link component={routerLink} to="/account/change-password" className="bg-primary text-white text-bold p-2">Change Password</Link>
                         </Box>
 
                         <FAQsStyled >

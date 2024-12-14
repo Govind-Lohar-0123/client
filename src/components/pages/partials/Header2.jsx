@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, styled, Box } from "@mui/material";import Navbar1 from './Navbar1';
+import { AppBar, styled, Box } from "@mui/material"; import Navbar1 from './Navbar1';
 import Navbar2 from './Navbar2';
 import MoreProdNav from '../FilterProduct/MoreProdNav';
 import SearchBox from "../SearchBox";
@@ -13,16 +13,17 @@ import SearchBox from "../SearchBox";
 const StyledSearchBox = styled(Box)(({ theme }) => ({
     width: "90%",
     display: "none",
-    marginInline:"auto",
+    marginInline: "auto",
     [theme.breakpoints.down("md")]: {
         display: "block",
-    
+
 
     }
 
 }))
 
-export default function Header() {
+
+export default function Header2() {
 
     return (
         <>
@@ -38,7 +39,7 @@ export default function Header() {
             <StyledSearchBox className="mx-auto">
                 <SearchBox />
             </StyledSearchBox>
-            
+
 
 
 

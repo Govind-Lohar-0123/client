@@ -1,11 +1,8 @@
 import { Box, styled, } from "@mui/material";
-
-
 import React from "react";
 import SearchBox from "../SearchBox";
-import CustomeButton from "./CustomeButton";
-
-import DrawerComponent from "./DrawerList";
+import CustomeButton1 from "./CustomeButton1";
+import DrawerComponent from "./DrawerComponent";
 
 const Image = styled("img")(({ theme }) => ({
     width: "170px",
@@ -23,9 +20,6 @@ const Image = styled("img")(({ theme }) => ({
     objectFit: "contain",
 
 }))
-
-
-
 const LeftComponent = styled(Box)(({ theme }) => ({
     display: "flex",
     width: "58%",
@@ -45,7 +39,7 @@ const RightComponent = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("md")]: {
         width: "80%",
         marginInline: "0",
-        marginLeft:"20px"
+        marginLeft: "20px"
     }
 
 
@@ -67,17 +61,11 @@ const Logo = styled(Box)(({ theme }) => ({
     height: "100%",
     //   padding:"5px",
     marginRight: "30px",
-  
-
-
-
-
-
 }))
 const StyledSearchBox = styled(Box)(({ theme }) => ({
     width: "100%",
     [theme.breakpoints.down("md")]: {
-     display:"none "
+        display: "none "
     }
 
 }))
@@ -86,9 +74,7 @@ const StyledSearchBox = styled(Box)(({ theme }) => ({
 
 
 
-export default function Navbar() {
-
-    
+export default function Navbar1() {
 
 
     return (<>
@@ -103,7 +89,7 @@ export default function Navbar() {
                 </StyledSearchBox>
             </LeftComponent>
             <RightComponent>
-                <CustomeButton />
+                <CustomeButton1 />
             </RightComponent>
 
 

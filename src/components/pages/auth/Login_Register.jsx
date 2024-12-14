@@ -2,7 +2,7 @@ import { Dialog, TextField, styled, Box, Button, Grid, Typography, FormControl, 
 import { useState } from "react";
 import { userRegister, userLogin, sendOTP, verifyOTP } from "./userApi";
 import { Link as routerLink } from "react-router-dom";
-import { clientUrl } from "../partials/data";
+import { getCookie } from "./cookieAction";
 
 
 
@@ -17,7 +17,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
         marginTop: "35px",
         width: "80%",
 
-        height: "70vh"
+        height: "80vh"
     },
     [theme.breakpoints.down("sm")]: {
 
@@ -28,7 +28,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
         },
 
     },
-    height:"75vh"
+    height: "75vh"
 
 
 }))
@@ -65,20 +65,24 @@ const signupinitialvalue = {
     email: "",
 
 }
-const logininitialvalue = {
-    password: "",
-    email: ""
-}
 
+
+let cookieEmail = getCookie("email");
+let cookiePass = getCookie("password");
 
 
 export default function Login_Register() {
 
     const [account, toggleAccount] = useState(true);
     const [signData, setSignData] = useState(signupinitialvalue);
-    const [loginData, setLoginData] = useState(logininitialvalue);
+    const [loginData, setLoginData] = useState({
+        password: cookiePass,
+        email: cookieEmail
+    });
+
     const [result, setResult] = useState({ status: false, msg: "" })
     const [isOpt, setIsOtp] = useState(true);
+    const [rememberMe, setRemember] = useState(false);
     const [otp, setOtp] = useState("");
 
     // **********HANDLES***********
@@ -88,9 +92,10 @@ export default function Login_Register() {
         userRegister(signData, setResult);
 
     }
+
     const verifyOtpHandle = async () => {
-        verifyOTP(loginData.email, otp, setResult);
-        window.location.href = clientUrl;
+        verifyOTP(loginData.email, loginData.password, otp, setResult);
+
 
     }
     const sendOTPHandle = async () => {
@@ -124,7 +129,7 @@ export default function Login_Register() {
     }
     return <>
 
-        <Wrapper className="bg-white " >
+        <Wrapper className="bg-white "  >
             <Grid container lg={12} >
                 <LeftComponent item lg={4} md={5} sm={5}>
                     <Box className=" h-100 bg-primary text-white py-5 d-flex flex-direction-column justify-content-space-between align-item-center">
@@ -155,16 +160,31 @@ export default function Login_Register() {
                                     <Typography variant="h5" className="text-center text-bold mb-2">LOGIN</Typography>
                                     <FormControl className="w-100 px-5"  >
                                         {(isOpt == true) ?
-                                            <><TextField variant="standard" className="w-100" defaultValue={signData.email} onChange={loginInputHandle} name="email" label="Enter Email" />
-                                                <TextField variant="standard" className=" w-100 my-3" defaultValue={signData.password} onChange={loginInputHandle} name="password" label="Enter Password" />
+                                            <Box>
+                                                <div className="form-group">
+                                                    <label for="exampleInputEmail1">Email address</label>
+                                                    <input type="email" defaultValue={loginData.email} onChange={loginInputHandle} name="email" label="Enter Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                                                </div>
+                                                <div className="form-group my-4">
+                                                    <label for="exampleInputPassword1">Password</label>
+                                                    <input type="password" className="form-control" defaultValue={loginData.password} onChange={loginInputHandle} name="password" label="Enter Password" id="exampleInputPassword1" placeholder="Password" />
+                                                </div>
+
+
+
+
                                                 <Typography className="text-danger text-bold mt-1" style={{ fontSize: "11px" }}>{(result.status) ? result.msg : ""}</Typography>
+                                                <Box>
+                                                    <input type="checkbox" onClick={() => setRemember((rememberMe) ? false : true)} />
+                                                    <label for="vehicle1" className="mx-2">Remember Me</label>
+                                                </Box>
                                                 <Link to="/forget-password" component={routerLink} className="forget-password">Forget Password</Link>
                                                 <Typography className="mb-3 text-muted  mt-4" style={{ fontSize: "12px" }}>
                                                     By continuing, you agree to Flipkart's <span className="text-primary">Terms of Use</span> and <span className="text-primary">Privacy Policy.</span>
                                                 </Typography>
                                                 <LoginBtn variant="contained" className="w-100  py-3" onClick={loginHandle}>Login</LoginBtn>
+                                            </Box>
 
-                                            </>
                                             :
                                             <>
                                                 <TextField variant="standard" type="number" className=" w-100 my-3" defaultValue={otp} onChange={(e) => {
