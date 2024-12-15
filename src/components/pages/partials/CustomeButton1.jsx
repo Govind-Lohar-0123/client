@@ -116,9 +116,9 @@ const LinkStyle = styled(Link)(({ theme }) => ({
 const LoginStyle = styled(Box)(({ theme }) => ({
     width: "100px"
 }))
-console.log(getCookie("user"));
+
 let user = JSON.parse(getCookie("user"));
-console.log(user, JSON.stringify(user));
+
 export default function CustomeButton1() {
 
 
