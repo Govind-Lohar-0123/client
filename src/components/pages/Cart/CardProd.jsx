@@ -2,7 +2,7 @@
 import { Box, Grid, styled, Typography, Button } from "@mui/material";
 import ExtendedCart from "./Extended";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { removeFromCart } from "../../react_redux/redux/actions/cartAction";
 
 const Wrapper = styled(Box)(({ theme }) => ({

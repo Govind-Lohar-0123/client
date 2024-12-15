@@ -5,11 +5,12 @@ import { Box, Button, Typography, IconButton, List, ListItem, Link } from '@mui/
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
 import { Link as routerLink } from "react-router-dom"
-import { getUser, removeUser } from '../auth/userAction';
-import { removeToken } from '../auth/tokenAction';
+import { getCookie } from '../auth/cookieAction';
+
 import { useSelector, useDispatch } from 'react-redux';
 
 import { getAllCarts } from '../../react_redux/redux/actions/cartAction';
+import logOut from './logout';
 
 const UserList = styled(Box)(({ them }) => ({
     position: "absolute",
@@ -97,7 +98,7 @@ const Cart = styled(Typography)(({ theme }) => ({
     },
 
 }))
-
+let user = JSON.parse(getCookie("user"));
 export default function CustomeButton2() {
 
     const dispatch = useDispatch();
@@ -109,19 +110,17 @@ export default function CustomeButton2() {
     const cartSize = useSelector(state => state.cart).prods;
 
     const logoutHandle = () => {
-        removeToken();
-        removeUser();
-        window.location.href = "/"
+        logOut();
     }
     return (
         <>
 
             <StyledStack className="text-dark" >
-                {(getUser() != null && getUser() != undefined) ?
+                {(user != "" && user != null && user != undefined) ?
                     <Box className="username" style={{ position: "relative", paddingBlock: "15px" }}>
                         <Box >
 
-                            <Typography variant="contained" className="mx-2 text-bold bg-white text-primary p-1" style={{ fontSize: "1rem" }} >{getUser().firstname}</Typography>
+                            <Typography variant="contained" className="mx-2 text-bold bg-white text-primary p-1" style={{ fontSize: "1rem" }} >{user.firstname}</Typography>
                             {/* < Link ><svg style={{ transform: "rotate(271deg)" }} width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className="Wto0b0"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" className="-dC5Le" ></path></svg></Link> */}
                         </Box>
 

@@ -1,14 +1,16 @@
-import { Box, styled, TextField, Grid, Typography, Button, Link } from "@mui/material"
+import { Box, styled, Typography, Button, Link } from "@mui/material"
 import FilledInput from '@mui/material/FilledInput';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import { useState } from "react";
-import { getUser, removeUser, setUser } from "../../auth/userAction";
+import { getCookie ,setUser} from "../../auth/cookieAction";
 import { useNavigate } from "react-router-dom"
-import { removeToken } from "../../auth/tokenAction";
+
 import { userUpdate } from "../../auth/userApi";
 import { deleteAccount } from "../../auth/userApi";
 import { Link as routerLink } from "react-router-dom";
+
+import logOut from "../../partials/logout";
 const ComponentBox = styled(Box)(({ theme }) => ({
     "label": {
         color: "black !important",
@@ -23,8 +25,8 @@ const FAQsStyled = styled(Box)(({ theme }) => ({
 
 
 }))
-const user = getUser();
-if(user!=undefined && user!=null){var { firstname, lastname, phone } = user;}
+const user = JSON.parse(getCookie("user"));
+if (user != undefined && user != "" && user != null) { var { firstname, lastname, phone } = user; }
 export default function ProfileInfo() {
 
     const [editPerInfo, setEditPerInfo] = useState(true);
@@ -50,8 +52,7 @@ export default function ProfileInfo() {
     }
     const deleteAccountHandle = async () => {
         await deleteAccount(user._id, setResult);
-        removeToken();
-        removeUser();
+        logOut();
         setTimeout(() => {
             navigate("/");
         }, 2000);
@@ -68,9 +69,9 @@ export default function ProfileInfo() {
         let name = e.target.name;
         if (name == "phone") {
             let len = perInfo.phone.toString().length;
-            
-            if (len == 10) {phone = perInfo.phone;}
-            else {setResult({type:true,msg:"Please Enter 10 Digit..."});}
+
+            if (len == 10) { phone = perInfo.phone; }
+            else { setResult({ type: true, msg: "Please Enter 10 Digit..." }); }
             setEditMobile(true);
         }
         else {
@@ -82,7 +83,7 @@ export default function ProfileInfo() {
             setEditPerInfo(true);
         }
 
-        setTimeout(()=>setResult({type:false}))
+        setTimeout(() => setResult({ type: false }))
     }
     return (
         <>

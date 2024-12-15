@@ -2,11 +2,12 @@
 
 
 import axios from "axios";
-import { setUser } from "./userAction";
-import { setToken ,getToken} from "./tokenAction";
-import { url  } from "../partials/data";
+
+
+import { url } from "../partials/data";
 import { clientUrl } from "../partials/data";
-import { addEmailPassToCookie } from "./cookieAction";
+import { setCookieForRememberMe, setToken, getCookie, setUser } from "./cookieAction";
+
 const temp = { token: null, user: null }
 export const userRegister = async (signData, setResult) => {
 
@@ -18,9 +19,9 @@ export const userRegister = async (signData, setResult) => {
         });
 
         if (data.status == true) {
-            setToken(data.token);
-            setUser(data.user);
-            window.location.href = "/";
+            setToken(data.token, 4);
+            setUser(data.user, 4);
+            window.location.href = clientUrl;
         }
         else {
             setResult({ type: true, msg: data.msg });
@@ -36,7 +37,7 @@ export const userRegister = async (signData, setResult) => {
 }
 
 export const userUpdate = async (user_data, setResult) => {
-    
+
 
     try {
 
@@ -45,7 +46,7 @@ export const userUpdate = async (user_data, setResult) => {
             url: `${url}/user-api/update`,
             data: { user_data }
         });
-       
+
         setResult({ type: true, msg: data.msg });
         return true;
     }
@@ -122,7 +123,7 @@ export const sendOTP = async (email, setResult, setIsOtp) => {
     catch (err) { }
 
 }
-export const verifyOTP = async (email,password, otp, setResult) => {
+export const verifyOTP = async (email, password, otp, setResult) => {
     let otplen = otp.toString().length;
     if (otplen != 4) {
 
@@ -138,11 +139,11 @@ export const verifyOTP = async (email,password, otp, setResult) => {
         });
 
         if (data.success == true) {
-            
-            setToken(temp.token);
-            setUser(temp.user);
-            addEmailPassToCookie(email,password);
-            setTimeout(()=>window.location.href = clientUrl,5000);
+
+            setToken(temp.token,4);
+            setUser(JSON.stringify(temp.user),4);
+            setCookieForRememberMe(email, password, 3);
+            setTimeout(() => window.location.href = clientUrl, 5000);
 
         }
 
@@ -153,7 +154,7 @@ export const verifyOTP = async (email,password, otp, setResult) => {
 
         setResult({ type: true, msg: "Server Error..." + err.message });
     }
-    setTimeout(()=>setResult({type:false,msg:""}),4000);
+    setTimeout(() => setResult({ type: false, msg: "" }), 4000);
 }
 
 export async function changeUserPassword(user_data, setResult) {
@@ -175,10 +176,10 @@ export async function changeUserPassword(user_data, setResult) {
 
 
     try {
-        let token = getToken();
+        let token = getCookie("token");
         let { status, data } = await axios({
             method: "put",
-            url: `${url}/user-api/change-pass`,            
+            url: `${url}/user-api/change-pass`,
             data: { user_data },
             headers: {
                 'Authorization': 'Bearer ' + token
@@ -187,7 +188,7 @@ export async function changeUserPassword(user_data, setResult) {
         })
 
         if (status == 200) {
-            window.location.href=clientUrl;
+            window.location.href = clientUrl;
         }
 
         setResult({ type: true, msg: data.msg });
@@ -240,26 +241,3 @@ export async function userForgetPassword(user_data, setResult) {
     }
 
 }
-// export async function deleteAccount(email) {
-    
-//     try {
-//         let { status, data } = await axios({
-//             method: "delete",
-//             url: `${urlPath}/delete-account`,
-//             data: { email },
-
-//         })
-        
-//         if (status == 200) {
-//             logOut();
-//             window.location.href = clientUrl;
-//         }
-
-
-
-//     }
-//     catch (err) {
-//         return;
-//     }
-
-// }

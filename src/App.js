@@ -32,7 +32,7 @@ import Notifi_Preffrence from "./components/pages/More/Notifi_Prefre.jsx";
 import HelpCare from "./components/pages/More/HelpCare.jsx";
 import DownloadApp from "./components/pages/More/DownloadApp.jsx";
 import Terms from "./components/pages/MyProfile/Account/Terms.jsx";
-import { getToken } from "./components/pages/auth/tokenAction.js";
+import { getCookie } from "./components/pages/auth/cookieAction.js";
 import Login_Register from "./components/pages/auth/Login_Register.jsx"
 import VideoDetails from "./components/pages/YouTube/VideosDetails/VideoDetails.jsx";
 import YoutubeLayout from "./components/pages/YouTube/partials/YoutubeLayout.jsx";
@@ -44,8 +44,8 @@ import ResetPassword from "./components/pages/auth/ResetPassword.jsx";
 import ChangePassword from "./components/pages/auth/ChangePassword.jsx";
 import { getEmailForResetPass } from "./components/pages/auth/cookieAction.js";
 function App() {
-  const token = getToken();
-  const email = getEmailForResetPass();
+  const token = getCookie("token");
+  const email = getCookie("resetEmail");
   return (
 
     <Provider store={store}>

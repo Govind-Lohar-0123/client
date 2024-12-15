@@ -7,7 +7,7 @@ import { styled } from '@mui/material';
 import { userForgetPassword } from './userApi';
 // import userForgetPassword from 
 import { clientUrl } from '../partials/data';
-import { getEmailForResetPass } from './cookieAction';
+import { getCookie, getEmailForResetPass } from './cookieAction';
 const StyleBox = styled(Box)(({ theme }) => ({
 
     display: "flex",
@@ -33,7 +33,7 @@ export default function ResetPassword() {
 
     const [result, setResult] = useState({ type: false, msg: "" });
     const [user_data, setUser_data] = useState({
-        email:getEmailForResetPass(), newPassword: "", confirmPassword: "",
+        email:getCookie("resetEmail"), newPassword: "", confirmPassword: "",
     });
     const handleInput = (e) => {
         setUser_data({ ...user_data, [e.target.name]: e.target.value });

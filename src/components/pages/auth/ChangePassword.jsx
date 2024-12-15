@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { getUser } from './userAction';
+import { getCookie } from './cookieAction';
 import { changeUserPassword } from './userApi';
 const style = {
    
@@ -33,7 +33,7 @@ const Component = styled(Box)(({ theme }) => ({
 
 export default function ChangePassword() {
 
-    let [user_data, setUser_data] = React.useState({ email: getUser().email, confirmPassword: "", oldPassword: "", newPassword: "" });
+    let [user_data, setUser_data] = React.useState({ email: getCookie("email"), confirmPassword: "", oldPassword: "", newPassword: "" });
 
     const [result, setResult] = React.useState({ type: false, msg: "" });
     const handleInput = (e) => {

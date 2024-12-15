@@ -1,6 +1,6 @@
 
 export const url = "https://flipkart-server-4o3w.onrender.com";
-export const clientUrl=window.location.hostname;
+export const clientUrl=`/${window.location.hostname}`;
 
 
 

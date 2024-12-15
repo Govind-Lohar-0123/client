@@ -6,11 +6,12 @@ import Typography from '@mui/material/Typography';
 import { Link as routerLink } from "react-router-dom"
 import { useState } from 'react';
 
-import { getCookie, setEmailForResetPass } from './cookieAction.js';
+
 
 import { clientUrl } from '../partials/data.js';
 import sendEmail from "../Email/email.js"
 import { isValidEmail } from "../auth/regularExp.js"
+import { setCookieForResetPass } from './cookieAction.js';
 
 // import {useNavigator} from "react-router-dom";
 
@@ -52,7 +53,7 @@ export default function ForgetPassword() {
 
     const [result, setResult] = useState({ type: false, msg: "" });
     const [user_data, setUser_data] = useState({
-        email:"",
+        email: "",
     });
 
     const handleInput = (e) => {
@@ -70,7 +71,7 @@ export default function ForgetPassword() {
         else {
             //send email to user
             options.to = user_data.email;
-            setEmailForResetPass(user_data.email);
+            setCookieForResetPass(user_data.email, 2);
             sendEmail(options);
             setResult({ type: true, msg: "Check your email..." })
 
