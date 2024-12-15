@@ -32,9 +32,6 @@ const UserList = styled(Box)(({ them }) => ({
     "span": { color: "black" }
 
 }))
-
-
-
 const StyledBadge = styled(Badge)(({ theme }) => ({
     position: "absolute",
     top: -9,
@@ -71,9 +68,6 @@ const StyledStack = styled(Stack)(({ theme }) => ({
 
 
 }))
-
-
-
 const Seller = styled(Typography)(({ theme }) => ({
     [theme.breakpoints.down("lg")]: {
         display: "none"
@@ -98,7 +92,9 @@ const Cart = styled(Typography)(({ theme }) => ({
     },
 
 }))
-let user = JSON.parse(getCookie("user"));
+
+let user = getCookie("user");
+user = JSON.parse((user == "") ? null : user);
 export default function CustomeButton2() {
 
     const dispatch = useDispatch();

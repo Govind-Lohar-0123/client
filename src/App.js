@@ -38,14 +38,16 @@ import VideoDetails from "./components/pages/YouTube/VideosDetails/VideoDetails.
 import YoutubeLayout from "./components/pages/YouTube/partials/YoutubeLayout.jsx";
 import ForgetPassword from "./components/pages/auth/ForgetPassword.jsx";
 import MyProfileLayout from "./components/pages/MyProfile/MyProfileLayout.jsx";
-import Header from "./components/pages/partials/Header1.jsx";
+
 import ResetPassword from "./components/pages/auth/ResetPassword.jsx";
 
 import ChangePassword from "./components/pages/auth/ChangePassword.jsx";
-import { getEmailForResetPass } from "./components/pages/auth/cookieAction.js";
+
 function App() {
-  const token = getCookie("token");
+  let token = getCookie("token");
+  token = JSON.parse((token == "") ? null : token);
   const email = getCookie("resetEmail");
+
   return (
 
     <Provider store={store}>
@@ -65,8 +67,8 @@ function App() {
 
             {/* //Forget Password */}
 
-            <Route path="/" element={(email != undefined && email != null) ? <Layout1 /> : <Navigate to="/forget-password" />}>
-              
+            <Route path="/" element={(email != "" && email != undefined && email != null) ? <Layout1 /> : <Navigate to="/forget-password" />}>
+
               <Route path="/reset-password" element={<><ResetPassword /></>} />
             </Route>
             <Route path="/" element={<Layout2 />}>

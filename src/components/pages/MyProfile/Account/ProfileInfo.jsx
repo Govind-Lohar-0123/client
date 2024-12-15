@@ -3,7 +3,7 @@ import FilledInput from '@mui/material/FilledInput';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import { useState } from "react";
-import { getCookie ,setUser} from "../../auth/cookieAction";
+import { getCookie, setUser } from "../../auth/cookieAction";
 import { useNavigate } from "react-router-dom"
 
 import { userUpdate } from "../../auth/userApi";
@@ -25,7 +25,8 @@ const FAQsStyled = styled(Box)(({ theme }) => ({
 
 
 }))
-const user = JSON.parse(getCookie("user"));
+let user = getCookie("user");
+user = JSON.parse((user == "") ? null : user);
 if (user != undefined && user != "" && user != null) { var { firstname, lastname, phone } = user; }
 export default function ProfileInfo() {
 

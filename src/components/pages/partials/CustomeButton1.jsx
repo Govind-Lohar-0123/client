@@ -116,7 +116,8 @@ const LoginStyle = styled(Box)(({ theme }) => ({
     width: "100px"
 }))
 
-let user = JSON.parse(getCookie("user"));
+let user = getCookie("user");
+user=JSON.parse((user=="")?null:user);
 
 export default function CustomeButton1() {
 
