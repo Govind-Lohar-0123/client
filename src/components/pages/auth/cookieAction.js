@@ -1,7 +1,11 @@
 export function addEmailPassToCookie(email, password) {
-
-    document.cookie = `email=${email};`
-    document.cookie = `password=${password};`
+    const date = new Date();
+    let days=3;
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convert days to milliseconds
+    const expires = "expires=" + date.toUTCString();
+    email = `email=${email}`
+   password = `password=${password}`
+     document.cookie = `${email} ;${password} ; ${expires}`;
 }
 export function setEmailForResetPass(email) {
     
