@@ -1,8 +1,14 @@
 
 
+<<<<<<< HEAD
 export const url = "https://flipkart-server-0wxb.onrender.com";
 // export const url = "";
 export const clientUrl =+"/"+window.location.hostname;
+=======
+export const url = "https://flipkart-server-yu7d.onrender.com";
+
+export const clientUrl =window.location.hostname;
+>>>>>>> b00d9357648be70b03ca84ef46f39f5c4af2cd14
 
 
 
