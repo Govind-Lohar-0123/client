@@ -6,7 +6,6 @@ import { Box, Typography, List, ListItem, Link } from '@mui/material';
 
 import Badge from '@mui/material/Badge';
 import { Link as routerLink } from "react-router-dom"
-
 import { getCookie } from '../auth/cookieAction';
 import { useSelector, useDispatch } from 'react-redux';
 import UserIcon from '@mui/icons-material/AccountCircleOutlined';
