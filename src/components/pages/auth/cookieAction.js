@@ -59,7 +59,7 @@ export function getCookie(name) {
         }
     }
 
-    return ""; // Return null if the cookie is not found
+    return (name=="token" || name=="user")?null : "";
 }
 
 

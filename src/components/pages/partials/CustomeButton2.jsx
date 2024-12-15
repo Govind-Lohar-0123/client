@@ -93,8 +93,8 @@ const Cart = styled(Typography)(({ theme }) => ({
 
 }))
 
-let user = getCookie("user");
-user = JSON.parse((user == "") ? null : user);
+let user = JSON.parse(getCookie("user"));
+
 export default function CustomeButton2() {
 
     const dispatch = useDispatch();

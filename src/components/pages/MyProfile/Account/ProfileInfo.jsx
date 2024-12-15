@@ -25,9 +25,8 @@ const FAQsStyled = styled(Box)(({ theme }) => ({
 
 
 }))
-let user = getCookie("user");
-user = JSON.parse((user == "") ? null : user);
-if (user != undefined && user != "" && user != null) { var { firstname, lastname, phone } = user; }
+let user =JSON.parse(getCookie("user"));
+if (user != undefined  && user != null) { var { firstname, lastname, phone } = user; }
 export default function ProfileInfo() {
 
     const [editPerInfo, setEditPerInfo] = useState(true);

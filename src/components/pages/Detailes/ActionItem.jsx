@@ -4,8 +4,10 @@ import { useDispatch, useSelector } from "react-redux"
 import { addToCart, getAllCarts } from "../../react_redux/redux/actions/cartAction";
 import { useState } from "react";
 import Carousel from "./Carousel";
-
+import { getCookie } from "../auth/cookieAction";
 import v1 from "../../videos/v1.mp4";
+import { useNavigate } from "react-router-dom";
+import { clientUrl } from "../partials/data";
 // ---------------LEFT COMPONENT CSS------------
 const LeftComponent = styled(Grid)(({ theme }) => ({
     width: "100%",
@@ -32,11 +34,11 @@ const ButtonStyle = styled(Box)(({ theme }) => ({
         borderRadius: "0px",
         width: "100%",
         // paddingBlock: ".8rem"
-        whiteSpace:"nowrap",
-        fontSize:"12px",
-        padding:"10px"
+        whiteSpace: "nowrap",
+        fontSize: "12px",
+        padding: "10px"
     },
-    
+
 }))
 const BigImage = styled("Box")(({ theme }) => ({
 
@@ -51,10 +53,18 @@ const BigImage = styled("Box")(({ theme }) => ({
 
 }))
 
+let token = getCookie("token");
+
 export default function ActionItem({ url, prod }) {
     const [{ src, isImg }, setUrl] = useState({ src: url, isImg: true });
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const addToCartHandle = () => {
+        if ( token == null || token == undefined)
+            navigate(`${clientUrl}/login`);
 
+        dispatch(addToCart(prod));
+    }
 
 
     return (<>
@@ -63,7 +73,7 @@ export default function ActionItem({ url, prod }) {
             <Carousel setUrl={setUrl} url={url} />
 
             <BigImage style={{ zIndex: 100 }}>
-               
+
                 {
                     (isImg == true) ?
                         <img src={src} className="h-100 w-100 d-block" alt="" />
@@ -74,10 +84,7 @@ export default function ActionItem({ url, prod }) {
 
 
                 <ButtonStyle className="mt-4 ">
-                    <Button variant="contained" size="large" className="bg-white text-bold" onClick={() => {
-                        dispatch(addToCart(prod));
-                    }}
-                        style={{ color: "#878787" }}><Card /> ADD TO CARD</Button>
+                    <Button variant="contained" size="large" className="bg-white text-bold" onClick={addToCartHandle} style={{ color: "#878787" }}><Card /> ADD TO CARD</Button>
                     <Button variant="contained" size="large" className="text-bold" style={{ backgroundColor: "#878787" }}><Flash /> BUY NOW </Button>
                 </ButtonStyle>
             </BigImage>

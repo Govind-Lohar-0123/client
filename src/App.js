@@ -45,7 +45,6 @@ import ChangePassword from "./components/pages/auth/ChangePassword.jsx";
 
 function App() {
   let token = getCookie("token");
-  token = JSON.parse((token == "") ? null : token);
   const email = getCookie("resetEmail");
 
   return (
