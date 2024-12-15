@@ -33,6 +33,12 @@ const responsive = {
 const SlideContainer = styled(Box)(({ theme }) => ({
 
     height: "100%",
+    [theme.breakpoints.down("md")]: {
+        ".cart": {
+            width: "280px!important",
+            marginInline: "auto",
+        }
+    }
 }))
 
 
@@ -44,7 +50,7 @@ const SlideContainer = styled(Box)(({ theme }) => ({
 
 
 const Slide3 = ({ prods, time, title }) => {
-   
+
 
 
     return (
