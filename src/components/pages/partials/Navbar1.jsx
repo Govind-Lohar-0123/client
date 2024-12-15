@@ -47,11 +47,12 @@ const RightComponent = styled(Box)(({ theme }) => ({
 const Wrapper = styled(Box)(({ theme }) => ({
     display: "flex",
     height: "100%",
-
+ marginInline:"10px",
     alignItems: "center",
     gap: "20px",
     [theme.breakpoints.down("lg")]: {
         gap: "5px",
+       
     }
 
 
@@ -65,7 +66,8 @@ const Logo = styled(Box)(({ theme }) => ({
 const StyledSearchBox = styled(Box)(({ theme }) => ({
     width: "100%",
     [theme.breakpoints.down("md")]: {
-        display: "none "
+        display: "none ",
+        
     }
 
 }))
@@ -78,7 +80,7 @@ export default function Navbar1() {
 
 
     return (<>
-        <Wrapper  >
+        <Wrapper >
             <DrawerComponent />
             <LeftComponent>
                 <Logo>

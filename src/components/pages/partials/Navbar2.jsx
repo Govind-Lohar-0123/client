@@ -51,6 +51,7 @@ const Logo = styled(Box)(({ theme }) => ({
 
     height: "100%",
     //   padding:"5px",
+    "img":{ width: "100px"},
 
     marginInline: "auto",
     ">div": {
@@ -62,14 +63,14 @@ const Logo = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("md")]: {
         marginInline: "auto",
         "img": {
-            width: "66%"
+            
         }
     },
     [theme.breakpoints.down("sm")]: {
-
         "img": {
-            width: "100%"
+            width:"85px"
         }
+       
     }
 
 
@@ -104,8 +105,8 @@ export default function Navbar2() {
             <LeftComponent className="gap-5">
                 <Logo >
                     <div className="text-center mx-0 text-center">
-                        <a href="/">
-                            <img style={{ width: "100px" }} src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="Flipkart" title="Flipkart" className="W5mR4e" />
+                        <a href="/" >
+                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="Flipkart" title="Flipkart" className="W5mR4e" />
                         </a>
                         <a className="MwbhDR text-white d-flex gap-1 text-bold align-items-center" href="/plus" style={{ fontSize: "10px" }}>
                             <span className="text-bold">Explore</span>

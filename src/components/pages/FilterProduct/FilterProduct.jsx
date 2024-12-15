@@ -1,18 +1,18 @@
-import { Box, Grid, Link, Typography,styled } from "@mui/material";
+import { Box, Grid, Link, Typography, styled } from "@mui/material";
 
 import Filter from "./Filter";
-import { Link as routerLink } from "react-router-dom";
-import Products from "./Products";
 
+import Products from "./Products";
+import {CircularProgress} from "@mui/material";
 import { useEffect } from "react";
 import { getProducts } from "../../react_redux/redux/actions/productAction";
 import { useDispatch, useSelector } from "react-redux";
 import ReviewSlide from "./Reviews/ReviewSlide";
 
 
-const FilterComponent=styled(Box)(({theme})=>({
-    [theme.breakpoints.down("lg")]:{
-        display:"none",
+const FilterComponent = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("lg")]: {
+        display: "none",
     }
 }))
 
@@ -29,10 +29,10 @@ export default function FilterProduct() {
 
     return (
         <>
-            {data && data.loading == false && data.prod &&
+            {(data && data.loading == false && data.prod) ?
                 <Box className="mt-5" >
 
-                    <Grid container className="mt-2 justify-content-center"lg={12}>
+                    <Grid container className="mt-2 justify-content-center" lg={12}>
                         <Grid item lg={2.2}>
                             <FilterComponent>
                                 <Filter />
@@ -49,6 +49,10 @@ export default function FilterProduct() {
 
                     <ReviewSlide prods={data.prod} />
 
+                </Box>
+                : <Box sx={{ display: 'flex', flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 10, textAlign: "center" }}>
+                    <CircularProgress color="inherit" />
+                    <Typography className="text-bold text-muted">Loading</Typography>
                 </Box>
             }
         </>)

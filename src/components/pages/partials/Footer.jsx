@@ -52,7 +52,7 @@ export default function Footer() {
 
             <StyledFooter className="pt-3 p-2 pb-4 mt-5 " style={{ backgroundColor: " #212121" }}>
                 <Box >
-                    <GridStyle container lg={10} md={10} sm={10} className="mx-auto mt-4">
+                    <GridStyle container lg={10} md={10} sm={8}  xs={10} className="mx-auto mt-4">
                         <Grid item lg={1} md={3} sm={6} xs={5} className="mx-auto">
 
 

@@ -31,6 +31,7 @@ const StyleList = styled(List)(({ theme }) => ({
 
 }))
 const Wrapper=styled(Box)(({theme})=>({
+    paddingInline:"20px",
     [theme.breakpoints.down("md")]:{
         marginBottom:"20px"
     }
@@ -40,7 +41,7 @@ const Wrapper=styled(Box)(({theme})=>({
 export default function MoreProdNav() {
 
     return (<>
-        <Wrapper className=" bg-white px-5 " style={{ boxShadow: "0 1px 1px #e0e3e5", position: "relative" }} >
+        <Wrapper className=" bg-white  " style={{ boxShadow: "0 1px 1px #e0e3e5", position: "relative" }} >
 
             <StyleList>
                 {

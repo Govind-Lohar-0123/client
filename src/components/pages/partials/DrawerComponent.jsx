@@ -35,7 +35,7 @@ const DrawerComponent = () => {
         setOpen(false)
     }
     return (
-        <Box>
+        <Box >
             <Box >
                 <MenuIcon onClick={handleOpen}>
                     <Menu />

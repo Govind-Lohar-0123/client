@@ -106,7 +106,7 @@ export default function Product() {
 
 
                                 return <>
-                                    <Grid item lg={3} md={4} sm={6} xs={8} className="mx-auto" key={idx}>
+                                    <Grid item lg={3} md={4} sm={6} xs={10} className="mx-auto" key={idx}>
                                         <Link className="text-dark w-100 d-block" to={`/detail-view/${prod._id}`} component={routerLink}>
                                             <Card2 prod={prod} />
                                         </Link>

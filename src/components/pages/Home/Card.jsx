@@ -6,21 +6,19 @@ import CardContent from '@mui/material/CardContent';
 import { Link as routerLink } from "react-router-dom";
 
 
-const AddToCompare = styled(Grid)(({ theme }) => ({
-    "span": {
-        fontSize: "14px",
-    }
-}))
+
 
 
 
 const Wrapper = styled(Box)(({ theme }) => ({
     transition: "all .5s ease-in-out",
     marginBottom: "10px",
+    width: "210px",
     ":hover": {
         boxShadow: "2px 2px 20px 20px #DFE1E5",
         transform: "scale(1.1)"
-    }
+    },
+   
 }))
 
 
@@ -28,8 +26,8 @@ const Wrapper = styled(Box)(({ theme }) => ({
 export default function Card({ prod }) {
     const prod_name = prod.content.title;
     return <>
-        <Link to={`filter-product/${prod._id}`} component={routerLink} style={{cursor:"pointer"}}>
-            <Wrapper className="p-2 py-3" style={{ width: "210px" }}>
+        <Link to={`filter-product/${prod._id}`} component={routerLink} style={{ cursor: "pointer" }}>
+            <Wrapper className="p-2 py-3 cart" >
 
                 <CardComp >
 

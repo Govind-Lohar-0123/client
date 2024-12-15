@@ -63,19 +63,7 @@ export default function ActionItem({ url, prod }) {
             <Carousel setUrl={setUrl} url={url} />
 
             <BigImage style={{ zIndex: 100 }}>
-                {/* <ReactImageMagnify {...{
-                    smallImage: {
-                        alt: 'Wristwatch by Ted Baker London',
-                        isFluidWidth: true,
-                        src: src,
-                        
-                    },
-                    largeImage: {
-                        src: src,
-                        width: 1200,
-                        height: 1800
-                    }
-                }} />  */}
+               
                 {
                     (isImg == true) ?
                         <img src={src} className="h-100 w-100 d-block" alt="" />

@@ -3,12 +3,12 @@ import { LocalOffer as Badge, BorderBottom, CheckBox } from "@mui/icons-material
 import Reply from '@mui/icons-material/Reply';
 import { useState } from "react";
 const RightComponent = styled(Box)(({ theme }) => ({
-    position:"relative",
+    position: "relative",
     "p": {
         fontSize: "14px",
         fontFamily: " Inter, -apple-system, Helvetica, Arial, sans-serif",
     },
-    
+
 }))
 const ListStyleCircle = styled(Typography)(({ theme }) => ({
     "&::before": {
@@ -27,7 +27,7 @@ const ListStyleCircle = styled(Typography)(({ theme }) => ({
 }))
 const ColumnText = styled(TableRow)(({ theme }) => ({
     verticalAlign: "baseline",
-   
+
 }))
 const RatingComponent = styled(Box)(({ theme }) => ({
 
@@ -59,8 +59,8 @@ const SmallNav = styled(Box)(({ theme }) => ({
         verticalAlign: "super",
         color: " #878787 !important",
     },
-    [theme.breakpoints.down("md")]:{
-        justifyContent:"flex-start"
+    [theme.breakpoints.down("md")]: {
+        justifyContent: "flex-start"
     }
 }))
 
@@ -80,7 +80,7 @@ const ToolbarComponent = styled(Box)(({ theme }) => ({
         justifyContent: "space-between",
         alignItems: "flex-start",
     },
-    
+
 }))
 const StyledChecked = styled(FormControlLabel)(({ theme }) => ({
     "span": {
@@ -95,7 +95,7 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
     "*": { border: "none!important" }
 }))
 const BuyChange = styled(Box)(({ theme }) => ({
-    width:"90%",
+    width: "90%",
     "*": {
         fontSize: "14px",
     },
@@ -103,14 +103,17 @@ const BuyChange = styled(Box)(({ theme }) => ({
         justifyContent: "space-between",
         alignItems: "center",
     },
-    [theme.breakpoints.down("md")]:{
-        overflowX:"scroll",
-        whiteSpace:"nowrap"
+    [theme.breakpoints.down("md")]: {
+        overflowX: "scroll",
+        whiteSpace: "nowrap"
     }
-    
+
 }))
 
 const RatingStyled = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("md")]: {
+
+    },
     "ul:first-child > li ,ul:last-child > li": {
         paddingBlock: "3px!important",
         fontWeight: "bold",
@@ -142,14 +145,14 @@ const SpecifiTable = styled(Table)(({ theme }) => ({
     },
     "td": { borderBottom: "none", }
 }))
-const TableStyle=styled(Table)(({theme})=>({
-    whiteSpace:"nowrap",
-    overflowX:"scroll"
+const TableStyle = styled(Table)(({ theme }) => ({
+    whiteSpace: "nowrap",
+    overflowX: "scroll"
 }))
 
 export default function ProductDetails({ content }) {
     const [readMore, setReadMore] = useState(false);
-    
+
     const date = new Date(new Date().getTime() + (5 * 24 * 60 * 60 * 1000));
     const adURL = 'https://rukminim1.flixcart.com/lockin/774/185/images/CCO__PP_2019-07-14.png?q=50';
 
@@ -205,7 +208,7 @@ export default function ProductDetails({ content }) {
                     <Typography variant="span" style={{ color: "#388e3c", fontWeight: "bold" }}> {content.price.discount}</Typography>
                 </PriceComponent>
                 <Typography className="">+ ₹59 Secured Packaging Fee</Typography>
-                
+
                 <Box className="my-2">
                     <Typography style={{ fontWeight: "550" }}>Available offers</Typography>
 
@@ -257,15 +260,7 @@ export default function ProductDetails({ content }) {
                             <Box className="mt-5 d-flex justify-content-space-between">
 
                                 <List style={{ listStyleType: "circle" }} className="gap-1">
-                                    {
-                                        // content.config.map((item, idx) => {
-                                        //     return (<ListItem key={idx} className="pt-0" >
-                                        //         <ListStyleCircle>{item}</ListStyleCircle>
 
-                                        //     </ListItem>)
-                                        // })
-
-                                    }
                                 </List>
 
                                 <Box className="d-flex  gap-4 " style={{ marginRight: "" }} >
@@ -333,22 +328,22 @@ export default function ProductDetails({ content }) {
                     </Box>
                 </Box>
                 <Box className="mt-5 border border-muted">
-                    <Box className="d-flex justify-content-space-between align-item-center px-4">
+                    <Box className="d-flex justify-content-space-between align-item-center px-3">
                         <Typography variant="h5" className="p-3  text-bold">Ratings & Reviews</Typography>
 
                         <Button variant="contained" style={{ boxShadow: "0 1px 2px 0 rgba(0, 0, 0, .26)", fontSize: "12px" }} className="bg-white text-bold text-dark py-3 " >Rate Product</Button>
                     </Box>
                     <Box className="mt-3 px-4">
-                        <Grid container className="align-item-center justify-content-space-between">
-                            <Grid item lg={2} className="my-auto">
+                        <Grid container className="align-item-center justify-content-space-between py-3">
+                            <Grid item lg={2} md={10} sm={10}className="my-auto">
                                 <Box className="text-center ">
                                     <Typography variant="h4">4.5★</Typography>
                                     <Typography className="text-muted">29,656 Ratings & 1,890 Reviews</Typography>
                                 </Box>
                             </Grid>
-                            <Grid item lg={4}>
-                                <RatingStyled className="d-flex gap-1 align-item-center">
-                                    <List style={{ fontSize: "12px" }}>
+                            <Grid item lg={4} md={10} sm={12} >
+                                <RatingStyled className="d-flex gap-1 align-item-center w-100" >
+                                    <List style={{ fontSize: "12px" }} className="w-100">
                                         <ListItem>
                                             <Typography variant="span">5</Typography>
                                             <Typography variant="span">★</Typography>
@@ -400,8 +395,8 @@ export default function ProductDetails({ content }) {
                                     </List>
                                 </RatingStyled>
                             </Grid>
-                            <Grid item lg="6">
-                                <Box className="d-flex align-item-center justify-content-space-between text-center">
+                            <Grid item lg={6} md={10} sm={10} xs={12}>
+                                <Box className="d-flex align-item-center justify-content-space-between text-center w-100">
                                     <Box>
                                         <CircleStyle><Typography >4.5</Typography></CircleStyle>
                                         <Typography className="text-bold text-dark" style={{ fontSize: "14px" }}>Camera</Typography>
@@ -502,7 +497,7 @@ export default function ProductDetails({ content }) {
 
                 </Box>
 
-               
+
 
 
             </RightComponent>
